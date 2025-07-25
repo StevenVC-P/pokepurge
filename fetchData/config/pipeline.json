@@ -1,0 +1,141 @@
+{
+  "pipeline": {
+    "name": "Pokemon GO Data Pipeline",
+    "version": "1.0.0",
+    "description": "Complete data pipeline for Pokemon GO data collection and processing"
+  },
+  "timeouts": {
+    "scraper_timeout_ms": 300000,
+    "processor_timeout_ms": 60000,
+    "builder_timeout_ms": 120000
+  },
+  "directories": {
+    "scrapers": "scrapers",
+    "processors": "processors", 
+    "builders": "builders",
+    "outputs": "outputs",
+    "config": "config"
+  },
+  "data_sources": {
+    "pokemongohub": {
+      "base_url": "https://db.pokemongohub.net",
+      "rate_limit_ms": 500,
+      "timeout_ms": 20000
+    },
+    "pvpoke": {
+      "base_url": "https://pvpoke.com/data/rankings",
+      "rate_limit_ms": 100,
+      "timeout_ms": 10000
+    },
+    "pokeapi": {
+      "base_url": "https://pokeapi.co/api/v2",
+      "rate_limit_ms": 200,
+      "timeout_ms": 5000
+    }
+  },
+  "validation": {
+    "required_files": [
+      "outputs/pokemon-variants-raw.json",
+      "outputs/pokemon-variants.json", 
+      "outputs/pokemon-variants-with-candy.json",
+      "outputs/pokemon-pvpoke-conversion.json",
+      "outputs/pokemon-condensed-meta.json",
+      "outputs/PokemonMaster.json",
+      "outputs/PokemonMaster_updated.json",
+      "pokemon.json"
+    ],
+    "optional_files": [
+      "outputs/best-per-type.json",
+      "outputs/raid-tiers.json",
+      "outputs/gym-defender-tiers.json",
+      "outputs/rankings/great.json",
+      "outputs/rankings/ultra.json",
+      "outputs/rankings/master.json"
+    ],
+    "min_pokemon_count": 1500,
+    "max_pokemon_count": 1700
+  },
+  "leagues": {
+    "great": {
+      "name": "Great League",
+      "cp_cap": 1500,
+      "url": "https://pvpoke.com/data/rankings/all/overall/rankings-1500.json"
+    },
+    "ultra": {
+      "name": "Ultra League", 
+      "cp_cap": 2500,
+      "url": "https://pvpoke.com/data/rankings/all/overall/rankings-2500.json"
+    },
+    "master": {
+      "name": "Master League",
+      "cp_cap": 10000,
+      "url": "https://pvpoke.com/data/rankings/all/overall/rankings-10000.json"
+    },
+    "little_element": {
+      "name": "Little Element Cup",
+      "cp_cap": 500,
+      "url": "https://pvpoke.com/data/rankings/element/overall/rankings-500.json"
+    },
+    "hisui": {
+      "name": "Hisui Cup",
+      "cp_cap": 1500,
+      "url": "https://pvpoke.com/data/rankings/hisui/overall/rankings-1500.json"
+    },
+    "sunshine": {
+      "name": "Sunshine Cup",
+      "cp_cap": 1500,
+      "url": "https://pvpoke.com/data/rankings/sunshine/overall/rankings-1500.json"
+    },
+    "aurora": {
+      "name": "Aurora Cup",
+      "cp_cap": 1500,
+      "url": "https://pvpoke.com/data/rankings/aurora/overall/rankings-1500.json"
+    },
+    "onyx": {
+      "name": "Onyx Cup",
+      "cp_cap": 1500,
+      "url": "https://pvpoke.com/data/rankings/onyx/overall/rankings-1500.json"
+    },
+    "battlefrontierultra": {
+      "name": "Battle Frontier Ultra",
+      "cp_cap": 2500,
+      "url": "https://pvpoke.com/data/rankings/battlefrontierultra/overall/rankings-2500.json"
+    },
+    "battlefrontiermaster": {
+      "name": "Battle Frontier Master",
+      "cp_cap": 10000,
+      "url": "https://pvpoke.com/data/rankings/battlefrontiermaster/overall/rankings-10000.json"
+    },
+    "ascension": {
+      "name": "Ascension Cup",
+      "cp_cap": 1500,
+      "url": "https://pvpoke.com/data/rankings/ascension/overall/rankings-1500.json"
+    },
+    "devonchampionship": {
+      "name": "Devon Championship",
+      "cp_cap": 1500,
+      "url": "https://pvpoke.com/data/rankings/devonchampionship/overall/rankings-1500.json"
+    },
+    "pillar2": {
+      "name": "Pillar 2",
+      "cp_cap": 1500,
+      "url": "https://pvpoke.com/data/rankings/pillar2/overall/rankings-1500.json"
+    }
+  },
+  "pokemon_types": [
+    "normal", "fighting", "flying", "poison", "ground", "rock", 
+    "bug", "ghost", "steel", "fire", "water", "grass", 
+    "electric", "psychic", "ice", "dragon", "dark", "fairy"
+  ],
+  "logging": {
+    "level": "info",
+    "timestamp_format": "ISO",
+    "colors": {
+      "info": "blue",
+      "success": "green", 
+      "warning": "yellow",
+      "error": "red",
+      "debug": "gray"
+    }
+  }
+}

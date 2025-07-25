@@ -1,0 +1,33 @@
+{
+    "rules": {
+      "only_one_suffix_per_category": true,
+      
+      "excluded_categories": [
+        "numeric_misc",
+        "unknown_or_pattern_forms",
+        "terrain_or_climate",
+        "costumes_event_forms"
+      ],
+      
+      "disallowed_combinations": [
+        ["Mega", "Shadow"],
+        ["Gigantamax", "Shadow"],
+        ["Primal", "Shadow"],
+        ["Mega", "Gigantamax"],
+        ["Mega", "Primal"],
+        ["Gigantamax", "Primal"],
+        ["Mega", "stat_variants"],
+        ["Shadow", "cosmetic_color"],
+        ["Shadow", "stat_variants"],
+        ["Shadow", "Paldean_regional_subforms"],
+        ["Shadow", "special_forms"],
+        ["Shadow", "elemental_or_type_like"]
+      ],
+
+
+      "tracked_categories":["SPECIAL_FORM_WHITELIST"],
+
+      "standalone_categories": ["SPECIAL_FORM_WHITELIST"]
+    }
+  }
+  

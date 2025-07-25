@@ -1,0 +1,296 @@
+{
+    "shadow": [
+        "Shadow"
+      ],
+
+    "mega": [
+        "Mega"
+      ],
+
+    "gigantamax": [
+        "Gigantamax"
+    ],
+
+    "SPECIAL_FORM_WHITELIST": {
+        "Alola": [19, 20, 26, 27, 28, 37, 38, 50, 51, 52, 53, 74, 75, 76, 88, 89, 103, 105],
+        "Alola_Shadow": [19, 20, 27, 28, 37, 38, 50, 51, 52, 53, 74, 75, 76, 88, 89, 103, 105],
+
+        "Galarian": [52, 77, 78, 79, 80, 83, 110, 122, 144, 145, 146, 199, 222, 263, 264, 554, 555, 562, 618],
+        "Galarian_Shadow": [52, 79, 80, 110, 122, 199, 263, 264, 554, 555, 562],
+
+        "Origin": [483,484, 487],
+        "Altered": [487],
+        "Origin_Shadow": [483,484],
+
+        "Galarian_Zen_Shadow": [555],
+        "Galarian_Zen": [555],
+        "Zen_Shadow": [555],
+        "Galarian_Standard_Shadow": [555],
+        "Galarian_Standard": [555],
+        "Standard_Shadow": [555],
+
+        "Hisuian": [100, 101, 157, 211, 215, 543, 549, 570, 571, 628, 713, 724],
+        "Hisuian_Shadow": [100, 101, 157, 215, 543],
+
+        "Paldea": [194],
+
+        "Paldean_Aqua_Breed": [128],
+        "Paldean_Blaze_Breed": [128],
+        "Paldean_Combat_Breed": [128],
+
+        "Mega_X": [6, 150],
+        "Mega_Y": [6, 150],
+
+        "Attack": [386],
+        "Defense": [386],
+        "Speed": [386],
+
+        "Complete": [718],
+        "Fifty_Percent": [718],
+        "Ten_Percent": [718],
+
+        "Dusk_Mane": [800],
+        "Dawn_Wings": [800],
+        "Ultra": [800],
+
+        "Eternamax": [890],
+
+        "Primal": [382, 383],
+
+        "Original_Color": [801],
+
+        "Therian": [641, 642, 645, 905],
+        "Incarnate": [641, 642, 645, 905],
+
+        "Family_Of_Three": [925],
+        "Family_Of_Four": [925],
+
+        "Full_Belly": [877],
+        "Hangry": [877],
+
+        "Shadow_Rider": [898],
+        "Ice_Rider": [898],
+
+        "Rapid_Strike": [892],
+        "Single_Strike": [892],
+
+        "School": [746],
+
+        "Confined": [720],
+        "Unbound": [720],
+
+        "Aria": [648],
+        "Pirouette": [648],
+
+        "Ordinary": [647],
+        "Resolute": [647],
+
+        "Wash": [479],
+        "Mow": [479],
+        "Heat": [479],
+        "Fan": [479],
+        "Frost": [479],
+
+        "Sky": [492],
+        "Land": [492],
+
+        "Rainy": [351],
+        "Snowy": [351],
+        "Sunny": [351, 421],
+        "Overcast": [351, 421],
+
+        "Antique": [854, 855],
+        "Phony": [854, 855],
+
+        "Baile": [741],
+        "Pom_pom": [741],
+        "Pa'u": [741],
+        "Sensu": [741],
+
+        "Amped": [849],
+        "Low_Key": [849],
+
+        "Busted": [778],
+        "Disguised": [778],
+
+        "Crowned_Sword": [888],
+        "Crowned_Shield": [889],
+        "Zero": [964],
+        "Hero": [888,889,964],
+
+        "Ice": [875],
+        "Noice": [875],
+
+        "Super": [710, 711],
+        "Average": [710, 711],
+        "Small": [710, 711],
+        "Large": [710, 711],
+
+        "Ultimate": [1008],
+
+        "Douse": [649],
+        "Shock": [649],
+        "Burn": [649],
+        "Chill": [649],
+
+        "Stretchy": [978],
+        "Droopy": [978],
+        "Curly": [978],
+
+        "Sandy": [412,413],
+        "Plant": [412,413],
+        "Trash": [412,413],
+
+        "East_Sea": [422,423],
+        "West_Sea": [422,423],
+
+        "Red_Striped": [550],
+        "Blue_Striped": [550],
+        "White_Striped": [550],
+
+        "Blue_Plumage": [931],
+        "Green_Plumage": [931],
+        "White_Plumage": [931],
+        "Yellow_Plumage": [931],
+
+        "Male": [593, 668, 678, 876, 916],
+        "Female": [593, 668, 678, 876, 916],
+
+        "Apex_Shadow": [249, 250],
+
+        "Apex:": [1007],
+
+        "Flying": [493, 773],    
+        "Bug": [493, 773],
+        "Dark": [493, 773],
+        "Dragon": [493, 773],
+        "Electric": [493, 773],
+        "Fairy": [493, 773],
+        "Fighting": [493, 773],
+        "Fire": [493, 773],
+        "Ghost": [493, 773],
+        "Grass": [493, 773],
+        "Ground": [493, 773],
+        "Ice": [493, 773],
+        "Normal": [493, 773],
+        "Poison": [493, 773],
+        "Psychic": [493, 773],
+        "Rock": [493, 773],
+        "Steel": [493, 773],
+        "Water": [493, 773],
+
+        "Black": [646],      
+        "White": [646],
+
+        "Meteor": [776],
+        "Red": [776],
+        "Orange": [776],
+        "Yellow": [776],
+        "Green": [776],
+        "Blue": [776],
+        "Indigo": [776],
+        "Violet": [776]
+    },
+
+
+    "terrain_or_climate": [
+        "Ocean", "Tundra", "Icy_snow", "High_plains", "Jungle", "Monsoon", "Polar",
+        "Savanna", "Sandstorm", "Meadow", "River", "Garden", "Archipelago", "Modern",
+        "Continental", "Marine"
+    ],
+
+    "costumes_event_forms": [
+      "Autumn",
+      "Winter",
+      "Spring",
+      "Summer",
+      "Fall_2019",
+      "Flying_5th_anniv",
+      "Flying_okinawa",
+      "Costume_2020",
+      "Adventure_hat_2020",
+      "Birthday_2022",
+      "Party_hat_2020",
+      "Copy_2019",
+      "Doctor",
+      "Fancy",
+      "Elegant",
+      "Debutante",
+      "Dandy",
+      "Aria",
+      "Samba",
+      "Sunshine",
+      "Fog",
+      "Windy",
+    "Summer_2023",
+    "Summer_2023_a",
+    "Summer_2023_b",
+    "Summer_2023_c",
+    "Summer_2023_d", 
+    "Summer_2023_e",
+    "Winter_2020", 
+    "Tshirt_01", 
+    "Tshirt_02", 
+    "Tshirt_03", 
+    "Gofest_2022",
+    "Gofest_2024_mscarf", 
+    "Gofest_2024_mtiara", 
+    "Gofest_2024_sscarf", 
+    "Gofest_2024_stiara",
+    "Gotour_2024_a", 
+    "Gotour_2024_a_02", 
+    "Gotour_2024_b", 
+    "Gotour_2024_b_02",
+    "Wcs_2022", 
+    "Wcs_2023", 
+    "Wcs_2024", 
+    "Vs_2019"
+    ],
+
+    "numeric_misc": [
+      "00",
+      "01",
+      "02",
+      "03",
+      "04",
+      "05",
+      "06",
+      "07",
+      "08",
+      "09",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "2020",
+      "2021",
+      "2022"
+    ],
+
+    "unknown_or_pattern_forms": [
+        "Flying_01",
+        "Flying_02",
+        "Flying_03",
+        "Flying_04",
+        "Exclamation_point",
+        "Question_mark",
+        "Pikachu_libre",
+        "Armor",
+        "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q",
+        "R", "S", "T", "U", "V", "W", "X", "Y", "Z",
+        "Solo", "Heart", "Natural", 
+        "Matron", "Kabuki", "La_reine", "Pharaoh",
+        "Diamond",
+        "Elegant", 
+        "Star", 
+        "Stripe", 
+        "Original_color",
+        "Necrozma"
+    ]
+  }
