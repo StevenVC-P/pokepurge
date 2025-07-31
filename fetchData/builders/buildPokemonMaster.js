@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 // Load all data files
-const condensed = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../outputs/pokemon-condensed-meta.json")));
+const condensed = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../outputs/pokemon-optimized.json")));
 const raidTiers = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../outputs/raid-tiers.json")));
 const defenderTiers = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../outputs/gym-defender-tiers.json")));
 const bestPerType = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../outputs/best-per-type.json")));

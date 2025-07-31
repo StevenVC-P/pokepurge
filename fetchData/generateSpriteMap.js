@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 // Load your Pokémon list
-const pokemonData = require("../src/data/pokemon.json");
+const pokemonData = require("../public/data/pokemon.json");
 
 // Initialize sprite map
 const spriteMap = {};
@@ -59,6 +59,6 @@ pokemonData.forEach((mon) => {
 });
 
 // Write to file
-const outputPath = path.join(__dirname, "../src/data/spriteMap.json");
+const outputPath = path.join(__dirname, "../public/data/spriteMap.json");
 fs.writeFileSync(outputPath, JSON.stringify(spriteMap, null, 2));
 console.log("✅ spriteMap.json has been generated!");
