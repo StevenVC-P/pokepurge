@@ -36,8 +36,8 @@ const path = require("path");
 // - PokemonMaster_with_weakness.json: Main Pokemon data with league scores, raid tiers, weakness analysis
 // - moves.json: Move data for penalty calculations
 // - meta-attack-types.json: Popular attack types from meta-relevant Pokemon for weakness analysis
-const INPUT_PATH = path.resolve(__dirname, "../../public/data/pokemon.json");
-const OUTPUT_PATH = path.resolve(__dirname, "../../public/data/pokemon.json");
+const INPUT_PATH = path.resolve(__dirname, "../outputs/PokemonMaster.json");
+const OUTPUT_PATH = path.resolve(__dirname, "../outputs/PokemonMaster.json");
 const MOVES_PATH = path.resolve(__dirname, "../outputs/moves.json");
 const META_ATTACK_TYPES_PATH = path.resolve(__dirname, "../outputs/meta-attack-types.json");
 

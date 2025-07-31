@@ -48,6 +48,15 @@ export default function PokemonTable() {
 
         setPokemonList(pokemonData);
         setSpriteMap(spriteMapData);
+
+        // Debug: Log first few Pokemon to verify data structure
+        console.log('🔍 First 3 Pokemon loaded:', pokemonData.slice(0, 3).map(p => ({
+          name: p.name,
+          trashability: p.trashability,
+          recommendedCount: p.recommendedCount,
+          quickRole: p.quickRole,
+          hasAIFields: !!(p.quickRole && p.keyTags && p.roleSummary && p.notes)
+        })));
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Failed to load data');
         console.error('Error loading Pokemon data:', err);
