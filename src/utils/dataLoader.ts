@@ -39,7 +39,10 @@ async function fetchJsonData<T>(url: string, cacheKey: string): Promise<T> {
  * @returns Promise that resolves to an array of Pokemon
  */
 export async function loadPokemonData(): Promise<Pokemon[]> {
-  return fetchJsonData<Pokemon[]>('/data/pokemon.json', 'pokemon');
+  // Clear cache and add cache-busting parameter to force fresh data load
+  dataCache.delete('pokemon');
+  const cacheBuster = Date.now();
+  return fetchJsonData<Pokemon[]>(`/data/pokemon.json?v=${cacheBuster}`, 'pokemon');
 }
 
 /**
