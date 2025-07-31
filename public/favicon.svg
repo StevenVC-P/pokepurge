@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Pokeball-inspired favicon for PokePurge -->
+  <circle cx="16" cy="16" r="15" fill="#f8f9fa" stroke="#333" stroke-width="2"/>
+  <path d="M 2 16 L 30 16" stroke="#333" stroke-width="2"/>
+  <circle cx="16" cy="16" r="6" fill="none" stroke="#333" stroke-width="2"/>
+  <circle cx="16" cy="16" r="2" fill="#333"/>
+  <!-- Top half red -->
+  <path d="M 16 1 A 15 15 0 0 1 30 16 L 2 16 A 15 15 0 0 1 16 1 Z" fill="#dc2626"/>
+  <!-- Bottom half white -->
+  <path d="M 2 16 L 30 16 A 15 15 0 0 1 16 31 A 15 15 0 0 1 2 16 Z" fill="#f8f9fa"/>
+  <!-- Center button -->
+  <circle cx="16" cy="16" r="6" fill="none" stroke="#333" stroke-width="2"/>
+  <circle cx="16" cy="16" r="2" fill="#333"/>
+</svg>

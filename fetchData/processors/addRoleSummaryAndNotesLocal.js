@@ -170,76 +170,74 @@ ${specialInfo}`;
 const generateQuickRolePrompt = (mon) => {
   const pokemonData = formatPokemonData(mon);
 
-  return `You are a Pokemon GO expert. Based on the performance data below, provide a quick 1-4 word role description.
+  return `Pokemon GO Role Classification
 
-${pokemonData}
+Data: ${pokemonData}
 
-Guidelines:
-- Use 1-4 words maximum
-- Focus on primary competitive role
-- Examples: "Great League Specialist", "Raid Attacker", "PvP Generalist", "Collection Only", "Transfer Candidate", "Meta Threat", "Niche Pick", "Glass Cannon", "Bulky Defender"
+Respond with ONLY one of these exact phrases:
+- "Meta Threat"
+- "Raid Specialist"
+- "PvP Specialist"
+- "Great League Star"
+- "Ultra League Star"
+- "Master League Star"
+- "Glass Cannon"
+- "Bulky Defender"
+- "Niche Pick"
+- "Collection Only"
+- "Transfer Candidate"
 
-Quick Role:`;
+Response:`;
 };
 
 const generateKeyTagsPrompt = (mon) => {
   const pokemonData = formatPokemonData(mon);
 
-  return `You are a Pokemon GO expert. Based on the performance data below, provide 2-4 short descriptive tags (each 3-15 characters).
+  return `Pokemon GO Tag Classification
 
-${pokemonData}
+Data: ${pokemonData}
 
-Guidelines:
-- Provide 2-4 tags maximum
-- Each tag should be 3-15 characters
-- Focus on key characteristics
-- Examples: ["Glass Cannon", "Bulky"], ["High DPS", "Fragile"], ["Meta Relevant", "Niche Use"], ["Fast Moves", "Limited Coverage"], ["Top Tier", "Investment Priority"]
+Respond with EXACTLY 2-3 tags from this list, separated by commas:
+High DPS, Glass Cannon, Bulky, Meta Relevant, Niche Use, Top Tier, Investment Priority, Fragile, Tanky, Fast Moves, Coverage, Limited Use, Situational, Budget Option, Elite TM
 
-Key Tags (comma-separated):`;
+Example: "High DPS, Glass Cannon" or "Bulky, Meta Relevant, Top Tier"
+
+Tags:`;
 };
 
 const generateRoleSummaryPrompt = (mon) => {
   const pokemonData = formatPokemonData(mon);
 
-  return `You are a Pokemon GO expert. Based on the performance data below, write a concise 1-2 sentence role summary.
+  return `Pokemon GO Summary
 
-${pokemonData}
+Data: ${pokemonData}
 
-Guidelines:
-- Be concise (1-2 sentences max)
-- Focus on strongest competitive aspects
-- Include practical advice (keep/transfer/invest)
-- Use terms: "Meta-defining", "Strong", "Solid", "Situational", "Limited", or "No competitive value"
-- Mention specific strengths (PvP leagues, raid types, defense)
+Write exactly 1-2 sentences using these terms: Meta-defining, Strong, Solid, Situational, Limited, No competitive value
+
+Format: "[Pokemon] is a [tier] [role] with [key strength]. [Investment advice]."
 
 Examples:
-- "Meta-defining raid specialist with elite psychic attacking power. High investment priority."
-- "Solid PvP option for Great League with decent defensive typing. Worth developing."
-- "Limited niche specialist for specific raid coverage. Keep one copy."
-- "No competitive value - transfer for candy."
+- "Mewtwo is a meta-defining raid specialist with elite psychic attacking power. High investment priority."
+- "Azumarill is a solid PvP option for Great League with excellent bulk. Worth developing."
+- "Tropius is a limited niche specialist for specific coverage. Keep one copy."
 
-Role Summary:`;
+Summary:`;
 };
 
 const generateNotesPrompt = (mon) => {
   const pokemonData = formatPokemonData(mon);
 
-  return `You are a Pokemon GO expert. Based on the performance data below, write detailed notes explaining this Pokemon's competitive value.
+  return `Pokemon GO Analysis
 
-${pokemonData}
+Data: ${pokemonData}
 
-Guidelines:
-- Explain WHY this Pokemon has its performance rating
-- Detail specific PvP, raid, and defense capabilities
-- Mention special form benefits/drawbacks if applicable
-- Provide clear usage recommendations
-- Be informative but concise (3-5 sentences)
-- Include specific numbers/rankings when relevant
+Write exactly 3-4 sentences in this format:
+"Rated [tier] due to [reason]. PvP performance shows [specific scores/leagues]. Raid performance ranks [position] in [type]. Recommended count: [number] for [reason]."
 
-Example format:
-"Rated [Tier] due to [reason]. Strong PvP performance in [leagues] with [scores]. [Raid tier] performance with top rankings in [types]. [Defense info]. [Recommended count explanation]. [Special form notes]."
+Example:
+"Rated Essential due to exceptional Great League performance. PvP performance shows 95.2 score in Great League with top-tier bulk. Raid performance ranks 3rd in Psychic-type with elite DPS. Recommended count: 6 for maximum utility across all formats."
 
-Detailed Notes:`;
+Analysis:`;
 };
 
 /**
@@ -249,7 +247,17 @@ const generateLocalAIQuickRole = async (mon) => {
   try {
     const prompt = generateQuickRolePrompt(mon);
     const response = await callOllama(prompt);
-    return response.replace(/^Quick Role:\s*/i, "").trim();
+    // Clean up the response to extract just the role
+    let cleanRole = response
+      .replace(/^(Response:|Role:|Quick Role:)\s*/i, "")
+      .replace(/['"]/g, "")
+      .replace(/^-\s*/, "")
+      .trim();
+
+    // Take only the first line if there are multiple lines
+    cleanRole = cleanRole.split("\n")[0].trim();
+
+    return cleanRole || "Collection Only";
   } catch (error) {
     console.error(`Error generating quick role for ${mon.name}:`, error.message);
     return "Collection Only";
@@ -260,13 +268,22 @@ const generateLocalAIKeyTags = async (mon) => {
   try {
     const prompt = generateKeyTagsPrompt(mon);
     const response = await callOllama(prompt);
-    const tagsText = response.replace(/^Key Tags.*?:\s*/i, "").trim();
+    // Clean up the response to extract just the tags
+    let tagsText = response
+      .replace(/^(Tags:|Key Tags.*?):\s*/i, "")
+      .replace(/^-\s*/, "")
+      .trim();
+
+    // Take only the first line if there are multiple lines
+    tagsText = tagsText.split("\n")[0].trim();
+
     // Parse comma-separated tags and clean them up
     const tags = tagsText
       .split(",")
       .map((tag) => tag.trim().replace(/["\[\]]/g, ""))
-      .filter((tag) => tag.length > 0);
-    return tags.slice(0, 4); // Ensure max 4 tags
+      .filter((tag) => tag.length > 0 && tag.length <= 20);
+
+    return tags.slice(0, 3) || ["Basic"]; // Ensure max 3 tags
   } catch (error) {
     console.error(`Error generating key tags for ${mon.name}:`, error.message);
     return ["Basic"];
@@ -277,10 +294,22 @@ const generateLocalAIRoleSummary = async (mon) => {
   try {
     const prompt = generateRoleSummaryPrompt(mon);
     const response = await callOllama(prompt);
-    return response.replace(/^Role Summary:\s*/i, "").trim();
+    // Clean up the response to extract just the summary
+    let cleanSummary = response
+      .replace(/^(Summary:|Role Summary:|Analysis:)\s*/i, "")
+      .replace(/['"]/g, "")
+      .replace(/^-\s*/, "")
+      .trim();
+
+    // Take only the first 2 sentences
+    const sentences = cleanSummary.split(". ");
+    cleanSummary = sentences.slice(0, 2).join(". ");
+    if (!cleanSummary.endsWith(".")) cleanSummary += ".";
+
+    return cleanSummary || "No competitive analysis available.";
   } catch (error) {
     console.error(`Error generating role summary for ${mon.name}:`, error.message);
-    return `Pokemon with recommended count of ${mon.recommendedCount || 0}. Performance data available for analysis.`;
+    return "No competitive analysis available.";
   }
 };
 
@@ -288,7 +317,19 @@ const generateLocalAIDetailedNotes = async (mon) => {
   try {
     const prompt = generateNotesPrompt(mon);
     const response = await callOllama(prompt);
-    return response.replace(/^Detailed Notes:\s*/i, "").trim();
+    // Clean up the response to extract just the notes
+    let cleanNotes = response
+      .replace(/^(Notes:|Detailed Notes:|Analysis:)\s*/i, "")
+      .replace(/['"]/g, "")
+      .replace(/^-\s*/, "")
+      .trim();
+
+    // Take only the first 4 sentences
+    const sentences = cleanNotes.split(". ");
+    cleanNotes = sentences.slice(0, 4).join(". ");
+    if (!cleanNotes.endsWith(".")) cleanNotes += ".";
+
+    return cleanNotes || `Performance analysis available. Check PvP leagues, raid utility, and defense capabilities for detailed evaluation.`;
   } catch (error) {
     console.error(`Error generating notes for ${mon.name}:`, error.message);
     return `Performance analysis available. Check PvP leagues, raid utility, and defense capabilities for detailed evaluation.`;

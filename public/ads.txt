@@ -1,0 +1,10 @@
+# Google AdSense ads.txt file
+# Replace pub-0000000000000000 with your actual Google AdSense publisher ID
+# google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
+
+# Example entries for other ad networks (uncomment and update as needed):
+# facebook.com, 000000000000000, RESELLER, c3e20eee3f780d68
+# amazon-adsystem.com, 0000-0000-0000-0000, RESELLER
+
+# This file helps prevent ad fraud by declaring authorized sellers
+# Update this file with your actual ad network relationships

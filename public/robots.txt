@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Sitemap location (update with your actual domain)
+Sitemap: https://your-domain.com/sitemap.xml
+
+# Allow search engines to crawl Pokemon data
+Allow: /data/
+
+# Disallow any admin or private areas (if any)
+# Disallow: /admin/
