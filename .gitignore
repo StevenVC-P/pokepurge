@@ -100,8 +100,9 @@ fetchData/pogoapi_data/
 # Keep important config and final output
 !fetchData/config/
 !fetchData/pokemon.json
-!src/data/pokemon.json
-!src/data/spriteMap.json
+!public/data/pokemon.json
+!public/data/spriteMap.json
+!public/data/moves.json
 
 # IDE and system files
 *.swp

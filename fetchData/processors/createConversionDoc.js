@@ -25,7 +25,7 @@ function speciesIdFromMasterEntry(pokemon) {
   else if (parts.includes("hisui") || parts.includes("hisuian")) id += "_hisuian";
 
   // Append other forms (e.g., "dragon") only if they exist
-  const specialExcludes = ["alola", "galar", "galarian", "hisui", "hisuian", "shadow"];
+  const specialExcludes = ["alola", "galar", "galarian", "hisui", "hisuian", "shadow", "normal"];
   const other = parts.filter((p) => !specialExcludes.includes(p));
   if (other.length > 0) {
     id += "_" + other.join("_");

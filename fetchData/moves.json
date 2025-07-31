@@ -1,0 +1,3150 @@
+{
+  "fast_vine_whip": {
+    "id": "fast_vine_whip",
+    "name": "Vine Whip",
+    "type": "grass",
+    "category": "fast",
+    "power": 5,
+    "energyGain": 8,
+    "turns": 2,
+    "cooldown": 1000,
+    "moveId": "301"
+  },
+  "charge_power_whip": {
+    "id": "charge_power_whip",
+    "name": "Power Whip",
+    "type": "grass",
+    "category": "charge",
+    "power": 90,
+    "energyCost": 50,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "210"
+  },
+  "charge_sludge_bomb": {
+    "id": "charge_sludge_bomb",
+    "name": "Sludge Bomb",
+    "type": "poison",
+    "category": "charge",
+    "power": 80,
+    "energyCost": 50,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "256"
+  },
+  "charge_frenzy_plant": {
+    "id": "charge_frenzy_plant",
+    "name": "Frenzy Plant",
+    "type": "grass",
+    "category": "charge",
+    "power": 100,
+    "energyCost": 45,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "100"
+  },
+  "fast_ember": {
+    "id": "fast_ember",
+    "name": "Ember",
+    "type": "fire",
+    "category": "fast",
+    "power": 7,
+    "energyGain": 7,
+    "turns": 2,
+    "cooldown": 1000,
+    "moveId": "76"
+  },
+  "charge_fire_punch": {
+    "id": "charge_fire_punch",
+    "name": "Fire Punch",
+    "type": "fire",
+    "category": "charge",
+    "power": 60,
+    "energyCost": 40,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "83"
+  },
+  "charge_return": {
+    "id": "charge_return",
+    "name": "Return",
+    "type": "normal",
+    "category": "charge",
+    "power": 130,
+    "energyCost": 70,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "226"
+  },
+  "charge_flamethrower": {
+    "id": "charge_flamethrower",
+    "name": "Flamethrower",
+    "type": "fire",
+    "category": "charge",
+    "power": 90,
+    "energyCost": 55,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "91"
+  },
+  "charge_blast_burn": {
+    "id": "charge_blast_burn",
+    "name": "Blast Burn",
+    "type": "fire",
+    "category": "charge",
+    "power": 110,
+    "energyCost": 50,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "22"
+  },
+  "charge_dragon_claw": {
+    "id": "charge_dragon_claw",
+    "name": "Dragon Claw",
+    "type": "dragon",
+    "category": "charge",
+    "power": 50,
+    "energyCost": 35,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "64"
+  },
+  "fast_dragon_breath": {
+    "id": "fast_dragon_breath",
+    "name": "Dragon Breath",
+    "type": "dragon",
+    "category": "fast",
+    "power": 4,
+    "energyGain": 3,
+    "turns": 1,
+    "cooldown": 500,
+    "moveId": "63"
+  },
+  "fast_water_gun": {
+    "id": "fast_water_gun",
+    "name": "Water Gun",
+    "type": "water",
+    "category": "fast",
+    "power": 3,
+    "energyGain": 3,
+    "turns": 1,
+    "cooldown": 500,
+    "moveId": "304"
+  },
+  "charge_aqua_jet": {
+    "id": "charge_aqua_jet",
+    "name": "Aqua Jet",
+    "type": "water",
+    "category": "charge",
+    "power": 70,
+    "energyCost": 40,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "10"
+  },
+  "charge_ice_beam": {
+    "id": "charge_ice_beam",
+    "name": "Ice Beam",
+    "type": "ice",
+    "category": "charge",
+    "power": 90,
+    "energyCost": 55,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "144"
+  },
+  "fast_rollout": {
+    "id": "fast_rollout",
+    "name": "Rollout",
+    "type": "rock",
+    "category": "fast",
+    "power": 7,
+    "energyGain": 13,
+    "turns": 3,
+    "cooldown": 1500,
+    "moveId": "234"
+  },
+  "charge_hydro_cannon": {
+    "id": "charge_hydro_cannon",
+    "name": "Hydro Cannon",
+    "type": "water",
+    "category": "charge",
+    "power": 80,
+    "energyCost": 40,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "139"
+  },
+  "charge_skull_bash": {
+    "id": "charge_skull_bash",
+    "name": "Skull Bash",
+    "type": "normal",
+    "category": "charge",
+    "power": 130,
+    "energyCost": 75,
+    "buffs": [
+      0,
+      1
+    ],
+    "buffApplyChance": "1",
+    "buffTarget": "self",
+    "moveId": "253"
+  },
+  "fast_bug_bite": {
+    "id": "fast_bug_bite",
+    "name": "Bug Bite",
+    "type": "bug",
+    "category": "fast",
+    "power": 4,
+    "energyGain": 3,
+    "turns": 1,
+    "cooldown": 500,
+    "moveId": "35"
+  },
+  "charge_bug_buzz": {
+    "id": "charge_bug_buzz",
+    "name": "Bug Buzz",
+    "type": "bug",
+    "category": "charge",
+    "power": 100,
+    "energyCost": 60,
+    "buffs": [
+      0,
+      -1
+    ],
+    "buffApplyChance": ".3",
+    "buffTarget": "opponent",
+    "moveId": "36"
+  },
+  "charge_signal_beam": {
+    "id": "charge_signal_beam",
+    "name": "Signal Beam",
+    "type": "bug",
+    "category": "charge",
+    "power": 75,
+    "energyCost": 55,
+    "buffs": [
+      -1,
+      -1
+    ],
+    "buffApplyChance": ".2",
+    "buffTarget": "opponent",
+    "moveId": "251"
+  },
+  "fast_poison_sting": {
+    "id": "fast_poison_sting",
+    "name": "Poison Sting",
+    "type": "poison",
+    "category": "fast",
+    "power": 4,
+    "energyGain": 9,
+    "turns": 2,
+    "cooldown": 1000,
+    "moveId": "204"
+  },
+  "charge_drill_run": {
+    "id": "charge_drill_run",
+    "name": "Drill Run",
+    "type": "ground",
+    "category": "charge",
+    "power": 80,
+    "energyCost": 45,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "71"
+  },
+  "fast_wing_attack": {
+    "id": "fast_wing_attack",
+    "name": "Wing Attack",
+    "type": "flying",
+    "category": "fast",
+    "power": 5,
+    "energyGain": 7,
+    "turns": 2,
+    "cooldown": 1000,
+    "moveId": "316"
+  },
+  "charge_air_cutter": {
+    "id": "charge_air_cutter",
+    "name": "Air Cutter",
+    "type": "flying",
+    "category": "charge",
+    "power": 45,
+    "energyCost": 35,
+    "buffs": [
+      1,
+      0
+    ],
+    "buffApplyChance": ".3",
+    "buffTarget": "self",
+    "moveId": "7"
+  },
+  "charge_aerial_ace": {
+    "id": "charge_aerial_ace",
+    "name": "Aerial Ace",
+    "type": "flying",
+    "category": "charge",
+    "power": 55,
+    "energyCost": 40,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "5"
+  },
+  "fast_gust": {
+    "id": "fast_gust",
+    "name": "Gust",
+    "type": "flying",
+    "category": "fast",
+    "power": 16,
+    "energyGain": 12,
+    "turns": 4,
+    "cooldown": 2000,
+    "moveId": "113"
+  },
+  "charge_brave_bird": {
+    "id": "charge_brave_bird",
+    "name": "Brave Bird",
+    "type": "flying",
+    "category": "charge",
+    "power": 130,
+    "energyCost": 55,
+    "buffs": [
+      0,
+      -3
+    ],
+    "buffApplyChance": "1",
+    "buffTarget": "self",
+    "moveId": "28"
+  },
+  "fast_quick_attack": {
+    "id": "fast_quick_attack",
+    "name": "Quick Attack",
+    "type": "normal",
+    "category": "fast",
+    "power": 5,
+    "energyGain": 8,
+    "turns": 2,
+    "cooldown": 1000,
+    "moveId": "221"
+  },
+  "charge_hyper_fang": {
+    "id": "charge_hyper_fang",
+    "name": "Hyper Fang",
+    "type": "normal",
+    "category": "charge",
+    "power": 80,
+    "energyCost": 50,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "143"
+  },
+  "charge_dig": {
+    "id": "charge_dig",
+    "name": "Dig",
+    "type": "ground",
+    "category": "charge",
+    "power": 70,
+    "energyCost": 50,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "55"
+  },
+  "charge_crunch": {
+    "id": "charge_crunch",
+    "name": "Crunch",
+    "type": "dark",
+    "category": "charge",
+    "power": 70,
+    "energyCost": 45,
+    "buffs": [
+      0,
+      -1
+    ],
+    "buffApplyChance": "0.2",
+    "buffTarget": "opponent",
+    "moveId": "49"
+  },
+  "charge_hyper_beam": {
+    "id": "charge_hyper_beam",
+    "name": "Hyper Beam",
+    "type": "normal",
+    "category": "charge",
+    "power": 150,
+    "energyCost": 80,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "142"
+  },
+  "fast_steel_wing": {
+    "id": "fast_steel_wing",
+    "name": "Steel Wing",
+    "type": "steel",
+    "category": "fast",
+    "power": 7,
+    "energyGain": 6,
+    "turns": 2,
+    "cooldown": 1000,
+    "moveId": "267"
+  },
+  "charge_fly": {
+    "id": "charge_fly",
+    "name": "Fly",
+    "type": "flying",
+    "category": "charge",
+    "power": 80,
+    "energyCost": 45,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "94"
+  },
+  "fast_acid": {
+    "id": "fast_acid",
+    "name": "Acid",
+    "type": "poison",
+    "category": "fast",
+    "power": 6,
+    "energyGain": 8,
+    "turns": 2,
+    "cooldown": 1000,
+    "moveId": "0"
+  },
+  "charge_dark_pulse": {
+    "id": "charge_dark_pulse",
+    "name": "Dark Pulse",
+    "type": "dark",
+    "category": "charge",
+    "power": 80,
+    "energyCost": 50,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "53"
+  },
+  "charge_sludge_wave": {
+    "id": "charge_sludge_wave",
+    "name": "Sludge Wave",
+    "type": "poison",
+    "category": "charge",
+    "power": 110,
+    "energyCost": 65,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "257"
+  },
+  "fast_thunder_shock": {
+    "id": "fast_thunder_shock",
+    "name": "Thunder Shock",
+    "type": "electric",
+    "category": "fast",
+    "power": 4,
+    "energyGain": 9,
+    "turns": 2,
+    "cooldown": 1000,
+    "moveId": "290"
+  },
+  "charge_wild_charge": {
+    "id": "charge_wild_charge",
+    "name": "Wild Charge",
+    "type": "electric",
+    "category": "charge",
+    "power": 100,
+    "energyCost": 45,
+    "buffs": [
+      0,
+      -2
+    ],
+    "buffApplyChance": "1",
+    "buffTarget": "self",
+    "moveId": "315"
+  },
+  "charge_trailblaze": {
+    "id": "charge_trailblaze",
+    "name": "Trailblaze",
+    "type": "grass",
+    "category": "charge",
+    "power": 65,
+    "energyCost": 45,
+    "buffs": [
+      1,
+      0
+    ],
+    "buffApplyChance": "1",
+    "buffTarget": "self",
+    "moveId": "293"
+  },
+  "charge_brick_break": {
+    "id": "charge_brick_break",
+    "name": "Brick Break",
+    "type": "fighting",
+    "category": "charge",
+    "power": 40,
+    "energyCost": 40,
+    "buffs": [
+      0,
+      -1
+    ],
+    "buffApplyChance": "1",
+    "buffTarget": "opponent",
+    "moveId": "30"
+  },
+  "fast_sand_attack": {
+    "id": "fast_sand_attack",
+    "name": "Sand Attack",
+    "type": "ground",
+    "category": "fast",
+    "power": 2,
+    "energyGain": 4,
+    "turns": 1,
+    "cooldown": 500,
+    "moveId": "237"
+  },
+  "charge_rock_tomb": {
+    "id": "charge_rock_tomb",
+    "name": "Rock Tomb",
+    "type": "rock",
+    "category": "charge",
+    "power": 80,
+    "energyCost": 50,
+    "buffs": [
+      -1,
+      0
+    ],
+    "buffApplyChance": "1",
+    "buffTarget": "opponent",
+    "moveId": "232"
+  },
+  "fast_powder_snow": {
+    "id": "fast_powder_snow",
+    "name": "Powder Snow",
+    "type": "ice",
+    "category": "fast",
+    "power": 5,
+    "energyGain": 8,
+    "turns": 2,
+    "cooldown": 1000,
+    "moveId": "207"
+  },
+  "charge_night_slash": {
+    "id": "charge_night_slash",
+    "name": "Night Slash",
+    "type": "dark",
+    "category": "charge",
+    "power": 50,
+    "energyCost": 35,
+    "buffs": [
+      2,
+      0
+    ],
+    "buffApplyChance": ".125",
+    "buffTarget": "self",
+    "moveId": "189"
+  },
+  "charge_blizzard": {
+    "id": "charge_blizzard",
+    "name": "Blizzard",
+    "type": "ice",
+    "category": "charge",
+    "power": 140,
+    "energyCost": 75,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "24"
+  },
+  "charge_scorching_sands": {
+    "id": "charge_scorching_sands",
+    "name": "Scorching Sands",
+    "type": "ground",
+    "category": "charge",
+    "power": 80,
+    "energyCost": 50,
+    "buffs": [
+      -1,
+      0
+    ],
+    "buffApplyChance": "0.3",
+    "buffTarget": "opponent",
+    "moveId": "241"
+  },
+  "fast_shadow_claw": {
+    "id": "fast_shadow_claw",
+    "name": "Shadow Claw",
+    "type": "ghost",
+    "category": "fast",
+    "power": 6,
+    "energyGain": 8,
+    "turns": 2,
+    "cooldown": 1000,
+    "moveId": "247"
+  },
+  "charge_ice_punch": {
+    "id": "charge_ice_punch",
+    "name": "Ice Punch",
+    "type": "ice",
+    "category": "charge",
+    "power": 60,
+    "energyCost": 40,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "147"
+  },
+  "charge_poison_fang": {
+    "id": "charge_poison_fang",
+    "name": "Poison Fang",
+    "type": "poison",
+    "category": "charge",
+    "power": 45,
+    "energyCost": 40,
+    "buffs": [
+      0,
+      -1
+    ],
+    "buffApplyChance": "1",
+    "buffTarget": "opponent",
+    "moveId": "202"
+  },
+  "charge_thunderbolt": {
+    "id": "charge_thunderbolt",
+    "name": "Thunderbolt",
+    "type": "electric",
+    "category": "charge",
+    "power": 90,
+    "energyCost": 55,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "291"
+  },
+  "charge_earth_power": {
+    "id": "charge_earth_power",
+    "name": "Earth Power",
+    "type": "ground",
+    "category": "charge",
+    "power": 90,
+    "energyCost": 55,
+    "buffs": [
+      0,
+      -1
+    ],
+    "buffApplyChance": ".1",
+    "buffTarget": "opponent",
+    "moveId": "75"
+  },
+  "fast_fury_cutter": {
+    "id": "fast_fury_cutter",
+    "name": "Fury Cutter",
+    "type": "bug",
+    "category": "fast",
+    "power": 3,
+    "energyGain": 4,
+    "turns": 1,
+    "cooldown": 500,
+    "moveId": "103"
+  },
+  "charge_sand_tomb": {
+    "id": "charge_sand_tomb",
+    "name": "Sand Tomb",
+    "type": "ground",
+    "category": "charge",
+    "power": 25,
+    "energyCost": 40,
+    "buffs": [
+      0,
+      -1
+    ],
+    "buffApplyChance": "1",
+    "buffTarget": "opponent",
+    "moveId": "238"
+  },
+  "fast_zen_headbutt": {
+    "id": "fast_zen_headbutt",
+    "name": "Zen Headbutt",
+    "type": "psychic",
+    "category": "fast",
+    "power": 8,
+    "energyGain": 6,
+    "turns": 3,
+    "cooldown": 1500,
+    "moveId": "321"
+  },
+  "charge_disarming_voice": {
+    "id": "charge_disarming_voice",
+    "name": "Disarming Voice",
+    "type": "fairy",
+    "category": "charge",
+    "power": 70,
+    "energyCost": 45,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "56"
+  },
+  "charge_swift": {
+    "id": "charge_swift",
+    "name": "Swift",
+    "type": "normal",
+    "category": "charge",
+    "power": 55,
+    "energyCost": 35,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "277"
+  },
+  "fast_fairy_wind": {
+    "id": "fast_fairy_wind",
+    "name": "Fairy Wind",
+    "type": "fairy",
+    "category": "fast",
+    "power": 4,
+    "energyGain": 9,
+    "turns": 2,
+    "cooldown": 1000,
+    "moveId": "85"
+  },
+  "charge_moonblast": {
+    "id": "charge_moonblast",
+    "name": "Moonblast",
+    "type": "fairy",
+    "category": "charge",
+    "power": 110,
+    "energyCost": 60,
+    "buffs": [
+      -1,
+      0
+    ],
+    "buffApplyChance": ".1",
+    "buffTarget": "opponent",
+    "moveId": "180"
+  },
+  "charge_overheat": {
+    "id": "charge_overheat",
+    "name": "Overheat",
+    "type": "fire",
+    "category": "charge",
+    "power": 130,
+    "energyCost": 55,
+    "buffs": [
+      -2,
+      0
+    ],
+    "buffApplyChance": "1",
+    "buffTarget": "self",
+    "moveId": "196"
+  },
+  "charge_dazzling_gleam": {
+    "id": "charge_dazzling_gleam",
+    "name": "Dazzling Gleam",
+    "type": "fairy",
+    "category": "charge",
+    "power": 90,
+    "energyCost": 55,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "54"
+  },
+  "fast_charm": {
+    "id": "fast_charm",
+    "name": "Charm",
+    "type": "fairy",
+    "category": "fast",
+    "power": 15,
+    "energyGain": 6,
+    "turns": 3,
+    "cooldown": 1500,
+    "moveId": "41"
+  },
+  "charge_icy_wind": {
+    "id": "charge_icy_wind",
+    "name": "Icy Wind",
+    "type": "ice",
+    "category": "charge",
+    "power": 60,
+    "energyCost": 45,
+    "buffs": [
+      -1,
+      0
+    ],
+    "buffApplyChance": "1",
+    "buffTarget": "opponent",
+    "moveId": "150"
+  },
+  "charge_shadow_ball": {
+    "id": "charge_shadow_ball",
+    "name": "Shadow Ball",
+    "type": "ghost",
+    "category": "charge",
+    "power": 100,
+    "energyCost": 55,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "245"
+  },
+  "charge_seed_bomb": {
+    "id": "charge_seed_bomb",
+    "name": "Seed Bomb",
+    "type": "grass",
+    "category": "charge",
+    "power": 65,
+    "energyCost": 45,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "243"
+  },
+  "charge_petal_blizzard": {
+    "id": "charge_petal_blizzard",
+    "name": "Petal Blizzard",
+    "type": "grass",
+    "category": "charge",
+    "power": 110,
+    "energyCost": 65,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "200"
+  },
+  "charge_cross_poison": {
+    "id": "charge_cross_poison",
+    "name": "Cross Poison",
+    "type": "poison",
+    "category": "charge",
+    "power": 50,
+    "energyCost": 35,
+    "buffs": [
+      2,
+      0
+    ],
+    "buffApplyChance": ".125",
+    "buffTarget": "self",
+    "moveId": "48"
+  },
+  "fast_psywave": {
+    "id": "fast_psywave",
+    "name": "Psywave",
+    "type": "psychic",
+    "category": "fast",
+    "power": 3,
+    "energyGain": 4,
+    "turns": 1,
+    "cooldown": 500,
+    "moveId": "220"
+  },
+  "charge_silver_wind": {
+    "id": "charge_silver_wind",
+    "name": "Silver Wind",
+    "type": "bug",
+    "category": "charge",
+    "power": 60,
+    "energyCost": 45,
+    "buffs": [
+      1,
+      1
+    ],
+    "buffApplyChance": ".1",
+    "buffTarget": "self",
+    "moveId": "252"
+  },
+  "fast_mud_slap": {
+    "id": "fast_mud_slap",
+    "name": "Mud Slap",
+    "type": "ground",
+    "category": "fast",
+    "power": 12,
+    "energyGain": 10,
+    "turns": 3,
+    "cooldown": 1500,
+    "moveId": "185"
+  },
+  "charge_mud_bomb": {
+    "id": "charge_mud_bomb",
+    "name": "Mud Bomb",
+    "type": "ground",
+    "category": "charge",
+    "power": 60,
+    "energyCost": 40,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "182"
+  },
+  "charge_stone_edge": {
+    "id": "charge_stone_edge",
+    "name": "Stone Edge",
+    "type": "rock",
+    "category": "charge",
+    "power": 100,
+    "energyCost": 55,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "269"
+  },
+  "charge_iron_head": {
+    "id": "charge_iron_head",
+    "name": "Iron Head",
+    "type": "steel",
+    "category": "charge",
+    "power": 70,
+    "energyCost": 50,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "153"
+  },
+  "fast_feint_attack": {
+    "id": "fast_feint_attack",
+    "name": "Feint Attack",
+    "type": "dark",
+    "category": "fast",
+    "power": 6,
+    "energyGain": 6,
+    "turns": 2,
+    "cooldown": 1000,
+    "moveId": "79"
+  },
+  "charge_power_gem": {
+    "id": "charge_power_gem",
+    "name": "Power Gem",
+    "type": "rock",
+    "category": "charge",
+    "power": 85,
+    "energyCost": 50,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "208"
+  },
+  "charge_foul_play": {
+    "id": "charge_foul_play",
+    "name": "Foul Play",
+    "type": "dark",
+    "category": "charge",
+    "power": 60,
+    "energyCost": 40,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "98"
+  },
+  "charge_play_rough": {
+    "id": "charge_play_rough",
+    "name": "Play Rough",
+    "type": "fairy",
+    "category": "charge",
+    "power": 90,
+    "energyCost": 60,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "201"
+  },
+  "charge_cross_chop": {
+    "id": "charge_cross_chop",
+    "name": "Cross Chop",
+    "type": "fighting",
+    "category": "charge",
+    "power": 55,
+    "energyCost": 35,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "47"
+  },
+  "charge_liquidation": {
+    "id": "charge_liquidation",
+    "name": "Liquidation",
+    "type": "water",
+    "category": "charge",
+    "power": 70,
+    "energyCost": 45,
+    "buffs": [
+      0,
+      -1
+    ],
+    "buffApplyChance": "0.3",
+    "buffTarget": "opponent",
+    "moveId": "162"
+  },
+  "fast_karate_chop": {
+    "id": "fast_karate_chop",
+    "name": "Karate Chop",
+    "type": "fighting",
+    "category": "fast",
+    "power": 5,
+    "energyGain": 9,
+    "turns": 2,
+    "cooldown": 1000,
+    "moveId": "155"
+  },
+  "charge_rage_fist": {
+    "id": "charge_rage_fist",
+    "name": "Rage Fist",
+    "type": "ghost",
+    "category": "charge",
+    "power": 50,
+    "energyCost": 35,
+    "buffs": [
+      1,
+      0
+    ],
+    "buffApplyChance": "1",
+    "buffTarget": "self",
+    "moveId": "222"
+  },
+  "charge_close_combat": {
+    "id": "charge_close_combat",
+    "name": "Close Combat",
+    "type": "fighting",
+    "category": "charge",
+    "power": 100,
+    "energyCost": 45,
+    "buffs": [
+      0,
+      -2
+    ],
+    "buffApplyChance": "1",
+    "buffTarget": "self",
+    "moveId": "43"
+  },
+  "charge_body_slam": {
+    "id": "charge_body_slam",
+    "name": "Body Slam",
+    "type": "normal",
+    "category": "charge",
+    "power": 50,
+    "energyCost": 35,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "25"
+  },
+  "fast_fire_fang": {
+    "id": "fast_fire_fang",
+    "name": "Fire Fang",
+    "type": "fire",
+    "category": "fast",
+    "power": 8,
+    "energyGain": 6,
+    "turns": 2,
+    "cooldown": 1000,
+    "moveId": "82"
+  },
+  "charge_psychic_fangs": {
+    "id": "charge_psychic_fangs",
+    "name": "Psychic Fangs",
+    "type": "psychic",
+    "category": "charge",
+    "power": 40,
+    "energyCost": 35,
+    "buffs": [
+      0,
+      -1
+    ],
+    "buffApplyChance": "1",
+    "buffTarget": "opponent",
+    "moveId": "215"
+  },
+  "fast_snarl": {
+    "id": "fast_snarl",
+    "name": "Snarl",
+    "type": "dark",
+    "category": "fast",
+    "power": 5,
+    "energyGain": 13,
+    "turns": 3,
+    "cooldown": 1500,
+    "moveId": "259"
+  },
+  "fast_bubble": {
+    "id": "fast_bubble",
+    "name": "Bubble",
+    "type": "water",
+    "category": "fast",
+    "power": 8,
+    "energyGain": 11,
+    "turns": 3,
+    "cooldown": 1500,
+    "moveId": "33"
+  },
+  "charge_scald": {
+    "id": "charge_scald",
+    "name": "Scald",
+    "type": "water",
+    "category": "charge",
+    "power": 85,
+    "energyCost": 50,
+    "buffs": [
+      -1,
+      0
+    ],
+    "buffApplyChance": "0.3",
+    "buffTarget": "opponent",
+    "moveId": "240"
+  },
+  "fast_counter": {
+    "id": "fast_counter",
+    "name": "Counter",
+    "type": "fighting",
+    "category": "fast",
+    "power": 8,
+    "energyGain": 6,
+    "turns": 2,
+    "cooldown": 1000,
+    "moveId": "45"
+  },
+  "fast_psycho_cut": {
+    "id": "fast_psycho_cut",
+    "name": "Psycho Cut",
+    "type": "psychic",
+    "category": "fast",
+    "power": 3,
+    "energyGain": 9,
+    "turns": 2,
+    "cooldown": 1000,
+    "moveId": "217"
+  },
+  "charge_dynamic_punch": {
+    "id": "charge_dynamic_punch",
+    "name": "Dynamic Punch",
+    "type": "fighting",
+    "category": "charge",
+    "power": 90,
+    "energyCost": 45,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "73"
+  },
+  "charge_rock_slide": {
+    "id": "charge_rock_slide",
+    "name": "Rock Slide",
+    "type": "rock",
+    "category": "charge",
+    "power": 65,
+    "energyCost": 45,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "229"
+  },
+  "charge_leaf_blade": {
+    "id": "charge_leaf_blade",
+    "name": "Leaf Blade",
+    "type": "grass",
+    "category": "charge",
+    "power": 70,
+    "energyCost": 35,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "157"
+  },
+  "charge_wrap": {
+    "id": "charge_wrap",
+    "name": "Wrap",
+    "type": "normal",
+    "category": "charge",
+    "power": 60,
+    "energyCost": 45,
+    "buffs": [
+      0,
+      -1
+    ],
+    "buffApplyChance": "1",
+    "buffTarget": "opponent",
+    "moveId": "317"
+  },
+  "charge_water_pulse": {
+    "id": "charge_water_pulse",
+    "name": "Water Pulse",
+    "type": "water",
+    "category": "charge",
+    "power": 80,
+    "energyCost": 55,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "306"
+  },
+  "fast_rock_throw": {
+    "id": "fast_rock_throw",
+    "name": "Rock Throw",
+    "type": "rock",
+    "category": "fast",
+    "power": 8,
+    "energyGain": 5,
+    "turns": 2,
+    "cooldown": 1000,
+    "moveId": "231"
+  },
+  "fast_volt_switch": {
+    "id": "fast_volt_switch",
+    "name": "Volt Switch",
+    "type": "electric",
+    "category": "fast",
+    "power": 12,
+    "energyGain": 16,
+    "turns": 4,
+    "cooldown": 2000,
+    "moveId": "302"
+  },
+  "charge_rock_blast": {
+    "id": "charge_rock_blast",
+    "name": "Rock Blast",
+    "type": "rock",
+    "category": "charge",
+    "power": 50,
+    "energyCost": 40,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "228"
+  },
+  "charge_flame_charge": {
+    "id": "charge_flame_charge",
+    "name": "Flame Charge",
+    "type": "fire",
+    "category": "charge",
+    "power": 65,
+    "energyCost": 50,
+    "buffs": [
+      1,
+      0
+    ],
+    "buffApplyChance": "1",
+    "buffTarget": "self",
+    "moveId": "89"
+  },
+  "charge_stomp": {
+    "id": "charge_stomp",
+    "name": "Stomp",
+    "type": "normal",
+    "category": "charge",
+    "power": 55,
+    "energyCost": 40,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "268"
+  },
+  "fast_incinerate": {
+    "id": "fast_incinerate",
+    "name": "Incinerate",
+    "type": "fire",
+    "category": "fast",
+    "power": 20,
+    "energyGain": 20,
+    "turns": 5,
+    "cooldown": 2500,
+    "moveId": "151"
+  },
+  "fast_confusion": {
+    "id": "fast_confusion",
+    "name": "Confusion",
+    "type": "psychic",
+    "category": "fast",
+    "power": 16,
+    "energyGain": 12,
+    "turns": 4,
+    "cooldown": 2000,
+    "moveId": "44"
+  },
+  "charge_psyshock": {
+    "id": "charge_psyshock",
+    "name": "Psyshock",
+    "type": "psychic",
+    "category": "charge",
+    "power": 70,
+    "energyCost": 40,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "218"
+  },
+  "charge_surf": {
+    "id": "charge_surf",
+    "name": "Surf",
+    "type": "water",
+    "category": "charge",
+    "power": 75,
+    "energyCost": 45,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "276"
+  },
+  "fast_poison_jab": {
+    "id": "fast_poison_jab",
+    "name": "Poison Jab",
+    "type": "poison",
+    "category": "fast",
+    "power": 7,
+    "energyGain": 7,
+    "turns": 2,
+    "cooldown": 1000,
+    "moveId": "203"
+  },
+  "charge_brutal_swing": {
+    "id": "charge_brutal_swing",
+    "name": "Brutal Swing",
+    "type": "dark",
+    "category": "charge",
+    "power": 55,
+    "energyCost": 35,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "31"
+  },
+  "charge_magnet_bomb": {
+    "id": "charge_magnet_bomb",
+    "name": "Magnet Bomb",
+    "type": "steel",
+    "category": "charge",
+    "power": 70,
+    "energyCost": 45,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "170"
+  },
+  "charge_discharge": {
+    "id": "charge_discharge",
+    "name": "Discharge",
+    "type": "electric",
+    "category": "charge",
+    "power": 55,
+    "energyCost": 40,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "57"
+  },
+  "charge_drill_peck": {
+    "id": "charge_drill_peck",
+    "name": "Drill Peck",
+    "type": "flying",
+    "category": "charge",
+    "power": 65,
+    "energyCost": 40,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "70"
+  },
+  "charge_aqua_tail": {
+    "id": "charge_aqua_tail",
+    "name": "Aqua Tail",
+    "type": "water",
+    "category": "charge",
+    "power": 55,
+    "energyCost": 35,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "12"
+  },
+  "fast_ice_shard": {
+    "id": "fast_ice_shard",
+    "name": "Ice Shard",
+    "type": "ice",
+    "category": "fast",
+    "power": 9,
+    "energyGain": 10,
+    "turns": 3,
+    "cooldown": 1500,
+    "moveId": "148"
+  },
+  "charge_sludge": {
+    "id": "charge_sludge",
+    "name": "Sludge",
+    "type": "poison",
+    "category": "charge",
+    "power": 70,
+    "energyCost": 40,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "255"
+  },
+  "charge_thunder_punch": {
+    "id": "charge_thunder_punch",
+    "name": "Thunder Punch",
+    "type": "electric",
+    "category": "charge",
+    "power": 60,
+    "energyCost": 40,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "289"
+  },
+  "charge_acid_spray": {
+    "id": "charge_acid_spray",
+    "name": "Acid Spray",
+    "type": "poison",
+    "category": "charge",
+    "power": 20,
+    "energyCost": 45,
+    "buffs": [
+      0,
+      -2
+    ],
+    "buffApplyChance": "1",
+    "buffTarget": "opponent",
+    "moveId": "1"
+  },
+  "charge_hydro_pump": {
+    "id": "charge_hydro_pump",
+    "name": "Hydro Pump",
+    "type": "water",
+    "category": "charge",
+    "power": 130,
+    "energyCost": 75,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "140"
+  },
+  "charge_shadow_punch": {
+    "id": "charge_shadow_punch",
+    "name": "Shadow Punch",
+    "type": "ghost",
+    "category": "charge",
+    "power": 55,
+    "energyCost": 35,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "249"
+  },
+  "charge_breaking_swipe": {
+    "id": "charge_breaking_swipe",
+    "name": "Breaking Swipe",
+    "type": "dragon",
+    "category": "charge",
+    "power": 50,
+    "energyCost": 35,
+    "buffs": [
+      -1,
+      0
+    ],
+    "buffApplyChance": ".5",
+    "buffTarget": "opponent",
+    "moveId": "29"
+  },
+  "charge_psychic": {
+    "id": "charge_psychic",
+    "name": "Psychic",
+    "type": "psychic",
+    "category": "charge",
+    "power": 75,
+    "energyCost": 55,
+    "buffs": [
+      0,
+      -1
+    ],
+    "buffApplyChance": ".1",
+    "buffTarget": "opponent",
+    "moveId": "214"
+  },
+  "charge_razor_shell": {
+    "id": "charge_razor_shell",
+    "name": "Razor Shell",
+    "type": "water",
+    "category": "charge",
+    "power": 35,
+    "energyCost": 35,
+    "buffs": [
+      0,
+      -1
+    ],
+    "buffApplyChance": "0.5",
+    "buffTarget": "opponent",
+    "moveId": "224"
+  },
+  "charge_crabhammer": {
+    "id": "charge_crabhammer",
+    "name": "Crabhammer",
+    "type": "water",
+    "category": "charge",
+    "power": 85,
+    "energyCost": 50,
+    "buffs": [
+      2,
+      0
+    ],
+    "buffApplyChance": ".125",
+    "buffTarget": "self",
+    "moveId": "46"
+  },
+  "charge_ancient_power": {
+    "id": "charge_ancient_power",
+    "name": "Ancient Power",
+    "type": "rock",
+    "category": "charge",
+    "power": 60,
+    "energyCost": 45,
+    "buffs": [
+      1,
+      1
+    ],
+    "buffApplyChance": ".1",
+    "buffTarget": "self",
+    "moveId": "9"
+  },
+  "fast_bullet_seed": {
+    "id": "fast_bullet_seed",
+    "name": "Bullet Seed",
+    "type": "grass",
+    "category": "fast",
+    "power": 5,
+    "energyGain": 13,
+    "turns": 3,
+    "cooldown": 1500,
+    "moveId": "39"
+  },
+  "fast_dragon_tail": {
+    "id": "fast_dragon_tail",
+    "name": "Dragon Tail",
+    "type": "dragon",
+    "category": "fast",
+    "power": 13,
+    "energyGain": 9,
+    "turns": 3,
+    "cooldown": 1500,
+    "moveId": "67"
+  },
+  "charge_draco_meteor": {
+    "id": "charge_draco_meteor",
+    "name": "Draco Meteor",
+    "type": "dragon",
+    "category": "charge",
+    "power": 150,
+    "energyCost": 65,
+    "buffs": [
+      -2,
+      0
+    ],
+    "buffApplyChance": "1",
+    "buffTarget": "self",
+    "moveId": "61"
+  },
+  "charge_bone_club": {
+    "id": "charge_bone_club",
+    "name": "Bone Club",
+    "type": "ground",
+    "category": "charge",
+    "power": 55,
+    "energyCost": 35,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "27"
+  },
+  "fast_fire_spin": {
+    "id": "fast_fire_spin",
+    "name": "Fire Spin",
+    "type": "fire",
+    "category": "fast",
+    "power": 11,
+    "energyGain": 10,
+    "turns": 3,
+    "cooldown": 1500,
+    "moveId": "87"
+  },
+  "charge_shadow_bone": {
+    "id": "charge_shadow_bone",
+    "name": "Shadow Bone",
+    "type": "ghost",
+    "category": "charge",
+    "power": 80,
+    "energyCost": 45,
+    "buffs": [
+      0,
+      -1
+    ],
+    "buffApplyChance": ".2",
+    "buffTarget": "opponent",
+    "moveId": "246"
+  },
+  "fast_hex": {
+    "id": "fast_hex",
+    "name": "Hex",
+    "type": "ghost",
+    "category": "fast",
+    "power": 7,
+    "energyGain": 13,
+    "turns": 3,
+    "cooldown": 1500,
+    "moveId": "118"
+  },
+  "fast_double_kick": {
+    "id": "fast_double_kick",
+    "name": "Double Kick",
+    "type": "fighting",
+    "category": "fast",
+    "power": 8,
+    "energyGain": 12,
+    "turns": 3,
+    "cooldown": 1500,
+    "moveId": "60"
+  },
+  "charge_blaze_kick": {
+    "id": "charge_blaze_kick",
+    "name": "Blaze Kick",
+    "type": "fire",
+    "category": "charge",
+    "power": 60,
+    "energyCost": 40,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "84"
+  },
+  "fast_bullet_punch": {
+    "id": "fast_bullet_punch",
+    "name": "Bullet Punch",
+    "type": "steel",
+    "category": "fast",
+    "power": 8,
+    "energyGain": 7,
+    "turns": 2,
+    "cooldown": 1000,
+    "moveId": "38"
+  },
+  "fast_lick": {
+    "id": "fast_lick",
+    "name": "Lick",
+    "type": "ghost",
+    "category": "fast",
+    "power": 3,
+    "energyGain": 3,
+    "turns": 1,
+    "cooldown": 500,
+    "moveId": "161"
+  },
+  "fast_infestation": {
+    "id": "fast_infestation",
+    "name": "Infestation",
+    "type": "bug",
+    "category": "fast",
+    "power": 6,
+    "energyGain": 12,
+    "turns": 3,
+    "cooldown": 1500,
+    "moveId": "152"
+  },
+  "charge_bulldoze": {
+    "id": "charge_bulldoze",
+    "name": "Bulldoze",
+    "type": "ground",
+    "category": "charge",
+    "power": 45,
+    "energyCost": 45,
+    "buffs": [
+      0,
+      -1
+    ],
+    "buffApplyChance": ".5",
+    "buffTarget": "opponent",
+    "moveId": "37"
+  },
+  "charge_grass_knot": {
+    "id": "charge_grass_knot",
+    "name": "Grass Knot",
+    "type": "grass",
+    "category": "charge",
+    "power": 90,
+    "energyCost": 50,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "111"
+  },
+  "charge_outrage": {
+    "id": "charge_outrage",
+    "name": "Outrage",
+    "type": "dragon",
+    "category": "charge",
+    "power": 110,
+    "energyCost": 60,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "195"
+  },
+  "fast_mud_shot": {
+    "id": "fast_mud_shot",
+    "name": "Mud Shot",
+    "type": "ground",
+    "category": "fast",
+    "power": 4,
+    "energyGain": 8,
+    "turns": 2,
+    "cooldown": 1000,
+    "moveId": "184"
+  },
+  "charge_horn_attack": {
+    "id": "charge_horn_attack",
+    "name": "Horn Attack",
+    "type": "normal",
+    "category": "charge",
+    "power": 40,
+    "energyCost": 35,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "137"
+  },
+  "charge_avalanche": {
+    "id": "charge_avalanche",
+    "name": "Avalanche",
+    "type": "ice",
+    "category": "charge",
+    "power": 90,
+    "energyCost": 45,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "18"
+  },
+  "fast_tackle": {
+    "id": "fast_tackle",
+    "name": "Tackle",
+    "type": "normal",
+    "category": "fast",
+    "power": 3,
+    "energyGain": 3,
+    "turns": 1,
+    "cooldown": 500,
+    "moveId": "279"
+  },
+  "charge_sparkling_aria": {
+    "id": "charge_sparkling_aria",
+    "name": "Sparkling Aria",
+    "type": "water",
+    "category": "charge",
+    "power": 80,
+    "energyCost": 45,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "263"
+  },
+  "charge_last_resort": {
+    "id": "charge_last_resort",
+    "name": "Last Resort",
+    "type": "normal",
+    "category": "charge",
+    "power": 90,
+    "energyCost": 55,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "156"
+  },
+  "charge_earthquake": {
+    "id": "charge_earthquake",
+    "name": "Earthquake",
+    "type": "ground",
+    "category": "charge",
+    "power": 110,
+    "energyCost": 65,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "74"
+  },
+  "charge_triple_axel": {
+    "id": "charge_triple_axel",
+    "name": "Triple Axel",
+    "type": "ice",
+    "category": "charge",
+    "power": 60,
+    "energyCost": 45,
+    "buffs": [
+      1,
+      0
+    ],
+    "buffApplyChance": "1",
+    "buffTarget": "self",
+    "moveId": "296"
+  },
+  "charge_sky_attack": {
+    "id": "charge_sky_attack",
+    "name": "Sky Attack",
+    "type": "flying",
+    "category": "charge",
+    "power": 85,
+    "energyCost": 55,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "254"
+  },
+  "fast_sucker_punch": {
+    "id": "fast_sucker_punch",
+    "name": "Sucker Punch",
+    "type": "dark",
+    "category": "fast",
+    "power": 8,
+    "energyGain": 7,
+    "turns": 2,
+    "cooldown": 1000,
+    "moveId": "273"
+  },
+  "charge_payback": {
+    "id": "charge_payback",
+    "name": "Payback",
+    "type": "dark",
+    "category": "charge",
+    "power": 110,
+    "energyCost": 60,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "198"
+  },
+  "charge_psystrike": {
+    "id": "charge_psystrike",
+    "name": "Psystrike",
+    "type": "psychic",
+    "category": "charge",
+    "power": 90,
+    "energyCost": 45,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "219"
+  },
+  "fast_magical_leaf": {
+    "id": "fast_magical_leaf",
+    "name": "Magical Leaf",
+    "type": "grass",
+    "category": "fast",
+    "power": 10,
+    "energyGain": 10,
+    "turns": 3,
+    "cooldown": 1500,
+    "moveId": "168"
+  },
+  "charge_energy_ball": {
+    "id": "charge_energy_ball",
+    "name": "Energy Ball",
+    "type": "grass",
+    "category": "charge",
+    "power": 90,
+    "energyCost": 55,
+    "buffs": [
+      0,
+      -1
+    ],
+    "buffApplyChance": ".1",
+    "buffTarget": "opponent",
+    "moveId": "77"
+  },
+  "charge_night_shade": {
+    "id": "charge_night_shade",
+    "name": "Night Shade",
+    "type": "ghost",
+    "category": "charge",
+    "power": 70,
+    "energyCost": 45,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "188"
+  },
+  "charge_lunge": {
+    "id": "charge_lunge",
+    "name": "Lunge",
+    "type": "bug",
+    "category": "charge",
+    "power": 60,
+    "energyCost": 45,
+    "buffs": [
+      -1,
+      0
+    ],
+    "buffApplyChance": "1",
+    "buffTarget": "opponent",
+    "moveId": "166"
+  },
+  "fast_air_slash": {
+    "id": "fast_air_slash",
+    "name": "Air Slash",
+    "type": "flying",
+    "category": "fast",
+    "power": 9,
+    "energyGain": 9,
+    "turns": 3,
+    "cooldown": 1500,
+    "moveId": "8"
+  },
+  "fast_spark": {
+    "id": "fast_spark",
+    "name": "Spark",
+    "type": "electric",
+    "category": "fast",
+    "power": 5,
+    "energyGain": 7,
+    "turns": 2,
+    "cooldown": 1000,
+    "moveId": "262"
+  },
+  "charge_future_sight": {
+    "id": "charge_future_sight",
+    "name": "Future Sight",
+    "type": "psychic",
+    "category": "charge",
+    "power": 110,
+    "energyCost": 65,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "106"
+  },
+  "fast_charge_beam": {
+    "id": "fast_charge_beam",
+    "name": "Charge Beam",
+    "type": "electric",
+    "category": "fast",
+    "power": 5,
+    "energyGain": 11,
+    "turns": 3,
+    "cooldown": 1500,
+    "moveId": "40"
+  },
+  "charge_meteor_beam": {
+    "id": "charge_meteor_beam",
+    "name": "Meteor Beam",
+    "type": "rock",
+    "category": "charge",
+    "power": 120,
+    "energyCost": 60,
+    "buffs": [
+      1,
+      0
+    ],
+    "buffApplyChance": "1",
+    "buffTarget": "self",
+    "moveId": "175"
+  },
+  "charge_acrobatics": {
+    "id": "charge_acrobatics",
+    "name": "Acrobatics",
+    "type": "flying",
+    "category": "charge",
+    "power": 110,
+    "energyCost": 55,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "2"
+  },
+  "fast_astonish": {
+    "id": "fast_astonish",
+    "name": "Astonish",
+    "type": "ghost",
+    "category": "fast",
+    "power": 12,
+    "energyGain": 10,
+    "turns": 3,
+    "cooldown": 1500,
+    "moveId": "13"
+  },
+  "charge_leaf_storm": {
+    "id": "charge_leaf_storm",
+    "name": "Leaf Storm",
+    "type": "grass",
+    "category": "charge",
+    "power": 130,
+    "energyCost": 55,
+    "buffs": [
+      -2,
+      0
+    ],
+    "buffApplyChance": "1",
+    "buffTarget": "self",
+    "moveId": "159"
+  },
+  "charge_shadow_sneak": {
+    "id": "charge_shadow_sneak",
+    "name": "Shadow Sneak",
+    "type": "ghost",
+    "category": "charge",
+    "power": 50,
+    "energyCost": 45,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "250"
+  },
+  "charge_mirror_coat": {
+    "id": "charge_mirror_coat",
+    "name": "Mirror Coat",
+    "type": "psychic",
+    "category": "charge",
+    "power": 60,
+    "energyCost": 55,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "177"
+  },
+  "charge_frustration": {
+    "id": "charge_frustration",
+    "name": "Frustration",
+    "type": "normal",
+    "category": "charge",
+    "power": 10,
+    "energyCost": 70,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "102"
+  },
+  "fast_thunder_fang": {
+    "id": "fast_thunder_fang",
+    "name": "Thunder Fang",
+    "type": "electric",
+    "category": "fast",
+    "power": 8,
+    "energyGain": 6,
+    "turns": 2,
+    "cooldown": 1000,
+    "moveId": "288"
+  },
+  "charge_upper_hand": {
+    "id": "charge_upper_hand",
+    "name": "Upper Hand",
+    "type": "fighting",
+    "category": "charge",
+    "power": 70,
+    "energyCost": 40,
+    "buffs": [
+      0,
+      -1
+    ],
+    "buffApplyChance": ".3",
+    "buffTarget": "opponent",
+    "moveId": "298"
+  },
+  "charge_megahorn": {
+    "id": "charge_megahorn",
+    "name": "Megahorn",
+    "type": "bug",
+    "category": "charge",
+    "power": 110,
+    "energyCost": 55,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "172"
+  },
+  "charge_icicle_spear": {
+    "id": "charge_icicle_spear",
+    "name": "Icicle Spear",
+    "type": "ice",
+    "category": "charge",
+    "power": 65,
+    "energyCost": 40,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "149"
+  },
+  "charge_high_horsepower": {
+    "id": "charge_high_horsepower",
+    "name": "High Horsepower",
+    "type": "ground",
+    "category": "charge",
+    "power": 100,
+    "energyCost": 60,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "135"
+  },
+  "fast_lock_on": {
+    "id": "fast_lock_on",
+    "name": "Lock On",
+    "type": "normal",
+    "category": "fast",
+    "power": 1,
+    "energyGain": 5,
+    "turns": 1,
+    "cooldown": 500,
+    "moveId": "163"
+  },
+  "charge_octazooka": {
+    "id": "charge_octazooka",
+    "name": "Octazooka",
+    "type": "water",
+    "category": "charge",
+    "power": 50,
+    "energyCost": 50,
+    "buffs": [
+      -2,
+      0
+    ],
+    "buffApplyChance": "0.5",
+    "buffTarget": "opponent",
+    "moveId": "192"
+  },
+  "charge_gunk_shot": {
+    "id": "charge_gunk_shot",
+    "name": "Gunk Shot",
+    "type": "poison",
+    "category": "charge",
+    "power": 130,
+    "energyCost": 75,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "112"
+  },
+  "charge_flash_cannon": {
+    "id": "charge_flash_cannon",
+    "name": "Flash Cannon",
+    "type": "steel",
+    "category": "charge",
+    "power": 110,
+    "energyCost": 70,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "92"
+  },
+  "charge_tri_attack": {
+    "id": "charge_tri_attack",
+    "name": "Tri Attack",
+    "type": "normal",
+    "category": "charge",
+    "power": 65,
+    "energyCost": 50,
+    "buffs": [
+      -1,
+      -1
+    ],
+    "buffApplyChance": ".5",
+    "buffTarget": "opponent",
+    "moveId": "295"
+  },
+  "charge_zap_cannon": {
+    "id": "charge_zap_cannon",
+    "name": "Zap Cannon",
+    "type": "electric",
+    "category": "charge",
+    "power": 150,
+    "energyCost": 80,
+    "buffs": [
+      -1,
+      0
+    ],
+    "buffApplyChance": ".33",
+    "buffTarget": "opponent",
+    "moveId": "320"
+  },
+  "fast_ice_fang": {
+    "id": "fast_ice_fang",
+    "name": "Ice Fang",
+    "type": "ice",
+    "category": "fast",
+    "power": 8,
+    "energyGain": 6,
+    "turns": 2,
+    "cooldown": 1000,
+    "moveId": "146"
+  },
+  "charge_bubble_beam": {
+    "id": "charge_bubble_beam",
+    "name": "Bubble Beam",
+    "type": "water",
+    "category": "charge",
+    "power": 25,
+    "energyCost": 40,
+    "buffs": [
+      -1,
+      0
+    ],
+    "buffApplyChance": "1",
+    "buffTarget": "opponent",
+    "moveId": "34"
+  },
+  "fast_bite": {
+    "id": "fast_bite",
+    "name": "Bite",
+    "type": "dark",
+    "category": "fast",
+    "power": 4,
+    "energyGain": 2,
+    "turns": 1,
+    "cooldown": 500,
+    "moveId": "21"
+  },
+  "fast_smack_down": {
+    "id": "fast_smack_down",
+    "name": "Smack Down",
+    "type": "rock",
+    "category": "fast",
+    "power": 11,
+    "energyGain": 8,
+    "turns": 3,
+    "cooldown": 1500,
+    "moveId": "258"
+  },
+  "charge_aeroblast": {
+    "id": "charge_aeroblast",
+    "name": "Aeroblast",
+    "type": "flying",
+    "category": "charge",
+    "power": 170,
+    "energyCost": 75,
+    "buffs": [
+      2,
+      0
+    ],
+    "buffApplyChance": ".125",
+    "buffTarget": "self",
+    "moveId": "6"
+  },
+  "charge_sacred_fire": {
+    "id": "charge_sacred_fire",
+    "name": "Sacred Fire",
+    "type": "fire",
+    "category": "charge",
+    "power": 130,
+    "energyCost": 65,
+    "buffs": [
+      -1,
+      0
+    ],
+    "buffApplyChance": "0.5",
+    "buffTarget": "opponent",
+    "moveId": "235"
+  },
+  "charge_hurricane": {
+    "id": "charge_hurricane",
+    "name": "Hurricane",
+    "type": "flying",
+    "category": "charge",
+    "power": 110,
+    "energyCost": 65,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "138"
+  },
+  "fast_force_palm": {
+    "id": "fast_force_palm",
+    "name": "Force Palm",
+    "type": "fighting",
+    "category": "fast",
+    "power": 13,
+    "energyGain": 10,
+    "turns": 3,
+    "cooldown": 1500,
+    "moveId": "97"
+  },
+  "fast_yawn": {
+    "id": "fast_yawn",
+    "name": "Yawn",
+    "type": "normal",
+    "category": "fast",
+    "power": 0,
+    "energyGain": 12,
+    "turns": 4,
+    "cooldown": 2000,
+    "moveId": "319"
+  },
+  "charge_heavy_slam": {
+    "id": "charge_heavy_slam",
+    "name": "Heavy Slam",
+    "type": "steel",
+    "category": "charge",
+    "power": 70,
+    "energyCost": 50,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "117"
+  },
+  "fast_metal_sound": {
+    "id": "fast_metal_sound",
+    "name": "Metal Sound",
+    "type": "steel",
+    "category": "fast",
+    "power": 5,
+    "energyGain": 8,
+    "turns": 2,
+    "cooldown": 1000,
+    "moveId": "174"
+  },
+  "charge_thunder": {
+    "id": "charge_thunder",
+    "name": "Thunder",
+    "type": "electric",
+    "category": "charge",
+    "power": 100,
+    "energyCost": 60,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "286"
+  },
+  "fast_waterfall": {
+    "id": "fast_waterfall",
+    "name": "Waterfall",
+    "type": "water",
+    "category": "fast",
+    "power": 12,
+    "energyGain": 8,
+    "turns": 3,
+    "cooldown": 1500,
+    "moveId": "307"
+  },
+  "fast_struggle_bug": {
+    "id": "fast_struggle_bug",
+    "name": "Struggle Bug",
+    "type": "bug",
+    "category": "fast",
+    "power": 9,
+    "energyGain": 8,
+    "turns": 3,
+    "cooldown": 1500,
+    "moveId": "271"
+  },
+  "charge_solar_beam": {
+    "id": "charge_solar_beam",
+    "name": "Solar Beam",
+    "type": "grass",
+    "category": "charge",
+    "power": 150,
+    "energyCost": 80,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "260"
+  },
+  "charge_twister": {
+    "id": "charge_twister",
+    "name": "Twister",
+    "type": "dragon",
+    "category": "charge",
+    "power": 45,
+    "energyCost": 45,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "297"
+  },
+  "charge_dragon_pulse": {
+    "id": "charge_dragon_pulse",
+    "name": "Dragon Pulse",
+    "type": "dragon",
+    "category": "charge",
+    "power": 90,
+    "energyCost": 60,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "66"
+  },
+  "charge_gyro_ball": {
+    "id": "charge_gyro_ball",
+    "name": "Gyro Ball",
+    "type": "steel",
+    "category": "charge",
+    "power": 80,
+    "energyCost": 60,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "114"
+  },
+  "charge_meteor_mash": {
+    "id": "charge_meteor_mash",
+    "name": "Meteor Mash",
+    "type": "steel",
+    "category": "charge",
+    "power": 100,
+    "energyCost": 50,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "176"
+  },
+  "charge_focus_blast": {
+    "id": "charge_focus_blast",
+    "name": "Focus Blast",
+    "type": "fighting",
+    "category": "charge",
+    "power": 150,
+    "energyCost": 75,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "96"
+  },
+  "charge_mist_ball": {
+    "id": "charge_mist_ball",
+    "name": "Mist Ball",
+    "type": "psychic",
+    "category": "charge",
+    "power": 120,
+    "energyCost": 60,
+    "buffs": [
+      -1,
+      0
+    ],
+    "buffApplyChance": "0.5",
+    "buffTarget": "opponent",
+    "moveId": "179"
+  },
+  "charge_luster_purge": {
+    "id": "charge_luster_purge",
+    "name": "Luster Purge",
+    "type": "psychic",
+    "category": "charge",
+    "power": 120,
+    "energyCost": 60,
+    "buffs": [
+      0,
+      -1
+    ],
+    "buffApplyChance": "0.5",
+    "buffTarget": "opponent",
+    "moveId": "167"
+  },
+  "charge_origin_pulse": {
+    "id": "charge_origin_pulse",
+    "name": "Origin Pulse",
+    "type": "water",
+    "category": "charge",
+    "power": 130,
+    "energyCost": 60,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "194"
+  },
+  "charge_precipice_blades": {
+    "id": "charge_precipice_blades",
+    "name": "Precipice Blades",
+    "type": "ground",
+    "category": "charge",
+    "power": 130,
+    "energyCost": 60,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "211"
+  },
+  "charge_dragon_ascent": {
+    "id": "charge_dragon_ascent",
+    "name": "Dragon Ascent",
+    "type": "flying",
+    "category": "charge",
+    "power": 150,
+    "energyCost": 70,
+    "buffs": [
+      0,
+      -1
+    ],
+    "buffApplyChance": "1",
+    "buffTarget": "self",
+    "moveId": "62"
+  },
+  "charge_doom_desire": {
+    "id": "charge_doom_desire",
+    "name": "Doom Desire",
+    "type": "steel",
+    "category": "charge",
+    "power": 80,
+    "energyCost": 40,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "58"
+  },
+  "charge_psycho_boost": {
+    "id": "charge_psycho_boost",
+    "name": "Psycho Boost",
+    "type": "psychic",
+    "category": "charge",
+    "power": 70,
+    "energyCost": 35,
+    "buffs": [
+      -2,
+      0
+    ],
+    "buffApplyChance": "1",
+    "buffTarget": "self",
+    "moveId": "216"
+  },
+  "fast_razor_leaf": {
+    "id": "fast_razor_leaf",
+    "name": "Razor Leaf",
+    "type": "grass",
+    "category": "fast",
+    "power": 9,
+    "energyGain": 4,
+    "turns": 2,
+    "cooldown": 1000,
+    "moveId": "223"
+  },
+  "charge_low_sweep": {
+    "id": "charge_low_sweep",
+    "name": "Low Sweep",
+    "type": "fighting",
+    "category": "charge",
+    "power": 40,
+    "energyCost": 40,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "165"
+  },
+  "fast_metal_claw": {
+    "id": "fast_metal_claw",
+    "name": "Metal Claw",
+    "type": "steel",
+    "category": "fast",
+    "power": 5,
+    "energyGain": 7,
+    "turns": 2,
+    "cooldown": 1000,
+    "moveId": "173"
+  },
+  "fast_take_down": {
+    "id": "fast_take_down",
+    "name": "Take Down",
+    "type": "normal",
+    "category": "fast",
+    "power": 5,
+    "energyGain": 8,
+    "turns": 3,
+    "cooldown": 1500,
+    "moveId": "280"
+  },
+  "charge_mirror_shot": {
+    "id": "charge_mirror_shot",
+    "name": "Mirror Shot",
+    "type": "steel",
+    "category": "charge",
+    "power": 35,
+    "energyCost": 35,
+    "buffs": [
+      -1,
+      0
+    ],
+    "buffApplyChance": ".3",
+    "buffTarget": "opponent",
+    "moveId": "178"
+  },
+  "charge_rock_wrecker": {
+    "id": "charge_rock_wrecker",
+    "name": "Rock Wrecker",
+    "type": "rock",
+    "category": "charge",
+    "power": 110,
+    "energyCost": 50,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "233"
+  },
+  "charge_aura_sphere": {
+    "id": "charge_aura_sphere",
+    "name": "Aura Sphere",
+    "type": "fighting",
+    "category": "charge",
+    "power": 100,
+    "energyCost": 55,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "14"
+  },
+  "charge_ominous_wind": {
+    "id": "charge_ominous_wind",
+    "name": "Ominous Wind",
+    "type": "ghost",
+    "category": "charge",
+    "power": 45,
+    "energyCost": 45,
+    "buffs": [
+      1,
+      1
+    ],
+    "buffApplyChance": ".1",
+    "buffTarget": "self",
+    "moveId": "193"
+  },
+  "charge_roar_of_time": {
+    "id": "charge_roar_of_time",
+    "name": "Roar of Time",
+    "type": "dragon",
+    "category": "charge",
+    "power": 150,
+    "energyCost": 65,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "227"
+  },
+  "charge_fire_blast": {
+    "id": "charge_fire_blast",
+    "name": "Fire Blast",
+    "type": "fire",
+    "category": "charge",
+    "power": 140,
+    "energyCost": 80,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "81"
+  },
+  "charge_spacial_rend": {
+    "id": "charge_spacial_rend",
+    "name": "Spacial Rend",
+    "type": "dragon",
+    "category": "charge",
+    "power": 95,
+    "energyCost": 50,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "261"
+  },
+  "charge_magma_storm": {
+    "id": "charge_magma_storm",
+    "name": "Magma Storm",
+    "type": "fire",
+    "category": "charge",
+    "power": 65,
+    "energyCost": 40,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "169"
+  },
+  "charge_crush_grip": {
+    "id": "charge_crush_grip",
+    "name": "Crush Grip",
+    "type": "normal",
+    "category": "charge",
+    "power": 110,
+    "energyCost": 50,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "50"
+  },
+  "charge_seed_flare": {
+    "id": "charge_seed_flare",
+    "name": "Seed Flare",
+    "type": "grass",
+    "category": "charge",
+    "power": 130,
+    "energyCost": 75,
+    "buffs": [
+      0,
+      -2
+    ],
+    "buffApplyChance": ".4",
+    "buffTarget": "opponent",
+    "moveId": "244"
+  },
+  "fast_low_kick": {
+    "id": "fast_low_kick",
+    "name": "Low Kick",
+    "type": "fighting",
+    "category": "fast",
+    "power": 4,
+    "energyGain": 5,
+    "turns": 2,
+    "cooldown": 1000,
+    "moveId": "164"
+  },
+  "charge_muddy_water": {
+    "id": "charge_muddy_water",
+    "name": "Muddy Water",
+    "type": "water",
+    "category": "charge",
+    "power": 35,
+    "energyCost": 35,
+    "buffs": [
+      -1,
+      0
+    ],
+    "buffApplyChance": ".3",
+    "buffTarget": "opponent",
+    "moveId": "183"
+  },
+  "charge_flame_burst": {
+    "id": "charge_flame_burst",
+    "name": "Flame Burst",
+    "type": "fire",
+    "category": "charge",
+    "power": 70,
+    "energyCost": 55,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "88"
+  },
+  "fast_scratch": {
+    "id": "fast_scratch",
+    "name": "Scratch",
+    "type": "normal",
+    "category": "fast",
+    "power": 4,
+    "energyGain": 2,
+    "turns": 1,
+    "cooldown": 500,
+    "moveId": "242"
+  },
+  "fast_water_shuriken": {
+    "id": "fast_water_shuriken",
+    "name": "Water Shuriken",
+    "type": "water",
+    "category": "fast",
+    "power": 6,
+    "energyGain": 14,
+    "turns": 3,
+    "cooldown": 1500,
+    "moveId": "308"
+  },
+  "charge_high_jump_kick": {
+    "id": "charge_high_jump_kick",
+    "name": "High Jump Kick",
+    "type": "fighting",
+    "category": "charge",
+    "power": 110,
+    "energyCost": 55,
+    "buffs": [
+      0,
+      -4
+    ],
+    "buffApplyChance": ".1",
+    "buffTarget": "self",
+    "moveId": "136"
+  },
+  "charge_sacred_sword": {
+    "id": "charge_sacred_sword",
+    "name": "Sacred Sword",
+    "type": "fighting",
+    "category": "charge",
+    "power": 60,
+    "energyCost": 35,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "236"
+  },
+  "charge_bleakwind_storm": {
+    "id": "charge_bleakwind_storm",
+    "name": "Bleakwind Storm",
+    "type": "flying",
+    "category": "charge",
+    "power": 60,
+    "energyCost": 45,
+    "buffs": [
+      -1,
+      0
+    ],
+    "buffApplyChance": "1",
+    "buffTarget": "opponent",
+    "moveId": "23"
+  },
+  "charge_wildbolt_storm": {
+    "id": "charge_wildbolt_storm",
+    "name": "Wildbolt Storm",
+    "type": "electric",
+    "category": "charge",
+    "power": 60,
+    "energyCost": 45,
+    "buffs": [
+      -1,
+      0
+    ],
+    "buffApplyChance": "1",
+    "buffTarget": "opponent",
+    "moveId": "314"
+  },
+  "charge_fusion_flare": {
+    "id": "charge_fusion_flare",
+    "name": "Fusion Flare",
+    "type": "fire",
+    "category": "charge",
+    "power": 90,
+    "energyCost": 45,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "105"
+  },
+  "charge_sandsear_storm": {
+    "id": "charge_sandsear_storm",
+    "name": "Sandsear Storm",
+    "type": "ground",
+    "category": "charge",
+    "power": 60,
+    "energyCost": 45,
+    "buffs": [
+      -1,
+      0
+    ],
+    "buffApplyChance": "1",
+    "buffTarget": "opponent",
+    "moveId": "239"
+  },
+  "charge_glaciate": {
+    "id": "charge_glaciate",
+    "name": "Glaciate",
+    "type": "ice",
+    "category": "charge",
+    "power": 60,
+    "energyCost": 40,
+    "buffs": [
+      -1,
+      0
+    ],
+    "buffApplyChance": "1",
+    "buffTarget": "opponent",
+    "moveId": "110"
+  },
+  "charge_fusion_bolt": {
+    "id": "charge_fusion_bolt",
+    "name": "Fusion Bolt",
+    "type": "electric",
+    "category": "charge",
+    "power": 90,
+    "energyCost": 45,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "104"
+  },
+  "charge_freeze_shock": {
+    "id": "charge_freeze_shock",
+    "name": "Freeze Shock",
+    "type": "ice",
+    "category": "charge",
+    "power": 120,
+    "energyCost": 60,
+    "buffs": [
+      -1,
+      0
+    ],
+    "buffApplyChance": ".3",
+    "buffTarget": "opponent",
+    "moveId": "99"
+  },
+  "charge_mystical_fire": {
+    "id": "charge_mystical_fire",
+    "name": "Mystical Fire",
+    "type": "fire",
+    "category": "charge",
+    "power": 60,
+    "energyCost": 45,
+    "buffs": [
+      -1,
+      0
+    ],
+    "buffApplyChance": "1",
+    "buffTarget": "opponent",
+    "moveId": "186"
+  },
+  "fast_rock_smash": {
+    "id": "fast_rock_smash",
+    "name": "Rock Smash",
+    "type": "fighting",
+    "category": "fast",
+    "power": 9,
+    "energyGain": 7,
+    "turns": 3,
+    "cooldown": 1500,
+    "moveId": "230"
+  },
+  "charge_draining_kiss": {
+    "id": "charge_draining_kiss",
+    "name": "Draining Kiss",
+    "type": "fairy",
+    "category": "charge",
+    "power": 60,
+    "energyCost": 55,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "69"
+  },
+  "charge_parabolic_charge": {
+    "id": "charge_parabolic_charge",
+    "name": "Parabolic Charge",
+    "type": "electric",
+    "category": "charge",
+    "power": 70,
+    "energyCost": 45,
+    "buffs": [
+      0,
+      1
+    ],
+    "buffApplyChance": "1",
+    "buffTarget": "self",
+    "moveId": "197"
+  },
+  "charge_flying_press": {
+    "id": "charge_flying_press",
+    "name": "Flying Press",
+    "type": "fighting",
+    "category": "charge",
+    "power": 90,
+    "energyCost": 40,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "95"
+  },
+  "fast_geomancy": {
+    "id": "fast_geomancy",
+    "name": "Geomancy",
+    "type": "fairy",
+    "category": "fast",
+    "power": 4,
+    "energyGain": 13,
+    "turns": 3,
+    "cooldown": 1500,
+    "moveId": "107"
+  },
+  "charge_oblivion_wing": {
+    "id": "charge_oblivion_wing",
+    "name": "Oblivion Wing",
+    "type": "flying",
+    "category": "charge",
+    "power": 85,
+    "energyCost": 50,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "190"
+  },
+  "fast_leafage": {
+    "id": "fast_leafage",
+    "name": "Leafage",
+    "type": "grass",
+    "category": "fast",
+    "power": 6,
+    "energyGain": 7,
+    "turns": 2,
+    "cooldown": 1000,
+    "moveId": "160"
+  },
+  "charge_spirit_shackle": {
+    "id": "charge_spirit_shackle",
+    "name": "Spirit Shackle",
+    "type": "ghost",
+    "category": "charge",
+    "power": 50,
+    "energyCost": 40,
+    "buffs": [
+      0,
+      -1
+    ],
+    "buffApplyChance": ".33",
+    "buffTarget": "opponent",
+    "moveId": "264"
+  },
+  "charge_darkest_lariat": {
+    "id": "charge_darkest_lariat",
+    "name": "Darkest Lariat",
+    "type": "dark",
+    "category": "charge",
+    "power": 120,
+    "energyCost": 60,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "52"
+  },
+  "fast_peck": {
+    "id": "fast_peck",
+    "name": "Peck",
+    "type": "flying",
+    "category": "fast",
+    "power": 6,
+    "energyGain": 5,
+    "turns": 2,
+    "cooldown": 1000,
+    "moveId": "199"
+  },
+  "charge_brine": {
+    "id": "charge_brine",
+    "name": "Brine",
+    "type": "water",
+    "category": "charge",
+    "power": 60,
+    "energyCost": 50,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "32"
+  },
+  "charge_fell_stinger": {
+    "id": "charge_fell_stinger",
+    "name": "Fell Stinger",
+    "type": "bug",
+    "category": "charge",
+    "power": 20,
+    "energyCost": 35,
+    "buffs": [
+      1,
+      0
+    ],
+    "buffApplyChance": "1",
+    "buffTarget": "self",
+    "moveId": "80"
+  },
+  "charge_clanging_scales": {
+    "id": "charge_clanging_scales",
+    "name": "Clanging Scales",
+    "type": "dragon",
+    "category": "charge",
+    "power": 120,
+    "energyCost": 45,
+    "buffs": [
+      0,
+      -1
+    ],
+    "buffApplyChance": "1",
+    "buffTarget": "self",
+    "moveId": "42"
+  },
+  "charge_sunsteel_strike": {
+    "id": "charge_sunsteel_strike",
+    "name": "Sunsteel Strike",
+    "type": "steel",
+    "category": "charge",
+    "power": 135,
+    "energyCost": 65,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "274"
+  },
+  "charge_moongeist_beam": {
+    "id": "charge_moongeist_beam",
+    "name": "Moongeist Beam",
+    "type": "ghost",
+    "category": "charge",
+    "power": 135,
+    "energyCost": 65,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "181"
+  },
+  "charge_double_iron_bash": {
+    "id": "charge_double_iron_bash",
+    "name": "Double Iron Bash",
+    "type": "steel",
+    "category": "charge",
+    "power": 55,
+    "energyCost": 35,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "59"
+  },
+  "charge_behemoth_blade": {
+    "id": "charge_behemoth_blade",
+    "name": "Behemoth Blade",
+    "type": "steel",
+    "category": "charge",
+    "power": 100,
+    "energyCost": 55,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "20"
+  },
+  "charge_behemoth_bash": {
+    "id": "charge_behemoth_bash",
+    "name": "Behemoth Bash",
+    "type": "steel",
+    "category": "charge",
+    "power": 80,
+    "energyCost": 45,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "19"
+  },
+  "charge_thunder_cage": {
+    "id": "charge_thunder_cage",
+    "name": "Thunder Cage",
+    "type": "electric",
+    "category": "charge",
+    "power": 60,
+    "energyCost": 40,
+    "buffs": [
+      0,
+      -1
+    ],
+    "buffApplyChance": "1",
+    "buffTarget": "opponent",
+    "moveId": "287"
+  },
+  "charge_dragon_energy": {
+    "id": "charge_dragon_energy",
+    "name": "Dragon Energy",
+    "type": "dragon",
+    "category": "charge",
+    "power": 100,
+    "energyCost": 45,
+    "buffs": null,
+    "buffApplyChance": null,
+    "buffTarget": null,
+    "moveId": "65"
+  },
+  "charge_torch_song": {
+    "id": "charge_torch_song",
+    "name": "Torch Song",
+    "type": "fire",
+    "category": "charge",
+    "power": 70,
+    "energyCost": 45,
+    "buffs": [
+      1,
+      0
+    ],
+    "buffApplyChance": "1",
+    "buffTarget": "self",
+    "moveId": "292"
+  }
+}

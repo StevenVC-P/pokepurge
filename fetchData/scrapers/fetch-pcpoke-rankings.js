@@ -14,36 +14,7 @@ const leagues = {
   master: {
     url: "https://pvpoke.com/data/rankings/all/overall/rankings-10000.json",
   },
-  little_element: {
-    url: "https://pvpoke.com/data/rankings/element/overall/rankings-500.json",
-  },
-  hisui: {
-    url: "https://pvpoke.com/data/rankings/hisui/overall/rankings-1500.json",
-  },
-  sunshine: {
-    url: "https://pvpoke.com/data/rankings/sunshine/overall/rankings-1500.json",
-  },
-  aurora: {
-    url: "https://pvpoke.com/data/rankings/aurora/overall/rankings-1500.json",
-  },
-  onyx: {
-    url: "https://pvpoke.com/data/rankings/onyx/overall/rankings-1500.json",
-  },
-  battlefrontierultra: {
-    url: "https://pvpoke.com/data/rankings/battlefrontierultra/overall/rankings-2500.json",
-  },
-  battlefrontiermaster: {
-    url: "https://pvpoke.com/data/rankings/battlefrontiermaster/overall/rankings-10000.json",
-  },
-  ascension: {
-    url: "https://pvpoke.com/data/rankings/ascension/overall/rankings-1500.json",
-  },
-  devonchampionship: {
-    url: "https://pvpoke.com/data/rankings/devonchampionship/overall/rankings-1500.json",
-  },
-  pillar2: {
-    url: "https://pvpoke.com/data/rankings/pillar2/overall/rankings-1500.json",
-  },
+  // Non-official leagues removed to reduce data size and processing time
 };
 async function fetchAndSave(league, url) {
   const filepath = path.join(RANKINGS_DIR, `${league}.json`);

@@ -1,0 +1,176 @@
+{
+  "performance_tiers": {
+    "meta_defining": {
+      "min_score": 90,
+      "min_leagues": 2,
+      "min_raid_tier": "S Tier",
+      "descriptor": "Meta-defining",
+      "advice": "High investment priority"
+    },
+    "strong": {
+      "min_score": 80,
+      "min_leagues": 1,
+      "min_raid_tier": "A+ Tier",
+      "descriptor": "Strong",
+      "advice": "Worth developing"
+    },
+    "solid": {
+      "min_score": 70,
+      "min_leagues": 1,
+      "min_raid_tier": "A Tier",
+      "descriptor": "Solid",
+      "advice": "Worth developing"
+    },
+    "situational": {
+      "min_score": 60,
+      "min_leagues": 0,
+      "min_raid_tier": "B+ Tier",
+      "descriptor": "Situational",
+      "advice": "Keep one copy"
+    },
+    "limited": {
+      "min_score": 50,
+      "min_leagues": 0,
+      "min_raid_tier": "B Tier",
+      "descriptor": "Limited",
+      "advice": "Keep one copy"
+    },
+    "trash": {
+      "min_score": 0,
+      "min_leagues": 0,
+      "min_raid_tier": "C Tier",
+      "descriptor": "No competitive value",
+      "advice": "Transfer for candy"
+    }
+  },
+  
+  "role_types": {
+    "multi_role_powerhouse": {
+      "conditions": {
+        "min_pvp_score": 85,
+        "min_leagues": 2,
+        "raid_tier_required": ["S Tier", "A+ Tier", "A Tier"],
+        "min_type_rankings": 2
+      },
+      "name": "multi-role powerhouse"
+    },
+    "pvp_specialist": {
+      "conditions": {
+        "min_pvp_score": 80,
+        "min_leagues": 1,
+        "raid_tier_required": null,
+        "min_type_rankings": 0
+      },
+      "name": "PvP specialist"
+    },
+    "raid_specialist": {
+      "conditions": {
+        "min_pvp_score": 0,
+        "min_leagues": 0,
+        "raid_tier_required": ["S Tier", "A+ Tier", "A Tier"],
+        "min_type_rankings": 1
+      },
+      "name": "raid specialist"
+    },
+    "gym_defender": {
+      "conditions": {
+        "min_pvp_score": 60,
+        "min_leagues": 0,
+        "defense_tier_required": ["S Tier", "A+ Tier", "A Tier"],
+        "min_type_rankings": 0
+      },
+      "name": "gym defender"
+    },
+    "niche_specialist": {
+      "conditions": {
+        "min_pvp_score": 50,
+        "min_leagues": 0,
+        "raid_tier_required": null,
+        "min_type_rankings": 0
+      },
+      "name": "niche specialist"
+    },
+    "collection_only": {
+      "conditions": {
+        "min_pvp_score": 0,
+        "min_leagues": 0,
+        "raid_tier_required": null,
+        "min_type_rankings": 0
+      },
+      "name": "collection only"
+    }
+  },
+  
+  "strength_templates": {
+    "league_performance": {
+      "great_league": "Great League performance ({score})",
+      "ultra_league": "Ultra League performance ({score})",
+      "master_league": "Master League performance ({score})",
+      "multi_league": "{leagues} performance"
+    },
+    "raid_utility": {
+      "elite_attacker": "elite {types} attacker",
+      "strong_attacker": "strong {types} attacker",
+      "raid_utility": "{tier} raid utility"
+    },
+    "typing_advantages": {
+      "defensive_typing": "excellent defensive typing",
+      "offensive_typing": "powerful offensive typing",
+      "dual_typing": "versatile {type1}/{type2} typing"
+    },
+    "special_forms": {
+      "shadow": "Shadow form benefits",
+      "mega": "Mega evolution potential",
+      "gigantamax": "Gigantamax capabilities"
+    }
+  },
+  
+  "role_summary_templates": {
+    "meta_defining": "{descriptor} {role} with {strengths}. {advice}.",
+    "strong": "{descriptor} {role} with {strengths}. {advice}.",
+    "solid": "{descriptor} {role} with {strengths}. {advice}.",
+    "situational": "{descriptor} {role} for {use_cases}. {advice}.",
+    "limited": "{descriptor} {role} with minimal competitive utility. {advice}.",
+    "trash": "{descriptor} - {advice}."
+  },
+  
+  "notes_templates": {
+    "tier_explanation": "Rated {tier} due to {reasoning}.",
+    "pvp_analysis": "Strong PvP performance in: {leagues}.",
+    "raid_analysis": "{raid_tier} raid performance with top rankings in: {types}.",
+    "defense_analysis": "{defense_tier} gym defender with {capabilities}.",
+    "count_explanation": {
+      "high": "High recommended count ({count}) indicates multiple viable roles.",
+      "moderate": "Moderate recommended count ({count}) suggests specific utility.",
+      "single": "Keep one copy for collection or specific use cases.",
+      "none": "No copies recommended - transfer for candy."
+    },
+    "special_forms": {
+      "shadow": "Shadow form provides increased attack at the cost of defense.",
+      "mega": "Mega evolution provides temporary power boost for raids.",
+      "gigantamax": "Gigantamax form designed for Max Battle mechanics."
+    }
+  },
+  
+  "type_effectiveness": {
+    "defensive_types": ["Steel", "Fairy", "Water", "Fire"],
+    "offensive_types": ["Dragon", "Psychic", "Fighting", "Ghost"],
+    "versatile_types": ["Normal", "Flying", "Electric"]
+  },
+  
+  "raid_tier_rankings": {
+    "S Tier": 5,
+    "A+ Tier": 4,
+    "A Tier": 3,
+    "B+ Tier": 2,
+    "B Tier": 1,
+    "C Tier": 0
+  },
+  
+  "league_thresholds": {
+    "excellent": 85,
+    "strong": 75,
+    "decent": 65,
+    "weak": 50
+  }
+}
