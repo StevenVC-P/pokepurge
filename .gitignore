@@ -109,6 +109,15 @@ fetchData/temp/
 fetchData/*.backup
 fetchData/*.bak
 
+# Exclude large intermediate files (>1MB)
+fetchData/outputs/pokemon-condensed-meta.json
+fetchData/outputs/pokemon-official-leagues.json
+fetchData/outputs/pokemon-optimized.json
+fetchData/outputs/pokemon-with-moves.json
+fetchData/outputs/PokemonMaster*.json
+fetchData/outputs/pvpoke-gamemaster-raw.json
+fetchData/outputs/rankings/*.json
+
 # Keep essential structure files
 !fetchData/outputs/.gitkeep
 !fetchData/config/
@@ -131,6 +140,28 @@ fetchData/*.bak
 *.backup
 *.bak
 *.orig
+
+# Pokemon data backup files (timestamped backups)
+public/data/*backup*.json
+public/data/pokemon_backup_*.json
+public/data/pokemon-backup-*.json
+public/data/pokemon-maxmove-backup-*.json
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Windows crash dumps
+*.stackdump
+
+# Test files and development scripts
+fetchData/processors/test*.js
+fetchData/processors/debug*.js
+
+# Temporary HTML files and debug pages
+debug-page.html
+pokemon-list.html
 
 # Documentation drafts
 *.draft.md

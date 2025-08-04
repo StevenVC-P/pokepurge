@@ -75,7 +75,11 @@ const PIPELINE = [
     timeout: CONFIG.BUILDER_TIMEOUT,
     scripts: [
       { name: "Build Pokemon Master", file: "builders/buildPokemonMaster.js", required: true },
+      { name: "Scrape Dynamax Battle Data", file: "processors/dynamaxDataScraper.js", required: false, timeout: 300000 }, // 5 min timeout, not required
+      { name: "Integrate Dynamax Data", file: "processors/dynamaxDataIntegrator.js", required: false, timeout: 60000 }, // 1 min timeout, not required
+      { name: "Analyze Max Moves & Roles", file: "processors/maxMoveAnalyzer.js", required: false, timeout: 60000 }, // 1 min timeout, not required
       { name: "Generate AI Role Summaries", file: "processors/addRoleSummaryAndNotesLocal.js", required: true, timeout: CONFIG.AI_TIMEOUT },
+      { name: "Generate Dynamax AI Analysis", file: "processors/addDynamaxAIAnalysis.js", required: true, timeout: CONFIG.AI_TIMEOUT },
       { name: "Analyze Meta Attack Types", file: "analyzers/analyzeMetaAttackTypes.js", required: true },
       { name: "Analyze Weakness Impact", file: "analyzers/analyzeWeaknessImpact.js", required: true },
       { name: "Add Weakness Analysis", file: "processors/addWeaknessAnalysis.js", required: true },
@@ -344,10 +348,11 @@ Options:
 Pipeline Phases:
   1. Scraping:   Fetch Pokemon data, rankings, moves, raid tiers
   2. Processing: Clean, merge, and analyze data
-  3. Building:   Generate final datasets + AI role summaries (2+ hours)
+  3. Building:   Generate final datasets + AI role summaries + Dynamax AI analysis (2+ hours)
 
 AI Processing:
   - Uses local Llama3 model to generate role summaries and notes
+  - Generates separate Max Battle-focused analysis for dynamax Pokemon
   - Requires Ollama to be installed and running
   - Processes ~1,620 Pokemon (estimated 2 hours)
 

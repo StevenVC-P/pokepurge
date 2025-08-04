@@ -1,0 +1,142 @@
+{
+  "sources": {
+    "pokemonGoHub": {
+      "baseUrl": "https://pokemongohub.net",
+      "enabled": true,
+      "rateLimit": 1000,
+      "timeout": 10000,
+      "searchPaths": [
+        "/post/category/guide/",
+        "/post/tag/max-battle/",
+        "/post/tag/dynamax/"
+      ],
+      "selectors": {
+        "guideLinks": "a[href*='dynamax'], a[href*='max-battle']",
+        "counters": "table tr, .counter-list li, [class*='attacker']",
+        "tierInfo": "h1, h2, h3, .tier-info"
+      }
+    },
+    "gamePress": {
+      "baseUrl": "https://pokemongo.gamepress.gg",
+      "enabled": true,
+      "rateLimit": 1000,
+      "timeout": 10000,
+      "searchPaths": [
+        "/comprehensive-dps-spreadsheet",
+        "/tier-5-and-mega-raid-guides"
+      ]
+    },
+    "silphRoad": {
+      "baseUrl": "https://www.reddit.com/r/TheSilphRoad",
+      "enabled": false,
+      "rateLimit": 2000,
+      "timeout": 15000,
+      "note": "Requires Reddit API authentication for extensive scraping"
+    }
+  },
+  
+  "scraping": {
+    "maxGuidesPerSource": 10,
+    "minTierLevel": 3,
+    "retryAttempts": 3,
+    "retryDelay": 2000,
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+    "respectRobotsTxt": true
+  },
+  
+  "integration": {
+    "recommendedCountBonus": {
+      "multipleTargets": {
+        "threshold": 3,
+        "bonus": 1
+      },
+      "manyTargets": {
+        "threshold": 5,
+        "bonus": 2
+      },
+      "highTierEffective": {
+        "threshold": 4.0,
+        "bonus": 1
+      },
+      "topTierEffective": {
+        "threshold": 5.0,
+        "bonus": 2
+      }
+    },
+    
+    "trashabilityBoosts": {
+      "essential": {
+        "minTargets": 3,
+        "minAverageTier": 4.0
+      },
+      "valuable": {
+        "minTargets": 2,
+        "minAverageTier": 4.0
+      },
+      "reliable": {
+        "minTargets": 1,
+        "minAverageTier": 3.0
+      }
+    },
+    
+    "aiEnhancements": {
+      "maxTargetsInSummary": 3,
+      "includeVulnerabilities": true,
+      "includeTierInfo": true
+    }
+  },
+  
+  "output": {
+    "dataFile": "public/data/dynamax-battle-data.json",
+    "backupOnUpdate": true,
+    "validateOutput": true,
+    "compressionLevel": 2
+  },
+  
+  "scheduling": {
+    "autoUpdate": false,
+    "updateInterval": "weekly",
+    "updateDay": "sunday",
+    "updateHour": 2,
+    "maxAge": 604800000
+  },
+  
+  "pokemonNameMappings": {
+    "Gigantamax Venusaur": "Venusaur",
+    "Gigantamax Charizard": "Charizard", 
+    "Gigantamax Blastoise": "Blastoise",
+    "Dynamax Raikou": "Raikou",
+    "Dynamax Entei": "Entei",
+    "Dynamax Suicune": "Suicune"
+  },
+  
+  "typeEffectiveness": {
+    "superEffective": 2.0,
+    "notVeryEffective": 0.5,
+    "noEffect": 0.0,
+    "neutral": 1.0
+  },
+  
+  "roles": {
+    "attacker": {
+      "keywords": ["attacker", "dps", "damage", "counter"],
+      "priority": 1
+    },
+    "defender": {
+      "keywords": ["defender", "tank", "shield", "guard"],
+      "priority": 2
+    },
+    "healer": {
+      "keywords": ["healer", "support", "spirit", "heal"],
+      "priority": 3
+    }
+  },
+  
+  "validation": {
+    "minRaidsRequired": 1,
+    "minCountersPerRaid": 1,
+    "maxCountersPerRaid": 20,
+    "requiredFields": ["name", "tier", "counters"],
+    "allowedTiers": [1, 2, 3, 4, 5, 6]
+  }
+}
