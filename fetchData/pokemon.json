@@ -82,7 +82,7 @@
     "trashabilityScore": 50,
     "regularTrashability": "Valuable",
     "regularTrashabilityScore": 50,
-    "dynamaxScore": 41,
+    "dynamaxScore": 43,
     "regularRecommendedCount": 1
   },
   {
@@ -259,7 +259,7 @@
     "trashabilityScore": 50,
     "regularTrashability": "Valuable",
     "regularTrashabilityScore": 50,
-    "dynamaxScore": 43,
+    "dynamaxScore": 45,
     "regularRecommendedCount": 1
   },
   {
@@ -511,7 +511,7 @@
     "trashabilityScore": 60,
     "regularTrashability": "Essential",
     "regularTrashabilityScore": 60,
-    "dynamaxScore": 65,
+    "dynamaxScore": 67,
     "regularRecommendedCount": 2
   },
   {
@@ -730,17 +730,17 @@
     ],
     "candy": "Bulbasaur",
     "dynamax": true,
-    "trashability": "Reliable",
+    "trashability": "Valuable",
     "recommendedCount": 1,
     "url": "https://db.pokemongohub.net/pokemon/3-Gigantamax",
     "raidTier": null,
     "defenderTier": "C Tier",
     "bestTypes": [],
     "leagues": {},
-    "trashabilityScore": 40,
+    "trashabilityScore": 50,
     "regularTrashability": "Reliable",
     "regularTrashabilityScore": 40,
-    "dynamaxScore": 38,
+    "dynamaxScore": 40,
     "regularRecommendedCount": 1
   },
   {
@@ -763,7 +763,7 @@
     "trashabilityScore": 40,
     "regularTrashability": "Reliable",
     "regularTrashabilityScore": 40,
-    "dynamaxScore": 38,
+    "dynamaxScore": 39,
     "regularRecommendedCount": 1
   },
   {
@@ -867,7 +867,7 @@
     "trashabilityScore": 50,
     "regularTrashability": "Valuable",
     "regularTrashabilityScore": 50,
-    "dynamaxScore": 43,
+    "dynamaxScore": 44,
     "regularRecommendedCount": 1
   },
   {
@@ -1127,7 +1127,7 @@
     "trashabilityScore": 60,
     "regularTrashability": "Essential",
     "regularTrashabilityScore": 60,
-    "dynamaxScore": 62,
+    "dynamaxScore": 64,
     "regularRecommendedCount": 2
   },
   {
@@ -1316,17 +1316,17 @@
     ],
     "candy": "Charmander",
     "dynamax": true,
-    "trashability": "Reliable",
+    "trashability": "Valuable",
     "recommendedCount": 1,
     "url": "https://db.pokemongohub.net/pokemon/6-Gigantamax",
     "raidTier": null,
     "defenderTier": null,
     "bestTypes": [],
     "leagues": {},
-    "trashabilityScore": 40,
+    "trashabilityScore": 50,
     "regularTrashability": "Reliable",
     "regularTrashabilityScore": 40,
-    "dynamaxScore": 38,
+    "dynamaxScore": 40,
     "regularRecommendedCount": 1
   },
   {
@@ -1445,7 +1445,7 @@
     "trashabilityScore": 40,
     "regularTrashability": "Reliable",
     "regularTrashabilityScore": 40,
-    "dynamaxScore": 38,
+    "dynamaxScore": 39,
     "regularRecommendedCount": 1
   },
   {
@@ -1558,7 +1558,7 @@
     "trashabilityScore": 60,
     "regularTrashability": "Essential",
     "regularTrashabilityScore": 60,
-    "dynamaxScore": 64,
+    "dynamaxScore": 65,
     "regularRecommendedCount": 2
   },
   {
@@ -1853,7 +1853,7 @@
     "trashabilityScore": 60,
     "regularTrashability": "Essential",
     "regularTrashabilityScore": 60,
-    "dynamaxScore": 75,
+    "dynamaxScore": 76,
     "regularRecommendedCount": 3
   },
   {
@@ -2151,7 +2151,7 @@
     "trashabilityScore": 40,
     "regularTrashability": "Reliable",
     "regularTrashabilityScore": 40,
-    "dynamaxScore": 38,
+    "dynamaxScore": 39,
     "regularRecommendedCount": 1
   },
   {
@@ -2249,7 +2249,7 @@
     ],
     "candy": "Caterpie",
     "dynamax": true,
-    "trashability": "Valuable",
+    "trashability": "Essential",
     "recommendedCount": 2,
     "url": "https://db.pokemongohub.net/pokemon/12",
     "raidTier": null,
@@ -2318,10 +2318,10 @@
         }
       }
     },
-    "trashabilityScore": 50,
+    "trashabilityScore": 60,
     "regularTrashability": "Valuable",
     "regularTrashabilityScore": 50,
-    "dynamaxScore": 49,
+    "dynamaxScore": 50,
     "regularRecommendedCount": 2
   },
   {
@@ -12599,7 +12599,7 @@
     "trashabilityScore": 50,
     "regularTrashability": "Valuable",
     "regularTrashabilityScore": 50,
-    "dynamaxScore": 48,
+    "dynamaxScore": 49,
     "regularRecommendedCount": 2
   },
   {
@@ -12789,7 +12789,7 @@
     "trashabilityScore": 60,
     "regularTrashability": "Essential",
     "regularTrashabilityScore": 60,
-    "dynamaxScore": 59,
+    "dynamaxScore": 60,
     "regularRecommendedCount": 2
   },
   {
@@ -13090,7 +13090,7 @@
     "trashabilityScore": 60,
     "regularTrashability": "Essential",
     "regularTrashabilityScore": 60,
-    "dynamaxScore": 77,
+    "dynamaxScore": 78,
     "regularRecommendedCount": 3
   },
   {
@@ -19623,7 +19623,7 @@
     "trashabilityScore": 50,
     "regularTrashability": "Valuable",
     "regularTrashabilityScore": 50,
-    "dynamaxScore": 43,
+    "dynamaxScore": 45,
     "regularRecommendedCount": 1
   },
   {
@@ -19775,7 +19775,7 @@
     "trashabilityScore": 60,
     "regularTrashability": "Essential",
     "regularTrashabilityScore": 60,
-    "dynamaxScore": 59,
+    "dynamaxScore": 61,
     "regularRecommendedCount": 3
   },
   {
@@ -20030,7 +20030,7 @@
     "trashabilityScore": 60,
     "regularTrashability": "Essential",
     "regularTrashabilityScore": 60,
-    "dynamaxScore": 71,
+    "dynamaxScore": 73,
     "regularRecommendedCount": 3
   },
   {
@@ -20261,17 +20261,17 @@
     ],
     "candy": "Gastly",
     "dynamax": true,
-    "trashability": "Reliable",
+    "trashability": "Valuable",
     "recommendedCount": 1,
     "url": "https://db.pokemongohub.net/pokemon/94-Gigantamax",
     "raidTier": null,
     "defenderTier": null,
     "bestTypes": [],
     "leagues": {},
-    "trashabilityScore": 40,
+    "trashabilityScore": 50,
     "regularTrashability": "Reliable",
     "regularTrashabilityScore": 40,
-    "dynamaxScore": 38,
+    "dynamaxScore": 40,
     "regularRecommendedCount": 1
   },
   {
@@ -21016,7 +21016,7 @@
     "trashabilityScore": 50,
     "regularTrashability": "Valuable",
     "regularTrashabilityScore": 50,
-    "dynamaxScore": 48,
+    "dynamaxScore": 49,
     "regularRecommendedCount": 1
   },
   {
@@ -21215,7 +21215,7 @@
     "trashabilityScore": 60,
     "regularTrashability": "Essential",
     "regularTrashabilityScore": 60,
-    "dynamaxScore": 58,
+    "dynamaxScore": 59,
     "regularRecommendedCount": 3
   },
   {
@@ -21303,7 +21303,7 @@
     "trashabilityScore": 40,
     "regularTrashability": "Reliable",
     "regularTrashabilityScore": 40,
-    "dynamaxScore": 38,
+    "dynamaxScore": 39,
     "regularRecommendedCount": 1
   },
   {
@@ -29119,7 +29119,7 @@
     "trashabilityScore": 60,
     "regularTrashability": "Essential",
     "regularTrashabilityScore": 60,
-    "dynamaxScore": 75,
+    "dynamaxScore": 77,
     "regularRecommendedCount": 3
   },
   {
@@ -29326,17 +29326,17 @@
     ],
     "candy": "Lapras",
     "dynamax": true,
-    "trashability": "Reliable",
+    "trashability": "Valuable",
     "recommendedCount": 1,
     "url": "https://db.pokemongohub.net/pokemon/131-Gigantamax",
     "raidTier": null,
     "defenderTier": "A+ Tier",
     "bestTypes": [],
     "leagues": {},
-    "trashabilityScore": 40,
+    "trashabilityScore": 50,
     "regularTrashability": "Reliable",
     "regularTrashabilityScore": 40,
-    "dynamaxScore": 38,
+    "dynamaxScore": 40,
     "regularRecommendedCount": 1
   },
   {
@@ -32106,7 +32106,7 @@
     "trashabilityScore": 60,
     "regularTrashability": "Essential",
     "regularTrashabilityScore": 60,
-    "dynamaxScore": 76,
+    "dynamaxScore": 78,
     "regularRecommendedCount": 2
   },
   {
@@ -32635,7 +32635,7 @@
     "trashabilityScore": 60,
     "regularTrashability": "Essential",
     "regularTrashabilityScore": 60,
-    "dynamaxScore": 83,
+    "dynamaxScore": 85,
     "regularRecommendedCount": 3
   },
   {
@@ -33164,7 +33164,7 @@
     "trashabilityScore": 60,
     "regularTrashability": "Essential",
     "regularTrashabilityScore": 60,
-    "dynamaxScore": 65,
+    "dynamaxScore": 67,
     "regularRecommendedCount": 2
   },
   {
@@ -45847,7 +45847,7 @@
     "trashabilityScore": 40,
     "regularTrashability": "Reliable",
     "regularTrashabilityScore": 40,
-    "dynamaxScore": 38,
+    "dynamaxScore": 39,
     "regularRecommendedCount": 1
   },
   {
@@ -51685,7 +51685,7 @@
     "trashabilityScore": 60,
     "regularTrashability": "Essential",
     "regularTrashabilityScore": 60,
-    "dynamaxScore": 75,
+    "dynamaxScore": 76,
     "regularRecommendedCount": 3
   },
   {
@@ -52028,7 +52028,7 @@
     "trashabilityScore": 60,
     "regularTrashability": "Essential",
     "regularTrashabilityScore": 60,
-    "dynamaxScore": 63,
+    "dynamaxScore": 64,
     "regularRecommendedCount": 2
   },
   {
@@ -52398,7 +52398,7 @@
     "trashabilityScore": 60,
     "regularTrashability": "Essential",
     "regularTrashabilityScore": 60,
-    "dynamaxScore": 76,
+    "dynamaxScore": 77,
     "regularRecommendedCount": 3
   },
   {
@@ -61336,7 +61336,7 @@
     "trashabilityScore": 60,
     "regularTrashability": "Essential",
     "regularTrashabilityScore": 60,
-    "dynamaxScore": 66,
+    "dynamaxScore": 68,
     "regularRecommendedCount": 3
   },
   {
@@ -73893,17 +73893,17 @@
     ],
     "candy": "Beldum",
     "dynamax": true,
-    "trashability": "Reliable",
+    "trashability": "Valuable",
     "recommendedCount": 1,
     "url": "https://db.pokemongohub.net/pokemon/374",
     "raidTier": null,
     "defenderTier": null,
     "bestTypes": [],
     "leagues": {},
-    "trashabilityScore": 40,
+    "trashabilityScore": 50,
     "regularTrashability": "Reliable",
     "regularTrashabilityScore": 40,
-    "dynamaxScore": 38,
+    "dynamaxScore": 41,
     "regularRecommendedCount": 1
   },
   {
@@ -74060,7 +74060,7 @@
     "trashabilityScore": 60,
     "regularTrashability": "Essential",
     "regularTrashabilityScore": 60,
-    "dynamaxScore": 69,
+    "dynamaxScore": 72,
     "regularRecommendedCount": 2
   },
   {
@@ -74381,7 +74381,7 @@
     "trashabilityScore": 60,
     "regularTrashability": "Essential",
     "regularTrashabilityScore": 60,
-    "dynamaxScore": 73,
+    "dynamaxScore": 76,
     "regularRecommendedCount": 3
   },
   {
@@ -102942,7 +102942,7 @@
     "trashabilityScore": 40,
     "regularTrashability": "Reliable",
     "regularTrashabilityScore": 40,
-    "dynamaxScore": 38,
+    "dynamaxScore": 39,
     "regularRecommendedCount": 1
   },
   {
@@ -103057,7 +103057,7 @@
     "trashabilityScore": 50,
     "regularTrashability": "Valuable",
     "regularTrashabilityScore": 50,
-    "dynamaxScore": 48,
+    "dynamaxScore": 49,
     "regularRecommendedCount": 1
   },
   {
@@ -103294,7 +103294,7 @@
     "trashabilityScore": 60,
     "regularTrashability": "Essential",
     "regularTrashabilityScore": 60,
-    "dynamaxScore": 51,
+    "dynamaxScore": 52,
     "regularRecommendedCount": 2
   },
   {
@@ -104687,7 +104687,7 @@
     "trashabilityScore": 50,
     "regularTrashability": "Valuable",
     "regularTrashabilityScore": 50,
-    "dynamaxScore": 48,
+    "dynamaxScore": 49,
     "regularRecommendedCount": 1
   },
   {
@@ -104956,7 +104956,7 @@
     "trashabilityScore": 60,
     "regularTrashability": "Essential",
     "regularTrashabilityScore": 60,
-    "dynamaxScore": 60,
+    "dynamaxScore": 63,
     "regularRecommendedCount": 3
   },
   {
@@ -108391,7 +108391,7 @@
     "trashabilityScore": 50,
     "regularTrashability": "Valuable",
     "regularTrashabilityScore": 50,
-    "dynamaxScore": 43,
+    "dynamaxScore": 44,
     "regularRecommendedCount": 1
   },
   {
@@ -117981,7 +117981,7 @@
     "trashabilityScore": 60,
     "regularTrashability": "Essential",
     "regularTrashabilityScore": 60,
-    "dynamaxScore": 51,
+    "dynamaxScore": 52,
     "regularRecommendedCount": 2
   },
   {
@@ -137612,7 +137612,7 @@
     "trashabilityScore": 60,
     "regularTrashability": "Essential",
     "regularTrashabilityScore": 60,
-    "dynamaxScore": 56,
+    "dynamaxScore": 57,
     "regularRecommendedCount": 1
   },
   {
@@ -142671,7 +142671,7 @@
     "trashabilityScore": 40,
     "regularTrashability": "Reliable",
     "regularTrashabilityScore": 40,
-    "dynamaxScore": 38,
+    "dynamaxScore": 39,
     "regularRecommendedCount": 1
   },
   {
@@ -142798,7 +142798,7 @@
     "trashabilityScore": 50,
     "regularTrashability": "Valuable",
     "regularTrashabilityScore": 50,
-    "dynamaxScore": 46,
+    "dynamaxScore": 47,
     "regularRecommendedCount": 1
   },
   {
@@ -142976,7 +142976,7 @@
     "trashabilityScore": 60,
     "regularTrashability": "Essential",
     "regularTrashabilityScore": 60,
-    "dynamaxScore": 59,
+    "dynamaxScore": 60,
     "regularRecommendedCount": 2
   },
   {
@@ -142999,7 +142999,7 @@
     "trashabilityScore": 40,
     "regularTrashability": "Reliable",
     "regularTrashabilityScore": 40,
-    "dynamaxScore": 38,
+    "dynamaxScore": 39,
     "regularRecommendedCount": 1
   },
   {
@@ -143032,7 +143032,7 @@
     "trashabilityScore": 40,
     "regularTrashability": "Reliable",
     "regularTrashabilityScore": 40,
-    "dynamaxScore": 38,
+    "dynamaxScore": 39,
     "regularRecommendedCount": 1
   },
   {
@@ -143117,7 +143117,7 @@
     "trashabilityScore": 50,
     "regularTrashability": "Valuable",
     "regularTrashabilityScore": 50,
-    "dynamaxScore": 43,
+    "dynamaxScore": 44,
     "regularRecommendedCount": 1
   },
   {
@@ -143295,7 +143295,7 @@
     "trashabilityScore": 60,
     "regularTrashability": "Essential",
     "regularTrashabilityScore": 60,
-    "dynamaxScore": 57,
+    "dynamaxScore": 58,
     "regularRecommendedCount": 2
   },
   {
@@ -143318,7 +143318,7 @@
     "trashabilityScore": 40,
     "regularTrashability": "Reliable",
     "regularTrashabilityScore": 40,
-    "dynamaxScore": 38,
+    "dynamaxScore": 39,
     "regularRecommendedCount": 1
   },
   {
@@ -143360,7 +143360,7 @@
     "trashabilityScore": 40,
     "regularTrashability": "Reliable",
     "regularTrashabilityScore": 40,
-    "dynamaxScore": 38,
+    "dynamaxScore": 39,
     "regularRecommendedCount": 1
   },
   {
@@ -143445,7 +143445,7 @@
     "trashabilityScore": 50,
     "regularTrashability": "Valuable",
     "regularTrashabilityScore": 50,
-    "dynamaxScore": 43,
+    "dynamaxScore": 44,
     "regularRecommendedCount": 1
   },
   {
@@ -143581,7 +143581,7 @@
     "trashabilityScore": 60,
     "regularTrashability": "Essential",
     "regularTrashabilityScore": 60,
-    "dynamaxScore": 57,
+    "dynamaxScore": 58,
     "regularRecommendedCount": 2
   },
   {
@@ -143604,7 +143604,7 @@
     "trashabilityScore": 40,
     "regularTrashability": "Reliable",
     "regularTrashabilityScore": 40,
-    "dynamaxScore": 38,
+    "dynamaxScore": 39,
     "regularRecommendedCount": 1
   },
   {
@@ -143795,7 +143795,7 @@
     "trashabilityScore": 40,
     "regularTrashability": "Reliable",
     "regularTrashabilityScore": 40,
-    "dynamaxScore": 38,
+    "dynamaxScore": 39,
     "regularRecommendedCount": 1
   },
   {
@@ -143889,7 +143889,7 @@
     "trashabilityScore": 50,
     "regularTrashability": "Valuable",
     "regularTrashabilityScore": 50,
-    "dynamaxScore": 48,
+    "dynamaxScore": 49,
     "regularRecommendedCount": 1
   },
   {
@@ -144077,7 +144077,7 @@
     "trashabilityScore": 60,
     "regularTrashability": "Essential",
     "regularTrashabilityScore": 60,
-    "dynamaxScore": 69,
+    "dynamaxScore": 72,
     "regularRecommendedCount": 3
   },
   {
@@ -145293,7 +145293,7 @@
     "trashabilityScore": 50,
     "regularTrashability": "Valuable",
     "regularTrashabilityScore": 50,
-    "dynamaxScore": 43,
+    "dynamaxScore": 47,
     "regularRecommendedCount": 1
   },
   {
@@ -145615,7 +145615,7 @@
     "trashabilityScore": 40,
     "regularTrashability": "Reliable",
     "regularTrashabilityScore": 40,
-    "dynamaxScore": 38,
+    "dynamaxScore": 39,
     "regularRecommendedCount": 1
   },
   {
@@ -145700,7 +145700,7 @@
     "trashabilityScore": 50,
     "regularTrashability": "Valuable",
     "regularTrashabilityScore": 50,
-    "dynamaxScore": 43,
+    "dynamaxScore": 44,
     "regularRecommendedCount": 1
   },
   {
@@ -145837,7 +145837,7 @@
     "trashabilityScore": 60,
     "regularTrashability": "Essential",
     "regularTrashabilityScore": 60,
-    "dynamaxScore": 51,
+    "dynamaxScore": 53,
     "regularRecommendedCount": 1
   },
   {
@@ -146668,7 +146668,7 @@
     "trashabilityScore": 50,
     "regularTrashability": "Valuable",
     "regularTrashabilityScore": 50,
-    "dynamaxScore": 46,
+    "dynamaxScore": 47,
     "regularRecommendedCount": 1
   },
   {
@@ -147587,7 +147587,7 @@
     "trashabilityScore": 60,
     "regularTrashability": "Essential",
     "regularTrashabilityScore": 60,
-    "dynamaxScore": 91,
+    "dynamaxScore": 96,
     "regularRecommendedCount": 3
   },
   {
@@ -147910,7 +147910,7 @@
     "trashabilityScore": 60,
     "regularTrashability": "Essential",
     "regularTrashabilityScore": 60,
-    "dynamaxScore": 91,
+    "dynamaxScore": 96,
     "regularRecommendedCount": 3
   },
   {
@@ -148341,7 +148341,7 @@
     "trashabilityScore": 60,
     "regularTrashability": "Essential",
     "regularTrashabilityScore": 60,
-    "dynamaxScore": 68,
+    "dynamaxScore": 84,
     "regularRecommendedCount": 3
   },
   {
@@ -148511,7 +148511,7 @@
     "trashabilityScore": 60,
     "regularTrashability": "Essential",
     "regularTrashabilityScore": 60,
-    "dynamaxScore": 68,
+    "dynamaxScore": 84,
     "regularRecommendedCount": 3
   },
   {

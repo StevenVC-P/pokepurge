@@ -56,6 +56,33 @@ export interface WeaknessAnalysis {
   netDefensiveScore: number;
 }
 
+export interface MaxBattleTarget {
+  name: string;
+  tier: number;
+  effectiveness: string;
+}
+
+export interface MaxBattleCounter {
+  name: string;
+  role: string;
+  effectiveness: string;
+}
+
+export interface MaxMoveRecommendation {
+  moveName: string;
+  moveType: string;
+  category: 'Attack' | 'Guard' | 'Spirit';
+  priority: 'Primary' | 'Secondary' | 'Situational';
+  description: string;
+}
+
+export interface DynamaxRole {
+  primary: 'Attacker' | 'Defender' | 'Healer' | 'Hybrid';
+  secondary?: 'Attacker' | 'Defender' | 'Healer';
+  confidence: number; // 0-100
+  reasoning: string;
+}
+
 export interface Pokemon {
   id: number;
   name: string;
@@ -87,4 +114,15 @@ export interface Pokemon {
   regularTrashability?: string;
   regularRecommendedCount?: number;
   regularTrashabilityScore?: number;
+  // Dynamax AI analysis
+  dynamaxQuickRole?: string;
+  dynamaxKeyTags?: string[];
+  dynamaxRoleSummary?: string;
+  dynamaxNotes?: string;
+  // Max Battle effectiveness data
+  maxBattleEffectiveAgainst?: MaxBattleTarget[];
+  maxBattleVulnerableTo?: MaxBattleCounter[];
+  // Max Move recommendations and strategy
+  maxMoveRecommendations?: MaxMoveRecommendation[];
+  dynamaxRole?: DynamaxRole;
 }

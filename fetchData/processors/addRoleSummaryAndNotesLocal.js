@@ -170,22 +170,21 @@ ${specialInfo}`;
 const generateQuickRolePrompt = (mon) => {
   const pokemonData = formatPokemonData(mon);
 
-  return `Pokemon GO Role Classification
+  return `Pokemon GO Role Classification for Semi-Serious Players
 
 Data: ${pokemonData}
 
 Respond with ONLY one of these exact phrases:
-- "Meta Threat"
-- "Raid Specialist"
-- "PvP Specialist"
-- "Great League Star"
-- "Ultra League Star"
-- "Master League Star"
-- "Glass Cannon"
-- "Bulky Defender"
-- "Niche Pick"
-- "Collection Only"
-- "Transfer Candidate"
+- "Meta Anchor" (dominates multiple formats - essential for competitive play)
+- "PvP Specialist" (excels in specific PvP leagues - core team member)
+- "League Anchor" (dominates one specific league - build for that format)
+- "Raid Specialist" (top-tier raid attacker - essential for damage dealing)
+- "Type Specialist" (best-in-type attacker - coverage for specific raids)
+- "Gym Defender" (excellent gym defense - passive coin generation)
+- "Cup Specialist" (shines in limited cup formats - niche but powerful)
+- "Spice Pick" (unexpected threat - surprise factor in PvP)
+- "Budget Option" (decent performance without heavy investment)
+- "Collector Only" (no competitive value - keep for completion only)
 
 Response:`;
 };
@@ -193,14 +192,21 @@ Response:`;
 const generateKeyTagsPrompt = (mon) => {
   const pokemonData = formatPokemonData(mon);
 
-  return `Pokemon GO Tag Classification
+  return `Pokemon GO Tag Classification for Resource Management
 
 Data: ${pokemonData}
 
-Respond with EXACTLY 2-3 tags from this list, separated by commas:
-High DPS, Glass Cannon, Bulky, Meta Relevant, Niche Use, Top Tier, Investment Priority, Fragile, Tanky, Fast Moves, Coverage, Limited Use, Situational, Budget Option, Elite TM
+Respond with EXACTLY 2-4 tags from this list, separated by commas:
 
-Example: "High DPS, Glass Cannon" or "Bulky, Meta Relevant, Top Tier"
+PRIORITY: Meta Relevant, High Priority, Essential Build, Core Team
+INVESTMENT: XL Investment, Heavy Investment, Budget Friendly, Low Investment, Skip Building
+PERFORMANCE: Glass Cannon, High DPS, Tanky, Balanced, Bulky Attacker
+ROLE: Raid Filler, Gym Defender, League Staple, Cup Meta, Anti-Meta
+UTILITY: Type Coverage, Niche Cup, Legacy Move, Future Investment
+WARNING: Outclassed, Trash Tier, Candy Fodder
+STRATEGY: Safe Switch, Lead Material, Closer, Flex Pick, Spice Factor
+
+Example: "Meta Relevant, XL Investment, League Staple, Anti-Meta"
 
 Tags:`;
 };
@@ -208,18 +214,21 @@ Tags:`;
 const generateRoleSummaryPrompt = (mon) => {
   const pokemonData = formatPokemonData(mon);
 
-  return `Pokemon GO Summary
+  return `Pokemon GO Summary for Semi-Serious Players
 
 Data: ${pokemonData}
 
-Write exactly 1-2 sentences using these terms: Meta-defining, Strong, Solid, Situational, Limited, No competitive value
+Write exactly 1 paragraph (1-2 sentences) of confident, actionable advice.
+DO NOT mention data sources, scores, or internal analysis.
+Focus on practical value and investment guidance.
 
-Format: "[Pokemon] is a [tier] [role] with [key strength]. [Investment advice]."
+Format: "[Pokemon] [dominates/excels/performs well/serves as/offers/lacks] [specific use case] with [key strength]. [Clear investment advice]."
 
 Examples:
-- "Mewtwo is a meta-defining raid specialist with elite psychic attacking power. High investment priority."
-- "Azumarill is a solid PvP option for Great League with excellent bulk. Worth developing."
-- "Tropius is a limited niche specialist for specific coverage. Keep one copy."
+- "Mewtwo dominates raid battles with elite psychic damage output. Essential for competitive teams - prioritize building multiple copies with different movesets."
+- "Azumarill excels as a Great League anchor with exceptional bulk and coverage. Core team member worth significant stardust investment."
+- "Tropius serves as a niche specialist for specific cup formats. Keep one copy for tournament play when you need Grass/Flying coverage."
+- "Dunsparce lacks competitive viability in current meta. Transfer for candy - your stardust is better spent elsewhere."
 
 Summary:`;
 };
@@ -227,15 +236,24 @@ Summary:`;
 const generateNotesPrompt = (mon) => {
   const pokemonData = formatPokemonData(mon);
 
-  return `Pokemon GO Analysis
+  return `Pokemon GO Strategic Analysis for Semi-Serious Players
 
 Data: ${pokemonData}
 
-Write exactly 3-4 sentences in this format:
-"Rated [tier] due to [reason]. PvP performance shows [specific scores/leagues]. Raid performance ranks [position] in [type]. Recommended count: [number] for [reason]."
+Write exactly 2-3 sentences of practical advice focusing on:
+1. WHY this Pokemon is valuable (or not)
+2. SPECIFIC use cases and strategy
+3. INVESTMENT guidance and priority
 
-Example:
-"Rated Essential due to exceptional Great League performance. PvP performance shows 95.2 score in Great League with top-tier bulk. Raid performance ranks 3rd in Psychic-type with elite DPS. Recommended count: 6 for maximum utility across all formats."
+DO NOT mention: data sources, internal scores, tier ratings, or analysis methodology.
+DO focus on: practical utility, team building, resource management, and competitive value.
+
+Format: "[Pokemon] [strength/weakness description]. [Specific usage strategy]. [Investment/building advice]."
+
+Examples:
+- "Mewtwo dominates raids with unmatched Psychic damage and versatile movepool coverage. Essential for legendary raids and Master League teams. Build multiple copies for different roles - highest investment priority."
+- "Azumarill anchors Great League teams with exceptional bulk and powerful Hydro Pump. Perfect safe switch with play rough coverage against Dragons. Requires XL candy investment but worth the grind for serious PvP players."
+- "Dunsparce offers no competitive advantages in current meta formats. Outclassed by better Normal-types in every role. Transfer immediately unless you're a completionist collector."
 
 Analysis:`;
 };

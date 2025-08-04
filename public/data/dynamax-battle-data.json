@@ -1,0 +1,554 @@
+{
+  "metadata": {
+    "lastUpdated": "2025-07-31T20:09:00.210Z",
+    "version": "1.0.0-sample",
+    "sources": [
+      "sample-data"
+    ],
+    "totalRaids": 5,
+    "totalCounters": 8
+  },
+  "raids": {
+    "Raikou": {
+      "tier": 5,
+      "counters": [
+        {
+          "pokemon": "Excadrill",
+          "effectiveness": "super-effective",
+          "moveType": "Ground",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Garchomp",
+          "effectiveness": "super-effective",
+          "moveType": "Ground",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Groudon",
+          "effectiveness": "super-effective",
+          "moveType": "Ground",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Rhyperior",
+          "effectiveness": "super-effective",
+          "moveType": "Ground",
+          "role": "Attacker"
+        }
+      ],
+      "url": "https://pokemongohub.net/sample",
+      "lastUpdated": "2025-07-31T20:09:00.211Z"
+    },
+    "Charizard": {
+      "tier": 4,
+      "counters": [
+        {
+          "pokemon": "Blastoise",
+          "effectiveness": "super-effective",
+          "moveType": "Water",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Gyarados",
+          "effectiveness": "super-effective",
+          "moveType": "Water",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Golem",
+          "effectiveness": "super-effective",
+          "moveType": "Rock",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Tyranitar",
+          "effectiveness": "super-effective",
+          "moveType": "Rock",
+          "role": "Attacker"
+        }
+      ],
+      "url": "https://pokemongohub.net/sample",
+      "lastUpdated": "2025-07-31T20:09:00.211Z"
+    },
+    "Venusaur": {
+      "tier": 3,
+      "counters": [
+        {
+          "pokemon": "Charizard",
+          "effectiveness": "super-effective",
+          "moveType": "Fire",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Moltres",
+          "effectiveness": "super-effective",
+          "moveType": "Fire",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Ho-Oh",
+          "effectiveness": "super-effective",
+          "moveType": "Fire",
+          "role": "Attacker"
+        }
+      ],
+      "url": "https://pokemongohub.net/sample",
+      "lastUpdated": "2025-07-31T20:09:00.211Z"
+    },
+    "Blastoise": {
+      "tier": 3,
+      "counters": [
+        {
+          "pokemon": "Venusaur",
+          "effectiveness": "super-effective",
+          "moveType": "Grass",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Sceptile",
+          "effectiveness": "super-effective",
+          "moveType": "Grass",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Raikou",
+          "effectiveness": "super-effective",
+          "moveType": "Electric",
+          "role": "Attacker"
+        }
+      ],
+      "url": "https://pokemongohub.net/sample",
+      "lastUpdated": "2025-07-31T20:09:00.211Z"
+    },
+    "Gigantamax Charizard": {
+      "tier": 5,
+      "counters": [
+        {
+          "pokemon": "Blastoise",
+          "effectiveness": "super-effective",
+          "moveType": "Water",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Gyarados",
+          "effectiveness": "super-effective",
+          "moveType": "Water",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Golem",
+          "effectiveness": "super-effective",
+          "moveType": "Rock",
+          "role": "Attacker"
+        }
+      ],
+      "url": "https://pokemongohub.net/sample",
+      "lastUpdated": "2025-07-31T20:09:00.211Z"
+    }
+  },
+  "counters": {
+    "Excadrill": {
+      "0": {
+        "target": "Raikou",
+        "tier": 5,
+        "effectiveness": "super-effective",
+        "role": "Attacker"
+      },
+      "effectiveAgainst": [
+        "Raikou"
+      ],
+      "averageTier": 5
+    },
+    "Garchomp": {
+      "0": {
+        "target": "Raikou",
+        "tier": 5,
+        "effectiveness": "super-effective",
+        "role": "Attacker"
+      },
+      "effectiveAgainst": [
+        "Raikou"
+      ],
+      "averageTier": 5
+    },
+    "Groudon": {
+      "0": {
+        "target": "Raikou",
+        "tier": 5,
+        "effectiveness": "super-effective",
+        "role": "Attacker"
+      },
+      "effectiveAgainst": [
+        "Raikou"
+      ],
+      "averageTier": 5
+    },
+    "Rhyperior": {
+      "0": {
+        "target": "Raikou",
+        "tier": 5,
+        "effectiveness": "super-effective",
+        "role": "Attacker"
+      },
+      "effectiveAgainst": [
+        "Raikou"
+      ],
+      "averageTier": 5
+    },
+    "Blastoise": {
+      "0": {
+        "target": "Charizard",
+        "tier": 4,
+        "effectiveness": "super-effective",
+        "role": "Attacker"
+      },
+      "1": {
+        "target": "Gigantamax Charizard",
+        "tier": 5,
+        "effectiveness": "super-effective",
+        "role": "Attacker"
+      },
+      "effectiveAgainst": [
+        "Charizard",
+        "Gigantamax Charizard"
+      ],
+      "averageTier": 4.5
+    },
+    "Gyarados": {
+      "0": {
+        "target": "Charizard",
+        "tier": 4,
+        "effectiveness": "super-effective",
+        "role": "Attacker"
+      },
+      "1": {
+        "target": "Gigantamax Charizard",
+        "tier": 5,
+        "effectiveness": "super-effective",
+        "role": "Attacker"
+      },
+      "effectiveAgainst": [
+        "Charizard",
+        "Gigantamax Charizard"
+      ],
+      "averageTier": 4.5
+    },
+    "Golem": {
+      "0": {
+        "target": "Charizard",
+        "tier": 4,
+        "effectiveness": "super-effective",
+        "role": "Attacker"
+      },
+      "1": {
+        "target": "Gigantamax Charizard",
+        "tier": 5,
+        "effectiveness": "super-effective",
+        "role": "Attacker"
+      },
+      "effectiveAgainst": [
+        "Charizard",
+        "Gigantamax Charizard"
+      ],
+      "averageTier": 4.5
+    },
+    "Tyranitar": {
+      "0": {
+        "target": "Charizard",
+        "tier": 4,
+        "effectiveness": "super-effective",
+        "role": "Attacker"
+      },
+      "effectiveAgainst": [
+        "Charizard"
+      ],
+      "averageTier": 4
+    },
+    "Charizard": {
+      "0": {
+        "target": "Venusaur",
+        "tier": 3,
+        "effectiveness": "super-effective",
+        "role": "Attacker"
+      },
+      "effectiveAgainst": [
+        "Venusaur"
+      ],
+      "averageTier": 3
+    },
+    "Moltres": {
+      "0": {
+        "target": "Venusaur",
+        "tier": 3,
+        "effectiveness": "super-effective",
+        "role": "Attacker"
+      },
+      "effectiveAgainst": [
+        "Venusaur"
+      ],
+      "averageTier": 3
+    },
+    "Ho-Oh": {
+      "0": {
+        "target": "Venusaur",
+        "tier": 3,
+        "effectiveness": "super-effective",
+        "role": "Attacker"
+      },
+      "effectiveAgainst": [
+        "Venusaur"
+      ],
+      "averageTier": 3
+    },
+    "Venusaur": {
+      "0": {
+        "target": "Blastoise",
+        "tier": 3,
+        "effectiveness": "super-effective",
+        "role": "Attacker"
+      },
+      "effectiveAgainst": [
+        "Blastoise"
+      ],
+      "averageTier": 3
+    },
+    "Sceptile": {
+      "0": {
+        "target": "Blastoise",
+        "tier": 3,
+        "effectiveness": "super-effective",
+        "role": "Attacker"
+      },
+      "effectiveAgainst": [
+        "Blastoise"
+      ],
+      "averageTier": 3
+    },
+    "Raikou": {
+      "0": {
+        "target": "Blastoise",
+        "tier": 3,
+        "effectiveness": "super-effective",
+        "role": "Attacker"
+      },
+      "effectiveAgainst": [
+        "Blastoise"
+      ],
+      "averageTier": 3
+    }
+  },
+  "vulnerabilities": {
+    "Raikou": {
+      "tier": 5,
+      "weakTo": [
+        {
+          "pokemon": "Excadrill",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Garchomp",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Groudon",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Rhyperior",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        }
+      ],
+      "topCounters": [
+        {
+          "pokemon": "Excadrill",
+          "effectiveness": "super-effective",
+          "moveType": "Ground",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Garchomp",
+          "effectiveness": "super-effective",
+          "moveType": "Ground",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Groudon",
+          "effectiveness": "super-effective",
+          "moveType": "Ground",
+          "role": "Attacker"
+        }
+      ]
+    },
+    "Charizard": {
+      "tier": 4,
+      "weakTo": [
+        {
+          "pokemon": "Blastoise",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Gyarados",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Golem",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Tyranitar",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        }
+      ],
+      "topCounters": [
+        {
+          "pokemon": "Blastoise",
+          "effectiveness": "super-effective",
+          "moveType": "Water",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Gyarados",
+          "effectiveness": "super-effective",
+          "moveType": "Water",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Golem",
+          "effectiveness": "super-effective",
+          "moveType": "Rock",
+          "role": "Attacker"
+        }
+      ]
+    },
+    "Venusaur": {
+      "tier": 3,
+      "weakTo": [
+        {
+          "pokemon": "Charizard",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Moltres",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Ho-Oh",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        }
+      ],
+      "topCounters": [
+        {
+          "pokemon": "Charizard",
+          "effectiveness": "super-effective",
+          "moveType": "Fire",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Moltres",
+          "effectiveness": "super-effective",
+          "moveType": "Fire",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Ho-Oh",
+          "effectiveness": "super-effective",
+          "moveType": "Fire",
+          "role": "Attacker"
+        }
+      ]
+    },
+    "Blastoise": {
+      "tier": 3,
+      "weakTo": [
+        {
+          "pokemon": "Venusaur",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Sceptile",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Raikou",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        }
+      ],
+      "topCounters": [
+        {
+          "pokemon": "Venusaur",
+          "effectiveness": "super-effective",
+          "moveType": "Grass",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Sceptile",
+          "effectiveness": "super-effective",
+          "moveType": "Grass",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Raikou",
+          "effectiveness": "super-effective",
+          "moveType": "Electric",
+          "role": "Attacker"
+        }
+      ]
+    },
+    "Gigantamax Charizard": {
+      "tier": 5,
+      "weakTo": [
+        {
+          "pokemon": "Blastoise",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Gyarados",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Golem",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        }
+      ],
+      "topCounters": [
+        {
+          "pokemon": "Blastoise",
+          "effectiveness": "super-effective",
+          "moveType": "Water",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Gyarados",
+          "effectiveness": "super-effective",
+          "moveType": "Water",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Golem",
+          "effectiveness": "super-effective",
+          "moveType": "Rock",
+          "role": "Attacker"
+        }
+      ]
+    }
+  },
+  "typeEffectiveness": {}
+}

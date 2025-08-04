@@ -30,21 +30,49 @@ export const parsePokemonSlug = (slug: string): number | null => {
  * Find Pokemon by ID or slug
  */
 export const findPokemonByIdOrSlug = (pokemonList: Pokemon[], identifier: string): Pokemon | null => {
-  // Try to parse as ID first
+  // Try to parse as ID first (simple number)
   const id = parseInt(identifier, 10);
-  if (!isNaN(id)) {
+  if (!isNaN(id) && !identifier.includes('-')) {
+    // Simple ID lookup - return first match
     return pokemonList.find(p => p.id === id) || null;
   }
-  
-  // Try to parse as slug
+
+  // Try to parse as slug (format: "id-name")
   const parsedId = parsePokemonSlug(identifier);
   if (parsedId) {
-    return pokemonList.find(p => p.id === parsedId) || null;
+    // Extract the name part from the slug
+    const nameFromSlug = identifier.replace(/^\d+-/, '').toLowerCase();
+
+    // Find Pokemon that matches both ID and name
+    const candidates = pokemonList.filter(p => p.id === parsedId);
+
+    // If only one candidate, return it
+    if (candidates.length === 1) {
+      return candidates[0];
+    }
+
+    // If multiple candidates, try to find exact match by name
+    for (const candidate of candidates) {
+      // Create slug from candidate name (same logic as generatePokemonSlug but inline)
+      const candidateSlug = candidate.name
+        .toLowerCase()
+        .replace(/[^a-z0-9\s-]/g, '')
+        .replace(/\s+/g, '-')
+        .replace(/-+/g, '-')
+        .trim();
+
+      if (candidateSlug === nameFromSlug) {
+        return candidate;
+      }
+    }
+
+    // Fallback: return first candidate if no exact match
+    return candidates[0] || null;
   }
-  
+
   // Fallback: try to match by name (case-insensitive)
   const normalizedIdentifier = identifier.toLowerCase().replace(/-/g, ' ');
-  return pokemonList.find(p => 
+  return pokemonList.find(p =>
     p.name.toLowerCase() === normalizedIdentifier
   ) || null;
 };

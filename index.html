@@ -9,12 +9,31 @@
     <meta name="description" content="Manage your Pokemon GO inventory with PokePurge. Get trashability ratings, recommended counts, and strategic guidance for all Pokemon." />
     <meta name="keywords" content="Pokemon GO, inventory management, trashability, Pokemon ratings, PvP, raids" />
 
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+    <!-- Google AdSense (only in production) -->
+    <script>
+      // Only load AdSense in production to avoid blocking issues in development
+      if (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXXX';
+        script.crossOrigin = 'anonymous';
+        script.onerror = function() {
+          console.log('AdSense blocked or failed to load - continuing without ads');
+        };
+        document.head.appendChild(script);
 
-    <!-- Preconnect to ad domains for performance -->
-    <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
-    <link rel="preconnect" href="https://googleads.g.doubleclick.net" />
+        // Preconnect to ad domains for performance (only in production)
+        const preconnect1 = document.createElement('link');
+        preconnect1.rel = 'preconnect';
+        preconnect1.href = 'https://pagead2.googlesyndication.com';
+        document.head.appendChild(preconnect1);
+
+        const preconnect2 = document.createElement('link');
+        preconnect2.rel = 'preconnect';
+        preconnect2.href = 'https://googleads.g.doubleclick.net';
+        document.head.appendChild(preconnect2);
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

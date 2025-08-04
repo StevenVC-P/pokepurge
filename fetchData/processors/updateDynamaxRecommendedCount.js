@@ -33,12 +33,34 @@ const OUTPUT_PATH = path.resolve(__dirname, "../../public/data/pokemon.json");
 // For debugging specific Pokemon
 const current = "";
 
+// Cache for data-driven detection
+let gigantamaxBasesCache = null;
+
+/**
+ * Build cache of Pokemon bases that have Gigantamax forms
+ * @param {Array} allPokemon - Full Pokemon dataset
+ * @returns {Set} Set of base names that have Gigantamax forms
+ */
+const buildGigantamaxBasesCache = (allPokemon) => {
+  if (gigantamaxBasesCache) return gigantamaxBasesCache;
+
+  gigantamaxBasesCache = new Set();
+  allPokemon.forEach((mon) => {
+    if (mon.form === "Gigantamax") {
+      gigantamaxBasesCache.add(mon.base);
+    }
+  });
+
+  return gigantamaxBasesCache;
+};
+
 /**
  * DYNAMAX RECOMMENDED COUNT CALCULATION
  *
  * Different logic than regular Pokemon due to unique Max Battle mechanics
+ * Now uses data-driven Gigantamax detection
  */
-const calcDynamaxRecommendedCount = (mon) => {
+const calcDynamaxRecommendedCount = (mon, allPokemon) => {
   let totalCount = 0;
 
   // 🎯 1. MAX BATTLE PARTICIPATION BASE
@@ -136,14 +158,15 @@ const calcDynamaxRecommendedCount = (mon) => {
   totalCount += specialBonus;
 
   // 🎯 6. GIGANTAMAX FORM BONUS
-  // Pokemon that can become Gigantamax get extra value
-  const hasGigantamaxForm = mon.form === "normal" && ["Venusaur", "Charizard", "Blastoise", "Butterfree", "Meowth", "Machamp", "Gengar", "Kingler", "Lapras", "Eevee", "Snorlax", "Rillaboom", "Cinderace", "Inteleon", "Toxtricity"].includes(mon.base);
+  // Pokemon that can become Gigantamax get extra value (data-driven detection)
+  const gigantamaxBases = buildGigantamaxBasesCache(allPokemon);
+  const hasGigantamaxForm = mon.form === "normal" && gigantamaxBases.has(mon.base);
 
   let gigantamaxBonus = 0;
   if (hasGigantamaxForm) {
     gigantamaxBonus = 1;
     if (mon.name === current) {
-      console.log(`Gigantamax form available: +1`);
+      console.log(`Gigantamax form available: +1 (${mon.base} has Gigantamax form)`);
     }
   }
 
@@ -178,7 +201,7 @@ const updated = data.map((mon) => {
   // Only process dynamax Pokemon
   if (mon.dynamax === true) {
     dynamaxCount++;
-    const newRecommendedCount = calcDynamaxRecommendedCount(mon);
+    const newRecommendedCount = calcDynamaxRecommendedCount(mon, data);
 
     if (mon.name === current) {
       console.log(`DEBUG: ${current} → Dynamax recommendedCount: ${mon.recommendedCount} → ${newRecommendedCount}`);
