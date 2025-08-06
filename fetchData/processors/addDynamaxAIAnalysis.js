@@ -311,6 +311,8 @@ const clean = (text = "") => {
     .replace(/['"`]/g, "")
     .replace(/^[-\s]*/, "")
     .replace(/^\n+/, "")
+    .replace(/\\n\\n/g, "\n\n") // Convert literal \n\n to actual line breaks
+    .replace(/\\n/g, "\n") // Convert literal \n to actual line breaks
     .trim();
 };
 
