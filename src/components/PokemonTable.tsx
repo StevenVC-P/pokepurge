@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { SmartPagination } from "./SmartPagination";
 import type { Pokemon } from "../types/Pokemon";
 import { loadPokemonData, loadSpriteMap } from "../utils/dataLoader";
-import { generatePokemonSlug } from "../utils/pokemonUtils";
+import { generatePokemonSlug, getTypeColor } from "../utils/pokemonUtils";
 
 export default function PokemonTable() {
   const [pokemonList, setPokemonList] = useState<Pokemon[]>([]);
@@ -519,7 +519,7 @@ export default function PokemonTable() {
                         {mon.types.map((type, index) => (
                           <span
                             key={index}
-                            className="px-2 py-1 text-xs font-medium rounded-full bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-600"
+                            className={`px-2 py-1 text-xs font-medium rounded-full text-white ${getTypeColor(type)}`}
                           >
                             {type}
                           </span>
