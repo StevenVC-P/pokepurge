@@ -271,12 +271,15 @@ class DynamaxDataIntegrator {
               reason: `${attackType} beats ${defenseType}`,
             };
 
-            effectiveAgainst.push({
-              name: target.name,
-              tier: this.inferRaidTier(target),
-              effectiveness: "super-effective",
-              moveInfo: moveInfo,
-            });
+            const difficulty = this.getMaxBattleDifficulty(target);
+            if (difficulty) {
+              effectiveAgainst.push({
+                name: target.name,
+                difficulty: difficulty,
+                effectiveness: "super-effective",
+                moveInfo: moveInfo,
+              });
+            }
             break; // Only add once per target
           }
         }
@@ -294,28 +297,63 @@ class DynamaxDataIntegrator {
    */
   generateVulnerableToData(pokemon, allDynamaxPokemon) {
     const vulnerableTo = [];
+    const addedAttackers = new Set(); // Track to avoid duplicates
 
     // Check what types are super effective against this Pokemon
     for (const attacker of allDynamaxPokemon) {
       if (attacker.name === pokemon.name) continue; // Skip self
+      if (addedAttackers.has(attacker.name)) continue; // Skip if already added
 
+      let bestMove = null;
+      let bestTargetType = null;
+
+      // Check attacker's natural types
       for (const attackType of attacker.types) {
         for (const defenseType of pokemon.types) {
           if (this.isTypeEffective(attackType, defenseType)) {
-            const moveInfo = {
+            bestMove = {
               moveName: this.getMaxMoveForType(attackType),
               moveType: attackType,
               reason: `${attackType} beats ${defenseType}`,
             };
-
-            vulnerableTo.push({
-              name: attacker.name,
-              role: this.inferRole(attacker),
-              effectiveness: "super-effective",
-              moveInfo: moveInfo,
-            });
-            break; // Only add once per attacker
+            bestTargetType = defenseType;
+            break;
           }
+        }
+        if (bestMove) break;
+      }
+
+      // If no natural type match, check fast moves
+      if (!bestMove && attacker.dynamaxFastMoves) {
+        for (const fastMove of attacker.dynamaxFastMoves) {
+          for (const defenseType of pokemon.types) {
+            if (this.isTypeEffective(fastMove.type, defenseType)) {
+              bestMove = {
+                moveName: this.getMaxMoveForType(fastMove.type),
+                moveType: fastMove.type,
+                reason: `${fastMove.type} beats ${defenseType}`,
+              };
+              bestTargetType = defenseType;
+              break;
+            }
+          }
+          if (bestMove) break;
+        }
+      }
+
+      // Add the attacker if we found a super-effective move
+      if (bestMove) {
+        const attackerDifficulty = this.getMaxBattleDifficulty(attacker);
+        if (attackerDifficulty && attackerDifficulty >= 3) {
+          // Only 3★ and up
+          vulnerableTo.push({
+            name: attacker.name,
+            role: this.inferRole(attacker),
+            difficulty: attackerDifficulty,
+            effectiveness: "super-effective",
+            moveInfo: bestMove,
+          });
+          addedAttackers.add(attacker.name);
         }
       }
     }
@@ -327,14 +365,18 @@ class DynamaxDataIntegrator {
   }
 
   /**
-   * Infer raid tier based on Pokemon stats/rarity
+   * Get actual Max Battle difficulty from scraped data
    */
-  inferRaidTier(pokemon) {
-    // Use trashability as a proxy for raid tier
-    if (pokemon.trashability === "Essential") return 5;
-    if (pokemon.trashability === "Valuable") return 4;
-    if (pokemon.trashability === "Reliable") return 3;
-    return 3; // Default tier
+  getMaxBattleDifficulty(pokemon) {
+    // Check if this Pokemon appears in our scraped Max Battle data
+    const raidData = this.dynamaxData.raids?.[pokemon.name];
+    if (raidData && raidData.difficulty) {
+      return raidData.difficulty;
+    }
+
+    // For Pokemon not in current Max Battle rotation, return null
+    // This means they won't show artificial tier information
+    return null;
   }
 
   /**

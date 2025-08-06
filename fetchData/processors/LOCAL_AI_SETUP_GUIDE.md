@@ -213,8 +213,7 @@ Modify the prompt templates in the script to customize AI behavior:
 
 | Method                       | Setup Cost | Running Cost | Total (1,620 Pokemon) |
 | ---------------------------- | ---------- | ------------ | --------------------- |
-| OpenAI API                   | $0         | $0.26        | $0.26                 |
-| Local AI                     | $0         | $0           | $0                    |
+| Local AI (Ollama)            | $0         | $0           | $0                    |
 | Local AI (one-time hardware) | $500-2000  | $0           | Hardware cost         |
 
 ## Integration with runAll.js Pipeline

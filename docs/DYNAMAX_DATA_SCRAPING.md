@@ -373,8 +373,13 @@ if (effectiveAgainst.length >= 3 && averageTier >= 4.0) {
 ```typescript
 interface MaxBattleTarget {
   name: string;
-  tier: number;
+  difficulty: number;
   effectiveness: string;
+  moveInfo?: {
+    moveName: string;
+    moveType: string;
+    reason: string;
+  };
 }
 
 interface Pokemon {

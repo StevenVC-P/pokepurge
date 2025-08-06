@@ -3,6 +3,7 @@
 ## 🚀 Quick Start
 
 ### Run the Complete Pipeline
+
 ```bash
 # Full data pipeline (includes Dynamax scraping)
 npm run build-data
@@ -13,6 +14,7 @@ node fetchData/processors/dynamaxDataIntegrator.js
 ```
 
 ### Test with Sample Data
+
 ```bash
 # Create sample data for testing
 node -e "
@@ -58,6 +60,7 @@ docs/
 ## 🔧 Configuration
 
 ### Key Settings (`dynamax-scraping-config.json`)
+
 ```json
 {
   "scraping": {
@@ -82,11 +85,13 @@ Web Sources → Scraper → Raw Data → Integrator → Enhanced Pokemon Data �
 ```
 
 ### Input Sources
+
 - **Pokemon GO Hub**: Dynamax raid guides
-- **GamePress**: DPS/TDO data  
+- **GamePress**: DPS/TDO data
 - **Community**: Tier lists and analysis
 
 ### Output Enhancement
+
 - **Recommended Count**: +1-2 copies for versatile counters
 - **Trashability**: Boost to Essential/Valuable for effective counters
 - **AI Analysis**: Add Max Battle context
@@ -95,6 +100,7 @@ Web Sources → Scraper → Raw Data → Integrator → Enhanced Pokemon Data �
 ## 🎯 Key Functions
 
 ### Scraper (`dynamaxDataScraper.js`)
+
 ```javascript
 // Main entry point
 scraper.scrapeAll()
@@ -106,6 +112,7 @@ scraper.processEffectivenessData() # Process type effectiveness
 ```
 
 ### Integrator (`dynamaxDataIntegrator.js`)
+
 ```javascript
 // Main entry point
 integrator.integrate()
@@ -120,6 +127,7 @@ integrator.generateEffectivenessData() # Create UI data
 ## 📋 Data Structures
 
 ### Raw Dynamax Data
+
 ```json
 {
   "raids": {
@@ -135,50 +143,70 @@ integrator.generateEffectivenessData() # Create UI data
 ```
 
 ### Enhanced Pokemon Data
+
 ```json
 {
   "name": "Excadrill",
-  "trashability": "Essential",        // Boosted from "Reliable"
-  "recommendedCount": 3,              // Boosted from 1
+  "trashability": "Essential", // Boosted from "Reliable"
+  "recommendedCount": 3, // Boosted from 1
   "dynamaxRoleSummary": "...Dominates Max Battles against Raikou...",
-  "maxBattleEffectiveAgainst": [
-    { "name": "Raikou", "tier": 5, "effectiveness": "super-effective" }
-  ]
+  "maxBattleEffectiveAgainst": [{ "name": "Raikou", "tier": 5, "effectiveness": "super-effective" }]
 }
 ```
 
 ## 🎨 UI Integration
 
 ### TypeScript Interface
+
 ```typescript
 interface Pokemon {
   maxBattleEffectiveAgainst?: Array<{
     name: string;
-    tier: number;
+    difficulty: number;
     effectiveness: string;
+    moveInfo?: {
+      moveName: string;
+      moveType: string;
+      reason: string;
+    };
   }>;
   maxBattleVulnerableTo?: Array<{
     name: string;
     role: string;
+    difficulty?: number;
     effectiveness: string;
+    moveInfo?: {
+      moveName: string;
+      moveType: string;
+      reason: string;
+    };
   }>;
 }
 ```
 
 ### React Component Usage
+
 ```tsx
-{pokemon.maxBattleEffectiveAgainst?.map((target, index) => (
-  <div key={index}>
-    <span>{target.name}</span>
-    <span>Tier {target.tier}</span>
-    <span>{target.effectiveness === 'super-effective' ? '2x' : '1x'}</span>
-  </div>
-))}
+{
+  pokemon.maxBattleEffectiveAgainst?.map((target, index) => (
+    <div key={index}>
+      <span>{target.name}</span>
+      <span>{target.difficulty}★</span>
+      <span>{target.effectiveness === "super-effective" ? "2x" : "1x"}</span>
+      {target.moveInfo && (
+        <span>
+          {target.moveInfo.moveName} ({target.moveInfo.moveType})
+        </span>
+      )}
+    </div>
+  ));
+}
 ```
 
 ## 🔍 Debugging
 
 ### Check Data Integration
+
 ```bash
 # Verify enhanced Pokemon data
 grep -A 5 "maxBattleEffectiveAgainst" public/data/pokemon.json
@@ -192,6 +220,7 @@ console.log(\`Enhanced \${enhanced.length} Pokemon with Max Battle data\`);
 ```
 
 ### Validate Scraping Results
+
 ```bash
 # Check raw Dynamax data
 cat public/data/dynamax-battle-data.json | jq '.metadata'
@@ -213,22 +242,27 @@ console.log('Excadrill Max Battle data:', {
 ### Common Issues
 
 #### 1. Scraping Fails (403 Error)
+
 - **Expected behavior** - System uses fallback data
 - **Solution**: Check if sample data exists in `public/data/dynamax-battle-data.json`
 
 #### 2. No Enhanced Pokemon
+
 - **Check**: Integration ran after scraping
 - **Fix**: Run `node fetchData/processors/dynamaxDataIntegrator.js`
 
 #### 3. UI Not Showing Data
+
 - **Check**: TypeScript interfaces match data structure
 - **Fix**: Verify `maxBattleEffectiveAgainst` field exists in Pokemon data
 
 #### 4. Pipeline Timeout
+
 - **Cause**: Scraping taking too long
 - **Fix**: Increase timeout in `runAll.js` or disable scraping temporarily
 
 ### Error Recovery
+
 ```bash
 # Restore from backup
 cp public/data/pokemon-backup-*.json public/data/pokemon.json
@@ -240,6 +274,7 @@ node fetchData/processors/dynamaxDataIntegrator.js
 ## 🔄 Adding New Data Sources
 
 ### 1. Extend Scraper
+
 ```javascript
 // Add to dynamaxDataScraper.js
 async scrapeNewSource() {
@@ -250,6 +285,7 @@ async scrapeNewSource() {
 ```
 
 ### 2. Update Configuration
+
 ```json
 // Add to dynamax-scraping-config.json
 "sources": {
@@ -262,6 +298,7 @@ async scrapeNewSource() {
 ```
 
 ### 3. Test Integration
+
 ```bash
 # Test new source
 node -e "
@@ -274,12 +311,14 @@ instance.scrapeNewSource().then(() => console.log('✅ New source working'));
 ## 📈 Performance Monitoring
 
 ### Metrics to Track
+
 - **Scraping success rate**: % of successful requests
 - **Data freshness**: Time since last update
 - **Enhancement coverage**: % of Pokemon with Max Battle data
 - **Integration time**: Duration of data processing
 
 ### Monitoring Commands
+
 ```bash
 # Check last update time
 node -e "

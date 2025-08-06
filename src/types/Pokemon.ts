@@ -58,14 +58,25 @@ export interface WeaknessAnalysis {
 
 export interface MaxBattleTarget {
   name: string;
-  tier: number;
+  difficulty: number;
   effectiveness: string;
+  moveInfo?: {
+    moveName: string;
+    moveType: string;
+    reason: string;
+  };
 }
 
 export interface MaxBattleCounter {
   name: string;
   role: string;
+  difficulty?: number;
   effectiveness: string;
+  moveInfo?: {
+    moveName: string;
+    moveType: string;
+    reason: string;
+  };
 }
 
 export interface MaxMoveRecommendation {
@@ -74,6 +85,16 @@ export interface MaxMoveRecommendation {
   category: 'Attack' | 'Guard' | 'Spirit';
   priority: 'Primary' | 'Secondary' | 'Situational';
   description: string;
+}
+
+export interface DynamaxFastMove {
+  type: string;
+  moveName: string;
+  moveId: string;
+  eps: number;
+  dps: number;
+  stab: boolean;
+  reasoning: string;
 }
 
 export interface DynamaxRole {
@@ -124,5 +145,7 @@ export interface Pokemon {
   maxBattleVulnerableTo?: MaxBattleCounter[];
   // Max Move recommendations and strategy
   maxMoveRecommendations?: MaxMoveRecommendation[];
+  // Dynamax fast move recommendations for energy generation
+  dynamaxFastMoves?: DynamaxFastMove[];
   dynamaxRole?: DynamaxRole;
 }

@@ -1,354 +1,1734 @@
 {
   "metadata": {
-    "lastUpdated": "2025-07-31T20:09:00.210Z",
-    "version": "1.0.0-sample",
+    "lastUpdated": "2025-08-04T22:23:56.118Z",
+    "version": "1.0.0",
     "sources": [
-      "sample-data"
+      "pokemonGoHub",
+      "gamePress"
     ],
-    "totalRaids": 5,
-    "totalCounters": 8
+    "totalRaids": 17,
+    "totalCounters": 0
   },
   "raids": {
-    "Raikou": {
-      "tier": 5,
-      "counters": [
-        {
-          "pokemon": "Excadrill",
-          "effectiveness": "super-effective",
-          "moveType": "Ground",
-          "role": "Attacker"
-        },
-        {
-          "pokemon": "Garchomp",
-          "effectiveness": "super-effective",
-          "moveType": "Ground",
-          "role": "Attacker"
-        },
-        {
-          "pokemon": "Groudon",
-          "effectiveness": "super-effective",
-          "moveType": "Ground",
-          "role": "Attacker"
-        },
-        {
-          "pokemon": "Rhyperior",
-          "effectiveness": "super-effective",
-          "moveType": "Ground",
-          "role": "Attacker"
-        }
-      ],
-      "url": "https://pokemongohub.net/sample",
-      "lastUpdated": "2025-07-31T20:09:00.211Z"
-    },
-    "Charizard": {
-      "tier": 4,
+    "Omanyte": {
+      "difficulty": 1,
+      "type": "max-monday",
+      "date": "August 4",
       "counters": [
         {
           "pokemon": "Blastoise",
           "effectiveness": "super-effective",
           "moveType": "Water",
-          "role": "Attacker"
+          "role": "Attacker",
+          "reason": "Water beats Rock",
+          "typeReason": "Water beats Rock"
         },
         {
           "pokemon": "Gyarados",
           "effectiveness": "super-effective",
           "moveType": "Water",
-          "role": "Attacker"
+          "role": "Attacker",
+          "reason": "Water beats Rock",
+          "typeReason": "Water beats Rock"
         },
         {
-          "pokemon": "Golem",
+          "pokemon": "Swampert",
           "effectiveness": "super-effective",
-          "moveType": "Rock",
-          "role": "Attacker"
+          "moveType": "Water",
+          "role": "Attacker",
+          "reason": "Water beats Rock",
+          "typeReason": "Water beats Rock"
         },
         {
-          "pokemon": "Tyranitar",
+          "pokemon": "Kyogre",
           "effectiveness": "super-effective",
-          "moveType": "Rock",
-          "role": "Attacker"
-        }
-      ],
-      "url": "https://pokemongohub.net/sample",
-      "lastUpdated": "2025-07-31T20:09:00.211Z"
-    },
-    "Venusaur": {
-      "tier": 3,
-      "counters": [
-        {
-          "pokemon": "Charizard",
-          "effectiveness": "super-effective",
-          "moveType": "Fire",
-          "role": "Attacker"
+          "moveType": "Water",
+          "role": "Attacker",
+          "reason": "Water beats Rock",
+          "typeReason": "Water beats Rock"
         },
-        {
-          "pokemon": "Moltres",
-          "effectiveness": "super-effective",
-          "moveType": "Fire",
-          "role": "Attacker"
-        },
-        {
-          "pokemon": "Ho-Oh",
-          "effectiveness": "super-effective",
-          "moveType": "Fire",
-          "role": "Attacker"
-        }
-      ],
-      "url": "https://pokemongohub.net/sample",
-      "lastUpdated": "2025-07-31T20:09:00.211Z"
-    },
-    "Blastoise": {
-      "tier": 3,
-      "counters": [
         {
           "pokemon": "Venusaur",
           "effectiveness": "super-effective",
           "moveType": "Grass",
-          "role": "Attacker"
+          "role": "Attacker",
+          "reason": "Grass beats Rock",
+          "typeReason": "Grass beats Rock/Water"
         },
         {
           "pokemon": "Sceptile",
           "effectiveness": "super-effective",
           "moveType": "Grass",
-          "role": "Attacker"
+          "role": "Attacker",
+          "reason": "Grass beats Rock",
+          "typeReason": "Grass beats Rock/Water"
+        },
+        {
+          "pokemon": "Roserade",
+          "effectiveness": "super-effective",
+          "moveType": "Grass",
+          "role": "Attacker",
+          "reason": "Grass beats Rock",
+          "typeReason": "Grass beats Rock/Water"
+        },
+        {
+          "pokemon": "Leafeon",
+          "effectiveness": "super-effective",
+          "moveType": "Grass",
+          "role": "Attacker",
+          "reason": "Grass beats Rock",
+          "typeReason": "Grass beats Rock/Water"
+        }
+      ],
+      "url": "https://pokemongohub.net/post/guide/spotlight-raid-hours/",
+      "lastUpdated": "2025-08-04T22:23:56.116Z",
+      "source": "known-data",
+      "types": [
+        "Rock",
+        "Water"
+      ]
+    },
+    "Trubbish": {
+      "difficulty": 1,
+      "type": "max-monday",
+      "date": "August 11",
+      "counters": [
+        {
+          "pokemon": "Garchomp",
+          "effectiveness": "super-effective",
+          "moveType": "Ground",
+          "role": "Attacker",
+          "reason": "Ground beats Poison",
+          "typeReason": "Ground beats Poison"
+        },
+        {
+          "pokemon": "Excadrill",
+          "effectiveness": "super-effective",
+          "moveType": "Ground",
+          "role": "Attacker",
+          "reason": "Ground beats Poison",
+          "typeReason": "Ground beats Poison"
+        },
+        {
+          "pokemon": "Groudon",
+          "effectiveness": "super-effective",
+          "moveType": "Ground",
+          "role": "Attacker",
+          "reason": "Ground beats Poison",
+          "typeReason": "Ground beats Poison"
+        },
+        {
+          "pokemon": "Rhyperior",
+          "effectiveness": "super-effective",
+          "moveType": "Ground",
+          "role": "Attacker",
+          "reason": "Ground beats Poison",
+          "typeReason": "Ground beats Poison"
+        },
+        {
+          "pokemon": "Mewtwo",
+          "effectiveness": "super-effective",
+          "moveType": "Psychic",
+          "role": "Attacker",
+          "reason": "Psychic beats Poison",
+          "typeReason": "Psychic beats Poison"
+        },
+        {
+          "pokemon": "Alakazam",
+          "effectiveness": "super-effective",
+          "moveType": "Psychic",
+          "role": "Attacker",
+          "reason": "Psychic beats Poison",
+          "typeReason": "Psychic beats Poison"
+        },
+        {
+          "pokemon": "Espeon",
+          "effectiveness": "super-effective",
+          "moveType": "Psychic",
+          "role": "Attacker",
+          "reason": "Psychic beats Poison",
+          "typeReason": "Psychic beats Poison"
+        },
+        {
+          "pokemon": "Gardevoir",
+          "effectiveness": "super-effective",
+          "moveType": "Psychic",
+          "role": "Attacker",
+          "reason": "Psychic beats Poison",
+          "typeReason": "Psychic beats Poison"
+        }
+      ],
+      "url": "https://pokemongohub.net/post/guide/spotlight-raid-hours/",
+      "lastUpdated": "2025-08-04T22:23:56.116Z",
+      "source": "known-data",
+      "types": [
+        "Poison"
+      ]
+    },
+    "Chansey": {
+      "difficulty": 1,
+      "type": "max-monday",
+      "date": "August 25",
+      "counters": [
+        {
+          "pokemon": "Machamp",
+          "effectiveness": "super-effective",
+          "moveType": "Fighting",
+          "role": "Attacker",
+          "reason": "Fighting beats Normal",
+          "typeReason": "Fighting beats Normal"
+        },
+        {
+          "pokemon": "Lucario",
+          "effectiveness": "super-effective",
+          "moveType": "Fighting",
+          "role": "Attacker",
+          "reason": "Fighting beats Normal",
+          "typeReason": "Fighting beats Normal"
+        },
+        {
+          "pokemon": "Conkeldurr",
+          "effectiveness": "super-effective",
+          "moveType": "Fighting",
+          "role": "Attacker",
+          "reason": "Fighting beats Normal",
+          "typeReason": "Fighting beats Normal"
+        },
+        {
+          "pokemon": "Terrakion",
+          "effectiveness": "super-effective",
+          "moveType": "Fighting",
+          "role": "Attacker",
+          "reason": "Fighting beats Normal",
+          "typeReason": "Fighting beats Normal"
+        }
+      ],
+      "url": "https://pokemongohub.net/post/guide/spotlight-raid-hours/",
+      "lastUpdated": "2025-08-04T22:23:56.116Z",
+      "source": "known-data",
+      "types": [
+        "Normal"
+      ]
+    },
+    "Pidove": {
+      "difficulty": 1,
+      "type": "max-monday",
+      "date": "September 1",
+      "counters": [
+        {
+          "pokemon": "Machamp",
+          "effectiveness": "super-effective",
+          "moveType": "Fighting",
+          "role": "Attacker",
+          "reason": "Fighting beats Normal",
+          "typeReason": "Fighting beats Normal"
+        },
+        {
+          "pokemon": "Lucario",
+          "effectiveness": "super-effective",
+          "moveType": "Fighting",
+          "role": "Attacker",
+          "reason": "Fighting beats Normal",
+          "typeReason": "Fighting beats Normal"
+        },
+        {
+          "pokemon": "Conkeldurr",
+          "effectiveness": "super-effective",
+          "moveType": "Fighting",
+          "role": "Attacker",
+          "reason": "Fighting beats Normal",
+          "typeReason": "Fighting beats Normal"
+        },
+        {
+          "pokemon": "Terrakion",
+          "effectiveness": "super-effective",
+          "moveType": "Fighting",
+          "role": "Attacker",
+          "reason": "Fighting beats Normal",
+          "typeReason": "Fighting beats Normal"
         },
         {
           "pokemon": "Raikou",
           "effectiveness": "super-effective",
           "moveType": "Electric",
-          "role": "Attacker"
-        }
-      ],
-      "url": "https://pokemongohub.net/sample",
-      "lastUpdated": "2025-07-31T20:09:00.211Z"
-    },
-    "Gigantamax Charizard": {
-      "tier": 5,
-      "counters": [
-        {
-          "pokemon": "Blastoise",
-          "effectiveness": "super-effective",
-          "moveType": "Water",
-          "role": "Attacker"
+          "role": "Attacker",
+          "reason": "Electric beats Flying",
+          "typeReason": "Electric beats Flying"
         },
         {
-          "pokemon": "Gyarados",
+          "pokemon": "Zapdos",
           "effectiveness": "super-effective",
-          "moveType": "Water",
-          "role": "Attacker"
+          "moveType": "Electric",
+          "role": "Attacker",
+          "reason": "Electric beats Flying",
+          "typeReason": "Electric beats Flying"
+        },
+        {
+          "pokemon": "Magnezone",
+          "effectiveness": "super-effective",
+          "moveType": "Electric",
+          "role": "Attacker",
+          "reason": "Electric beats Flying",
+          "typeReason": "Electric beats Flying"
+        },
+        {
+          "pokemon": "Electivire",
+          "effectiveness": "super-effective",
+          "moveType": "Electric",
+          "role": "Attacker",
+          "reason": "Electric beats Flying",
+          "typeReason": "Electric beats Flying"
+        }
+      ],
+      "url": "https://pokemongohub.net/post/guide/spotlight-raid-hours/",
+      "lastUpdated": "2025-08-04T22:23:56.116Z",
+      "source": "known-data",
+      "types": [
+        "Normal",
+        "Flying"
+      ]
+    },
+    "Butterfree": {
+      "difficulty": 3,
+      "type": "gigantamax",
+      "date": null,
+      "counters": [
+        {
+          "pokemon": "Charizard",
+          "effectiveness": "super-effective",
+          "moveType": "Fire",
+          "role": "Attacker",
+          "reason": "Fire beats Bug",
+          "typeReason": "Fire beats Bug"
+        },
+        {
+          "pokemon": "Moltres",
+          "effectiveness": "super-effective",
+          "moveType": "Fire",
+          "role": "Attacker",
+          "reason": "Fire beats Bug",
+          "typeReason": "Fire beats Bug"
+        },
+        {
+          "pokemon": "Entei",
+          "effectiveness": "super-effective",
+          "moveType": "Fire",
+          "role": "Attacker",
+          "reason": "Fire beats Bug",
+          "typeReason": "Fire beats Bug"
+        },
+        {
+          "pokemon": "Blaziken",
+          "effectiveness": "super-effective",
+          "moveType": "Fire",
+          "role": "Attacker",
+          "reason": "Fire beats Bug",
+          "typeReason": "Fire beats Bug"
+        },
+        {
+          "pokemon": "Tyranitar",
+          "effectiveness": "super-effective",
+          "moveType": "Rock",
+          "role": "Attacker",
+          "reason": "Rock beats Bug",
+          "typeReason": "Rock beats Bug/Flying"
+        },
+        {
+          "pokemon": "Rampardos",
+          "effectiveness": "super-effective",
+          "moveType": "Rock",
+          "role": "Attacker",
+          "reason": "Rock beats Bug",
+          "typeReason": "Rock beats Bug/Flying"
+        },
+        {
+          "pokemon": "Terrakion",
+          "effectiveness": "super-effective",
+          "moveType": "Rock",
+          "role": "Attacker",
+          "reason": "Rock beats Bug",
+          "typeReason": "Rock beats Bug/Flying"
         },
         {
           "pokemon": "Golem",
           "effectiveness": "super-effective",
           "moveType": "Rock",
-          "role": "Attacker"
+          "role": "Attacker",
+          "reason": "Rock beats Bug",
+          "typeReason": "Rock beats Bug/Flying"
         }
       ],
-      "url": "https://pokemongohub.net/sample",
-      "lastUpdated": "2025-07-31T20:09:00.211Z"
-    }
-  },
-  "counters": {
-    "Excadrill": {
-      "0": {
-        "target": "Raikou",
-        "tier": 5,
-        "effectiveness": "super-effective",
-        "role": "Attacker"
-      },
-      "effectiveAgainst": [
-        "Raikou"
-      ],
-      "averageTier": 5
-    },
-    "Garchomp": {
-      "0": {
-        "target": "Raikou",
-        "tier": 5,
-        "effectiveness": "super-effective",
-        "role": "Attacker"
-      },
-      "effectiveAgainst": [
-        "Raikou"
-      ],
-      "averageTier": 5
-    },
-    "Groudon": {
-      "0": {
-        "target": "Raikou",
-        "tier": 5,
-        "effectiveness": "super-effective",
-        "role": "Attacker"
-      },
-      "effectiveAgainst": [
-        "Raikou"
-      ],
-      "averageTier": 5
-    },
-    "Rhyperior": {
-      "0": {
-        "target": "Raikou",
-        "tier": 5,
-        "effectiveness": "super-effective",
-        "role": "Attacker"
-      },
-      "effectiveAgainst": [
-        "Raikou"
-      ],
-      "averageTier": 5
-    },
-    "Blastoise": {
-      "0": {
-        "target": "Charizard",
-        "tier": 4,
-        "effectiveness": "super-effective",
-        "role": "Attacker"
-      },
-      "1": {
-        "target": "Gigantamax Charizard",
-        "tier": 5,
-        "effectiveness": "super-effective",
-        "role": "Attacker"
-      },
-      "effectiveAgainst": [
-        "Charizard",
-        "Gigantamax Charizard"
-      ],
-      "averageTier": 4.5
-    },
-    "Gyarados": {
-      "0": {
-        "target": "Charizard",
-        "tier": 4,
-        "effectiveness": "super-effective",
-        "role": "Attacker"
-      },
-      "1": {
-        "target": "Gigantamax Charizard",
-        "tier": 5,
-        "effectiveness": "super-effective",
-        "role": "Attacker"
-      },
-      "effectiveAgainst": [
-        "Charizard",
-        "Gigantamax Charizard"
-      ],
-      "averageTier": 4.5
-    },
-    "Golem": {
-      "0": {
-        "target": "Charizard",
-        "tier": 4,
-        "effectiveness": "super-effective",
-        "role": "Attacker"
-      },
-      "1": {
-        "target": "Gigantamax Charizard",
-        "tier": 5,
-        "effectiveness": "super-effective",
-        "role": "Attacker"
-      },
-      "effectiveAgainst": [
-        "Charizard",
-        "Gigantamax Charizard"
-      ],
-      "averageTier": 4.5
-    },
-    "Tyranitar": {
-      "0": {
-        "target": "Charizard",
-        "tier": 4,
-        "effectiveness": "super-effective",
-        "role": "Attacker"
-      },
-      "effectiveAgainst": [
-        "Charizard"
-      ],
-      "averageTier": 4
+      "url": "https://pokemongohub.net/post/guide/spotlight-raid-hours/",
+      "lastUpdated": "2025-08-04T22:23:56.116Z",
+      "source": "known-data",
+      "types": [
+        "Bug",
+        "Flying"
+      ]
     },
     "Charizard": {
-      "0": {
-        "target": "Venusaur",
-        "tier": 3,
-        "effectiveness": "super-effective",
-        "role": "Attacker"
-      },
-      "effectiveAgainst": [
-        "Venusaur"
+      "difficulty": 4,
+      "type": "gigantamax",
+      "date": null,
+      "counters": [
+        {
+          "pokemon": "Blastoise",
+          "effectiveness": "super-effective",
+          "moveType": "Water",
+          "role": "Attacker",
+          "reason": "Water beats Fire",
+          "typeReason": "Water beats Fire"
+        },
+        {
+          "pokemon": "Gyarados",
+          "effectiveness": "super-effective",
+          "moveType": "Water",
+          "role": "Attacker",
+          "reason": "Water beats Fire",
+          "typeReason": "Water beats Fire"
+        },
+        {
+          "pokemon": "Swampert",
+          "effectiveness": "super-effective",
+          "moveType": "Water",
+          "role": "Attacker",
+          "reason": "Water beats Fire",
+          "typeReason": "Water beats Fire"
+        },
+        {
+          "pokemon": "Kyogre",
+          "effectiveness": "super-effective",
+          "moveType": "Water",
+          "role": "Attacker",
+          "reason": "Water beats Fire",
+          "typeReason": "Water beats Fire"
+        },
+        {
+          "pokemon": "Garchomp",
+          "effectiveness": "super-effective",
+          "moveType": "Ground",
+          "role": "Attacker",
+          "reason": "Ground beats Fire",
+          "typeReason": "Ground beats Fire"
+        },
+        {
+          "pokemon": "Excadrill",
+          "effectiveness": "super-effective",
+          "moveType": "Ground",
+          "role": "Attacker",
+          "reason": "Ground beats Fire",
+          "typeReason": "Ground beats Fire"
+        },
+        {
+          "pokemon": "Groudon",
+          "effectiveness": "super-effective",
+          "moveType": "Ground",
+          "role": "Attacker",
+          "reason": "Ground beats Fire",
+          "typeReason": "Ground beats Fire"
+        },
+        {
+          "pokemon": "Rhyperior",
+          "effectiveness": "super-effective",
+          "moveType": "Ground",
+          "role": "Attacker",
+          "reason": "Ground beats Fire",
+          "typeReason": "Ground beats Fire"
+        }
       ],
-      "averageTier": 3
+      "url": "https://pokemongohub.net/post/guide/spotlight-raid-hours/",
+      "lastUpdated": "2025-08-04T22:23:56.116Z",
+      "source": "known-data",
+      "types": [
+        "Fire",
+        "Flying"
+      ]
     },
-    "Moltres": {
-      "0": {
-        "target": "Venusaur",
-        "tier": 3,
-        "effectiveness": "super-effective",
-        "role": "Attacker"
-      },
-      "effectiveAgainst": [
-        "Venusaur"
+    "Blastoise": {
+      "difficulty": 4,
+      "type": "gigantamax",
+      "date": null,
+      "counters": [
+        {
+          "pokemon": "Raikou",
+          "effectiveness": "super-effective",
+          "moveType": "Electric",
+          "role": "Attacker",
+          "reason": "Electric beats Water",
+          "typeReason": "Electric beats Water"
+        },
+        {
+          "pokemon": "Zapdos",
+          "effectiveness": "super-effective",
+          "moveType": "Electric",
+          "role": "Attacker",
+          "reason": "Electric beats Water",
+          "typeReason": "Electric beats Water"
+        },
+        {
+          "pokemon": "Magnezone",
+          "effectiveness": "super-effective",
+          "moveType": "Electric",
+          "role": "Attacker",
+          "reason": "Electric beats Water",
+          "typeReason": "Electric beats Water"
+        },
+        {
+          "pokemon": "Electivire",
+          "effectiveness": "super-effective",
+          "moveType": "Electric",
+          "role": "Attacker",
+          "reason": "Electric beats Water",
+          "typeReason": "Electric beats Water"
+        },
+        {
+          "pokemon": "Venusaur",
+          "effectiveness": "super-effective",
+          "moveType": "Grass",
+          "role": "Attacker",
+          "reason": "Grass beats Water",
+          "typeReason": "Grass beats Water"
+        },
+        {
+          "pokemon": "Sceptile",
+          "effectiveness": "super-effective",
+          "moveType": "Grass",
+          "role": "Attacker",
+          "reason": "Grass beats Water",
+          "typeReason": "Grass beats Water"
+        },
+        {
+          "pokemon": "Roserade",
+          "effectiveness": "super-effective",
+          "moveType": "Grass",
+          "role": "Attacker",
+          "reason": "Grass beats Water",
+          "typeReason": "Grass beats Water"
+        },
+        {
+          "pokemon": "Leafeon",
+          "effectiveness": "super-effective",
+          "moveType": "Grass",
+          "role": "Attacker",
+          "reason": "Grass beats Water",
+          "typeReason": "Grass beats Water"
+        }
       ],
-      "averageTier": 3
-    },
-    "Ho-Oh": {
-      "0": {
-        "target": "Venusaur",
-        "tier": 3,
-        "effectiveness": "super-effective",
-        "role": "Attacker"
-      },
-      "effectiveAgainst": [
-        "Venusaur"
-      ],
-      "averageTier": 3
+      "url": "https://pokemongohub.net/post/guide/spotlight-raid-hours/",
+      "lastUpdated": "2025-08-04T22:23:56.116Z",
+      "source": "known-data",
+      "types": [
+        "Water"
+      ]
     },
     "Venusaur": {
-      "0": {
-        "target": "Blastoise",
-        "tier": 3,
-        "effectiveness": "super-effective",
-        "role": "Attacker"
-      },
-      "effectiveAgainst": [
-        "Blastoise"
+      "difficulty": 4,
+      "type": "gigantamax",
+      "date": null,
+      "counters": [
+        {
+          "pokemon": "Charizard",
+          "effectiveness": "super-effective",
+          "moveType": "Fire",
+          "role": "Attacker",
+          "reason": "Fire beats Grass",
+          "typeReason": "Fire beats Grass"
+        },
+        {
+          "pokemon": "Moltres",
+          "effectiveness": "super-effective",
+          "moveType": "Fire",
+          "role": "Attacker",
+          "reason": "Fire beats Grass",
+          "typeReason": "Fire beats Grass"
+        },
+        {
+          "pokemon": "Entei",
+          "effectiveness": "super-effective",
+          "moveType": "Fire",
+          "role": "Attacker",
+          "reason": "Fire beats Grass",
+          "typeReason": "Fire beats Grass"
+        },
+        {
+          "pokemon": "Blaziken",
+          "effectiveness": "super-effective",
+          "moveType": "Fire",
+          "role": "Attacker",
+          "reason": "Fire beats Grass",
+          "typeReason": "Fire beats Grass"
+        },
+        {
+          "pokemon": "Articuno",
+          "effectiveness": "super-effective",
+          "moveType": "Ice",
+          "role": "Attacker",
+          "reason": "Ice beats Grass",
+          "typeReason": "Ice beats Grass"
+        },
+        {
+          "pokemon": "Mamoswine",
+          "effectiveness": "super-effective",
+          "moveType": "Ice",
+          "role": "Attacker",
+          "reason": "Ice beats Grass",
+          "typeReason": "Ice beats Grass"
+        },
+        {
+          "pokemon": "Glaceon",
+          "effectiveness": "super-effective",
+          "moveType": "Ice",
+          "role": "Attacker",
+          "reason": "Ice beats Grass",
+          "typeReason": "Ice beats Grass"
+        },
+        {
+          "pokemon": "Weavile",
+          "effectiveness": "super-effective",
+          "moveType": "Ice",
+          "role": "Attacker",
+          "reason": "Ice beats Grass",
+          "typeReason": "Ice beats Grass"
+        }
       ],
-      "averageTier": 3
+      "url": "https://pokemongohub.net/post/guide/spotlight-raid-hours/",
+      "lastUpdated": "2025-08-04T22:23:56.116Z",
+      "source": "known-data",
+      "types": [
+        "Grass",
+        "Poison"
+      ]
     },
-    "Sceptile": {
-      "0": {
-        "target": "Blastoise",
-        "tier": 3,
-        "effectiveness": "super-effective",
-        "role": "Attacker"
-      },
-      "effectiveAgainst": [
-        "Blastoise"
+    "Bulbasaur": {
+      "difficulty": 1,
+      "type": "dynamax",
+      "date": null,
+      "counters": [
+        {
+          "pokemon": "Charizard",
+          "effectiveness": "super-effective",
+          "moveType": "Fire",
+          "role": "Attacker",
+          "reason": "Fire beats Grass",
+          "typeReason": "Fire beats Grass"
+        },
+        {
+          "pokemon": "Moltres",
+          "effectiveness": "super-effective",
+          "moveType": "Fire",
+          "role": "Attacker",
+          "reason": "Fire beats Grass",
+          "typeReason": "Fire beats Grass"
+        },
+        {
+          "pokemon": "Entei",
+          "effectiveness": "super-effective",
+          "moveType": "Fire",
+          "role": "Attacker",
+          "reason": "Fire beats Grass",
+          "typeReason": "Fire beats Grass"
+        },
+        {
+          "pokemon": "Blaziken",
+          "effectiveness": "super-effective",
+          "moveType": "Fire",
+          "role": "Attacker",
+          "reason": "Fire beats Grass",
+          "typeReason": "Fire beats Grass"
+        },
+        {
+          "pokemon": "Articuno",
+          "effectiveness": "super-effective",
+          "moveType": "Ice",
+          "role": "Attacker",
+          "reason": "Ice beats Grass",
+          "typeReason": "Ice beats Grass"
+        },
+        {
+          "pokemon": "Mamoswine",
+          "effectiveness": "super-effective",
+          "moveType": "Ice",
+          "role": "Attacker",
+          "reason": "Ice beats Grass",
+          "typeReason": "Ice beats Grass"
+        },
+        {
+          "pokemon": "Glaceon",
+          "effectiveness": "super-effective",
+          "moveType": "Ice",
+          "role": "Attacker",
+          "reason": "Ice beats Grass",
+          "typeReason": "Ice beats Grass"
+        },
+        {
+          "pokemon": "Weavile",
+          "effectiveness": "super-effective",
+          "moveType": "Ice",
+          "role": "Attacker",
+          "reason": "Ice beats Grass",
+          "typeReason": "Ice beats Grass"
+        }
       ],
-      "averageTier": 3
+      "url": "https://pokemongohub.net/post/guide/spotlight-raid-hours/",
+      "lastUpdated": "2025-08-04T22:23:56.116Z",
+      "source": "known-data",
+      "types": [
+        "Grass",
+        "Poison"
+      ]
     },
-    "Raikou": {
-      "0": {
-        "target": "Blastoise",
-        "tier": 3,
-        "effectiveness": "super-effective",
-        "role": "Attacker"
-      },
-      "effectiveAgainst": [
-        "Blastoise"
+    "Ivysaur": {
+      "difficulty": 2,
+      "type": "dynamax",
+      "date": null,
+      "counters": [
+        {
+          "pokemon": "Charizard",
+          "effectiveness": "super-effective",
+          "moveType": "Fire",
+          "role": "Attacker",
+          "reason": "Fire beats Grass",
+          "typeReason": "Fire beats Grass"
+        },
+        {
+          "pokemon": "Moltres",
+          "effectiveness": "super-effective",
+          "moveType": "Fire",
+          "role": "Attacker",
+          "reason": "Fire beats Grass",
+          "typeReason": "Fire beats Grass"
+        },
+        {
+          "pokemon": "Entei",
+          "effectiveness": "super-effective",
+          "moveType": "Fire",
+          "role": "Attacker",
+          "reason": "Fire beats Grass",
+          "typeReason": "Fire beats Grass"
+        },
+        {
+          "pokemon": "Blaziken",
+          "effectiveness": "super-effective",
+          "moveType": "Fire",
+          "role": "Attacker",
+          "reason": "Fire beats Grass",
+          "typeReason": "Fire beats Grass"
+        },
+        {
+          "pokemon": "Articuno",
+          "effectiveness": "super-effective",
+          "moveType": "Ice",
+          "role": "Attacker",
+          "reason": "Ice beats Grass",
+          "typeReason": "Ice beats Grass"
+        },
+        {
+          "pokemon": "Mamoswine",
+          "effectiveness": "super-effective",
+          "moveType": "Ice",
+          "role": "Attacker",
+          "reason": "Ice beats Grass",
+          "typeReason": "Ice beats Grass"
+        },
+        {
+          "pokemon": "Glaceon",
+          "effectiveness": "super-effective",
+          "moveType": "Ice",
+          "role": "Attacker",
+          "reason": "Ice beats Grass",
+          "typeReason": "Ice beats Grass"
+        },
+        {
+          "pokemon": "Weavile",
+          "effectiveness": "super-effective",
+          "moveType": "Ice",
+          "role": "Attacker",
+          "reason": "Ice beats Grass",
+          "typeReason": "Ice beats Grass"
+        }
       ],
-      "averageTier": 3
+      "url": "https://pokemongohub.net/post/guide/spotlight-raid-hours/",
+      "lastUpdated": "2025-08-04T22:23:56.116Z",
+      "source": "known-data",
+      "types": [
+        "Grass",
+        "Poison"
+      ]
+    },
+    "Charmander": {
+      "difficulty": 1,
+      "type": "dynamax",
+      "date": null,
+      "counters": [
+        {
+          "pokemon": "Blastoise",
+          "effectiveness": "super-effective",
+          "moveType": "Water",
+          "role": "Attacker",
+          "reason": "Water beats Fire",
+          "typeReason": "Water beats Fire"
+        },
+        {
+          "pokemon": "Gyarados",
+          "effectiveness": "super-effective",
+          "moveType": "Water",
+          "role": "Attacker",
+          "reason": "Water beats Fire",
+          "typeReason": "Water beats Fire"
+        },
+        {
+          "pokemon": "Swampert",
+          "effectiveness": "super-effective",
+          "moveType": "Water",
+          "role": "Attacker",
+          "reason": "Water beats Fire",
+          "typeReason": "Water beats Fire"
+        },
+        {
+          "pokemon": "Kyogre",
+          "effectiveness": "super-effective",
+          "moveType": "Water",
+          "role": "Attacker",
+          "reason": "Water beats Fire",
+          "typeReason": "Water beats Fire"
+        },
+        {
+          "pokemon": "Garchomp",
+          "effectiveness": "super-effective",
+          "moveType": "Ground",
+          "role": "Attacker",
+          "reason": "Ground beats Fire",
+          "typeReason": "Ground beats Fire"
+        },
+        {
+          "pokemon": "Excadrill",
+          "effectiveness": "super-effective",
+          "moveType": "Ground",
+          "role": "Attacker",
+          "reason": "Ground beats Fire",
+          "typeReason": "Ground beats Fire"
+        },
+        {
+          "pokemon": "Groudon",
+          "effectiveness": "super-effective",
+          "moveType": "Ground",
+          "role": "Attacker",
+          "reason": "Ground beats Fire",
+          "typeReason": "Ground beats Fire"
+        },
+        {
+          "pokemon": "Rhyperior",
+          "effectiveness": "super-effective",
+          "moveType": "Ground",
+          "role": "Attacker",
+          "reason": "Ground beats Fire",
+          "typeReason": "Ground beats Fire"
+        }
+      ],
+      "url": "https://pokemongohub.net/post/guide/spotlight-raid-hours/",
+      "lastUpdated": "2025-08-04T22:23:56.116Z",
+      "source": "known-data",
+      "types": [
+        "Fire"
+      ]
+    },
+    "Charmeleon": {
+      "difficulty": 2,
+      "type": "dynamax",
+      "date": null,
+      "counters": [
+        {
+          "pokemon": "Blastoise",
+          "effectiveness": "super-effective",
+          "moveType": "Water",
+          "role": "Attacker",
+          "reason": "Water beats Fire",
+          "typeReason": "Water beats Fire"
+        },
+        {
+          "pokemon": "Gyarados",
+          "effectiveness": "super-effective",
+          "moveType": "Water",
+          "role": "Attacker",
+          "reason": "Water beats Fire",
+          "typeReason": "Water beats Fire"
+        },
+        {
+          "pokemon": "Swampert",
+          "effectiveness": "super-effective",
+          "moveType": "Water",
+          "role": "Attacker",
+          "reason": "Water beats Fire",
+          "typeReason": "Water beats Fire"
+        },
+        {
+          "pokemon": "Kyogre",
+          "effectiveness": "super-effective",
+          "moveType": "Water",
+          "role": "Attacker",
+          "reason": "Water beats Fire",
+          "typeReason": "Water beats Fire"
+        },
+        {
+          "pokemon": "Garchomp",
+          "effectiveness": "super-effective",
+          "moveType": "Ground",
+          "role": "Attacker",
+          "reason": "Ground beats Fire",
+          "typeReason": "Ground beats Fire"
+        },
+        {
+          "pokemon": "Excadrill",
+          "effectiveness": "super-effective",
+          "moveType": "Ground",
+          "role": "Attacker",
+          "reason": "Ground beats Fire",
+          "typeReason": "Ground beats Fire"
+        },
+        {
+          "pokemon": "Groudon",
+          "effectiveness": "super-effective",
+          "moveType": "Ground",
+          "role": "Attacker",
+          "reason": "Ground beats Fire",
+          "typeReason": "Ground beats Fire"
+        },
+        {
+          "pokemon": "Rhyperior",
+          "effectiveness": "super-effective",
+          "moveType": "Ground",
+          "role": "Attacker",
+          "reason": "Ground beats Fire",
+          "typeReason": "Ground beats Fire"
+        }
+      ],
+      "url": "https://pokemongohub.net/post/guide/spotlight-raid-hours/",
+      "lastUpdated": "2025-08-04T22:23:56.116Z",
+      "source": "known-data",
+      "types": [
+        "Fire"
+      ]
+    },
+    "Squirtle": {
+      "difficulty": 1,
+      "type": "dynamax",
+      "date": null,
+      "counters": [
+        {
+          "pokemon": "Raikou",
+          "effectiveness": "super-effective",
+          "moveType": "Electric",
+          "role": "Attacker",
+          "reason": "Electric beats Water",
+          "typeReason": "Electric beats Water"
+        },
+        {
+          "pokemon": "Zapdos",
+          "effectiveness": "super-effective",
+          "moveType": "Electric",
+          "role": "Attacker",
+          "reason": "Electric beats Water",
+          "typeReason": "Electric beats Water"
+        },
+        {
+          "pokemon": "Magnezone",
+          "effectiveness": "super-effective",
+          "moveType": "Electric",
+          "role": "Attacker",
+          "reason": "Electric beats Water",
+          "typeReason": "Electric beats Water"
+        },
+        {
+          "pokemon": "Electivire",
+          "effectiveness": "super-effective",
+          "moveType": "Electric",
+          "role": "Attacker",
+          "reason": "Electric beats Water",
+          "typeReason": "Electric beats Water"
+        },
+        {
+          "pokemon": "Venusaur",
+          "effectiveness": "super-effective",
+          "moveType": "Grass",
+          "role": "Attacker",
+          "reason": "Grass beats Water",
+          "typeReason": "Grass beats Water"
+        },
+        {
+          "pokemon": "Sceptile",
+          "effectiveness": "super-effective",
+          "moveType": "Grass",
+          "role": "Attacker",
+          "reason": "Grass beats Water",
+          "typeReason": "Grass beats Water"
+        },
+        {
+          "pokemon": "Roserade",
+          "effectiveness": "super-effective",
+          "moveType": "Grass",
+          "role": "Attacker",
+          "reason": "Grass beats Water",
+          "typeReason": "Grass beats Water"
+        },
+        {
+          "pokemon": "Leafeon",
+          "effectiveness": "super-effective",
+          "moveType": "Grass",
+          "role": "Attacker",
+          "reason": "Grass beats Water",
+          "typeReason": "Grass beats Water"
+        }
+      ],
+      "url": "https://pokemongohub.net/post/guide/spotlight-raid-hours/",
+      "lastUpdated": "2025-08-04T22:23:56.116Z",
+      "source": "known-data",
+      "types": [
+        "Water"
+      ]
+    },
+    "Wartortle": {
+      "difficulty": 2,
+      "type": "dynamax",
+      "date": null,
+      "counters": [
+        {
+          "pokemon": "Raikou",
+          "effectiveness": "super-effective",
+          "moveType": "Electric",
+          "role": "Attacker",
+          "reason": "Electric beats Water",
+          "typeReason": "Electric beats Water"
+        },
+        {
+          "pokemon": "Zapdos",
+          "effectiveness": "super-effective",
+          "moveType": "Electric",
+          "role": "Attacker",
+          "reason": "Electric beats Water",
+          "typeReason": "Electric beats Water"
+        },
+        {
+          "pokemon": "Magnezone",
+          "effectiveness": "super-effective",
+          "moveType": "Electric",
+          "role": "Attacker",
+          "reason": "Electric beats Water",
+          "typeReason": "Electric beats Water"
+        },
+        {
+          "pokemon": "Electivire",
+          "effectiveness": "super-effective",
+          "moveType": "Electric",
+          "role": "Attacker",
+          "reason": "Electric beats Water",
+          "typeReason": "Electric beats Water"
+        },
+        {
+          "pokemon": "Venusaur",
+          "effectiveness": "super-effective",
+          "moveType": "Grass",
+          "role": "Attacker",
+          "reason": "Grass beats Water",
+          "typeReason": "Grass beats Water"
+        },
+        {
+          "pokemon": "Sceptile",
+          "effectiveness": "super-effective",
+          "moveType": "Grass",
+          "role": "Attacker",
+          "reason": "Grass beats Water",
+          "typeReason": "Grass beats Water"
+        },
+        {
+          "pokemon": "Roserade",
+          "effectiveness": "super-effective",
+          "moveType": "Grass",
+          "role": "Attacker",
+          "reason": "Grass beats Water",
+          "typeReason": "Grass beats Water"
+        },
+        {
+          "pokemon": "Leafeon",
+          "effectiveness": "super-effective",
+          "moveType": "Grass",
+          "role": "Attacker",
+          "reason": "Grass beats Water",
+          "typeReason": "Grass beats Water"
+        }
+      ],
+      "url": "https://pokemongohub.net/post/guide/spotlight-raid-hours/",
+      "lastUpdated": "2025-08-04T22:23:56.116Z",
+      "source": "known-data",
+      "types": [
+        "Water"
+      ]
+    },
+    "Caterpie": {
+      "difficulty": 1,
+      "type": "dynamax",
+      "date": null,
+      "counters": [
+        {
+          "pokemon": "Charizard",
+          "effectiveness": "super-effective",
+          "moveType": "Fire",
+          "role": "Attacker",
+          "reason": "Fire beats Bug",
+          "typeReason": "Fire beats Bug"
+        },
+        {
+          "pokemon": "Moltres",
+          "effectiveness": "super-effective",
+          "moveType": "Fire",
+          "role": "Attacker",
+          "reason": "Fire beats Bug",
+          "typeReason": "Fire beats Bug"
+        },
+        {
+          "pokemon": "Entei",
+          "effectiveness": "super-effective",
+          "moveType": "Fire",
+          "role": "Attacker",
+          "reason": "Fire beats Bug",
+          "typeReason": "Fire beats Bug"
+        },
+        {
+          "pokemon": "Blaziken",
+          "effectiveness": "super-effective",
+          "moveType": "Fire",
+          "role": "Attacker",
+          "reason": "Fire beats Bug",
+          "typeReason": "Fire beats Bug"
+        },
+        {
+          "pokemon": "Tyranitar",
+          "effectiveness": "super-effective",
+          "moveType": "Rock",
+          "role": "Attacker",
+          "reason": "Rock beats Bug",
+          "typeReason": "Rock beats Bug"
+        },
+        {
+          "pokemon": "Rampardos",
+          "effectiveness": "super-effective",
+          "moveType": "Rock",
+          "role": "Attacker",
+          "reason": "Rock beats Bug",
+          "typeReason": "Rock beats Bug"
+        },
+        {
+          "pokemon": "Terrakion",
+          "effectiveness": "super-effective",
+          "moveType": "Rock",
+          "role": "Attacker",
+          "reason": "Rock beats Bug",
+          "typeReason": "Rock beats Bug"
+        },
+        {
+          "pokemon": "Golem",
+          "effectiveness": "super-effective",
+          "moveType": "Rock",
+          "role": "Attacker",
+          "reason": "Rock beats Bug",
+          "typeReason": "Rock beats Bug"
+        }
+      ],
+      "url": "https://pokemongohub.net/post/guide/spotlight-raid-hours/",
+      "lastUpdated": "2025-08-04T22:23:56.116Z",
+      "source": "known-data",
+      "types": [
+        "Bug"
+      ]
+    },
+    "Metapod": {
+      "difficulty": 1,
+      "type": "dynamax",
+      "date": null,
+      "counters": [
+        {
+          "pokemon": "Charizard",
+          "effectiveness": "super-effective",
+          "moveType": "Fire",
+          "role": "Attacker",
+          "reason": "Fire beats Bug",
+          "typeReason": "Fire beats Bug"
+        },
+        {
+          "pokemon": "Moltres",
+          "effectiveness": "super-effective",
+          "moveType": "Fire",
+          "role": "Attacker",
+          "reason": "Fire beats Bug",
+          "typeReason": "Fire beats Bug"
+        },
+        {
+          "pokemon": "Entei",
+          "effectiveness": "super-effective",
+          "moveType": "Fire",
+          "role": "Attacker",
+          "reason": "Fire beats Bug",
+          "typeReason": "Fire beats Bug"
+        },
+        {
+          "pokemon": "Blaziken",
+          "effectiveness": "super-effective",
+          "moveType": "Fire",
+          "role": "Attacker",
+          "reason": "Fire beats Bug",
+          "typeReason": "Fire beats Bug"
+        },
+        {
+          "pokemon": "Tyranitar",
+          "effectiveness": "super-effective",
+          "moveType": "Rock",
+          "role": "Attacker",
+          "reason": "Rock beats Bug",
+          "typeReason": "Rock beats Bug"
+        },
+        {
+          "pokemon": "Rampardos",
+          "effectiveness": "super-effective",
+          "moveType": "Rock",
+          "role": "Attacker",
+          "reason": "Rock beats Bug",
+          "typeReason": "Rock beats Bug"
+        },
+        {
+          "pokemon": "Terrakion",
+          "effectiveness": "super-effective",
+          "moveType": "Rock",
+          "role": "Attacker",
+          "reason": "Rock beats Bug",
+          "typeReason": "Rock beats Bug"
+        },
+        {
+          "pokemon": "Golem",
+          "effectiveness": "super-effective",
+          "moveType": "Rock",
+          "role": "Attacker",
+          "reason": "Rock beats Bug",
+          "typeReason": "Rock beats Bug"
+        }
+      ],
+      "url": "https://pokemongohub.net/post/guide/spotlight-raid-hours/",
+      "lastUpdated": "2025-08-04T22:23:56.116Z",
+      "source": "known-data",
+      "types": [
+        "Bug"
+      ]
+    },
+    "Lapras": {
+      "difficulty": 3,
+      "type": "dynamax",
+      "date": null,
+      "counters": [
+        {
+          "pokemon": "Raikou",
+          "effectiveness": "super-effective",
+          "moveType": "Electric",
+          "role": "Attacker",
+          "reason": "Electric beats Water",
+          "typeReason": "Electric beats Water"
+        },
+        {
+          "pokemon": "Zapdos",
+          "effectiveness": "super-effective",
+          "moveType": "Electric",
+          "role": "Attacker",
+          "reason": "Electric beats Water",
+          "typeReason": "Electric beats Water"
+        },
+        {
+          "pokemon": "Magnezone",
+          "effectiveness": "super-effective",
+          "moveType": "Electric",
+          "role": "Attacker",
+          "reason": "Electric beats Water",
+          "typeReason": "Electric beats Water"
+        },
+        {
+          "pokemon": "Electivire",
+          "effectiveness": "super-effective",
+          "moveType": "Electric",
+          "role": "Attacker",
+          "reason": "Electric beats Water",
+          "typeReason": "Electric beats Water"
+        },
+        {
+          "pokemon": "Venusaur",
+          "effectiveness": "super-effective",
+          "moveType": "Grass",
+          "role": "Attacker",
+          "reason": "Grass beats Water",
+          "typeReason": "Grass beats Water"
+        },
+        {
+          "pokemon": "Sceptile",
+          "effectiveness": "super-effective",
+          "moveType": "Grass",
+          "role": "Attacker",
+          "reason": "Grass beats Water",
+          "typeReason": "Grass beats Water"
+        },
+        {
+          "pokemon": "Roserade",
+          "effectiveness": "super-effective",
+          "moveType": "Grass",
+          "role": "Attacker",
+          "reason": "Grass beats Water",
+          "typeReason": "Grass beats Water"
+        },
+        {
+          "pokemon": "Leafeon",
+          "effectiveness": "super-effective",
+          "moveType": "Grass",
+          "role": "Attacker",
+          "reason": "Grass beats Water",
+          "typeReason": "Grass beats Water"
+        }
+      ],
+      "url": "https://pokemongohub.net/post/guide/spotlight-raid-hours/",
+      "lastUpdated": "2025-08-04T22:23:56.116Z",
+      "source": "known-data",
+      "types": [
+        "Water",
+        "Ice"
+      ]
     }
   },
+  "counters": {},
   "vulnerabilities": {
-    "Raikou": {
-      "tier": 5,
+    "Omanyte": {
       "weakTo": [
+        {
+          "pokemon": "Blastoise",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Gyarados",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Swampert",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Kyogre",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Venusaur",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Sceptile",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Roserade",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Leafeon",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        }
+      ],
+      "topCounters": [
+        {
+          "pokemon": "Blastoise",
+          "effectiveness": "super-effective",
+          "moveType": "Water",
+          "role": "Attacker",
+          "reason": "Water beats Rock",
+          "typeReason": "Water beats Rock"
+        },
+        {
+          "pokemon": "Gyarados",
+          "effectiveness": "super-effective",
+          "moveType": "Water",
+          "role": "Attacker",
+          "reason": "Water beats Rock",
+          "typeReason": "Water beats Rock"
+        },
+        {
+          "pokemon": "Swampert",
+          "effectiveness": "super-effective",
+          "moveType": "Water",
+          "role": "Attacker",
+          "reason": "Water beats Rock",
+          "typeReason": "Water beats Rock"
+        },
+        {
+          "pokemon": "Kyogre",
+          "effectiveness": "super-effective",
+          "moveType": "Water",
+          "role": "Attacker",
+          "reason": "Water beats Rock",
+          "typeReason": "Water beats Rock"
+        },
+        {
+          "pokemon": "Venusaur",
+          "effectiveness": "super-effective",
+          "moveType": "Grass",
+          "role": "Attacker",
+          "reason": "Grass beats Rock",
+          "typeReason": "Grass beats Rock/Water"
+        }
+      ]
+    },
+    "Trubbish": {
+      "weakTo": [
+        {
+          "pokemon": "Garchomp",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
         {
           "pokemon": "Excadrill",
           "effectiveness": "super-effective",
           "role": "Attacker"
         },
         {
+          "pokemon": "Groudon",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Rhyperior",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Mewtwo",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Alakazam",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Espeon",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Gardevoir",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        }
+      ],
+      "topCounters": [
+        {
           "pokemon": "Garchomp",
+          "effectiveness": "super-effective",
+          "moveType": "Ground",
+          "role": "Attacker",
+          "reason": "Ground beats Poison",
+          "typeReason": "Ground beats Poison"
+        },
+        {
+          "pokemon": "Excadrill",
+          "effectiveness": "super-effective",
+          "moveType": "Ground",
+          "role": "Attacker",
+          "reason": "Ground beats Poison",
+          "typeReason": "Ground beats Poison"
+        },
+        {
+          "pokemon": "Groudon",
+          "effectiveness": "super-effective",
+          "moveType": "Ground",
+          "role": "Attacker",
+          "reason": "Ground beats Poison",
+          "typeReason": "Ground beats Poison"
+        },
+        {
+          "pokemon": "Rhyperior",
+          "effectiveness": "super-effective",
+          "moveType": "Ground",
+          "role": "Attacker",
+          "reason": "Ground beats Poison",
+          "typeReason": "Ground beats Poison"
+        },
+        {
+          "pokemon": "Mewtwo",
+          "effectiveness": "super-effective",
+          "moveType": "Psychic",
+          "role": "Attacker",
+          "reason": "Psychic beats Poison",
+          "typeReason": "Psychic beats Poison"
+        }
+      ]
+    },
+    "Chansey": {
+      "weakTo": [
+        {
+          "pokemon": "Machamp",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Lucario",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Conkeldurr",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Terrakion",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        }
+      ],
+      "topCounters": [
+        {
+          "pokemon": "Machamp",
+          "effectiveness": "super-effective",
+          "moveType": "Fighting",
+          "role": "Attacker",
+          "reason": "Fighting beats Normal",
+          "typeReason": "Fighting beats Normal"
+        },
+        {
+          "pokemon": "Lucario",
+          "effectiveness": "super-effective",
+          "moveType": "Fighting",
+          "role": "Attacker",
+          "reason": "Fighting beats Normal",
+          "typeReason": "Fighting beats Normal"
+        },
+        {
+          "pokemon": "Conkeldurr",
+          "effectiveness": "super-effective",
+          "moveType": "Fighting",
+          "role": "Attacker",
+          "reason": "Fighting beats Normal",
+          "typeReason": "Fighting beats Normal"
+        },
+        {
+          "pokemon": "Terrakion",
+          "effectiveness": "super-effective",
+          "moveType": "Fighting",
+          "role": "Attacker",
+          "reason": "Fighting beats Normal",
+          "typeReason": "Fighting beats Normal"
+        }
+      ]
+    },
+    "Pidove": {
+      "weakTo": [
+        {
+          "pokemon": "Machamp",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Lucario",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Conkeldurr",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Terrakion",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Raikou",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Zapdos",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Magnezone",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Electivire",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        }
+      ],
+      "topCounters": [
+        {
+          "pokemon": "Machamp",
+          "effectiveness": "super-effective",
+          "moveType": "Fighting",
+          "role": "Attacker",
+          "reason": "Fighting beats Normal",
+          "typeReason": "Fighting beats Normal"
+        },
+        {
+          "pokemon": "Lucario",
+          "effectiveness": "super-effective",
+          "moveType": "Fighting",
+          "role": "Attacker",
+          "reason": "Fighting beats Normal",
+          "typeReason": "Fighting beats Normal"
+        },
+        {
+          "pokemon": "Conkeldurr",
+          "effectiveness": "super-effective",
+          "moveType": "Fighting",
+          "role": "Attacker",
+          "reason": "Fighting beats Normal",
+          "typeReason": "Fighting beats Normal"
+        },
+        {
+          "pokemon": "Terrakion",
+          "effectiveness": "super-effective",
+          "moveType": "Fighting",
+          "role": "Attacker",
+          "reason": "Fighting beats Normal",
+          "typeReason": "Fighting beats Normal"
+        },
+        {
+          "pokemon": "Raikou",
+          "effectiveness": "super-effective",
+          "moveType": "Electric",
+          "role": "Attacker",
+          "reason": "Electric beats Flying",
+          "typeReason": "Electric beats Flying"
+        }
+      ]
+    },
+    "Butterfree": {
+      "weakTo": [
+        {
+          "pokemon": "Charizard",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Moltres",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Entei",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Blaziken",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Tyranitar",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Rampardos",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Terrakion",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Golem",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        }
+      ],
+      "topCounters": [
+        {
+          "pokemon": "Charizard",
+          "effectiveness": "super-effective",
+          "moveType": "Fire",
+          "role": "Attacker",
+          "reason": "Fire beats Bug",
+          "typeReason": "Fire beats Bug"
+        },
+        {
+          "pokemon": "Moltres",
+          "effectiveness": "super-effective",
+          "moveType": "Fire",
+          "role": "Attacker",
+          "reason": "Fire beats Bug",
+          "typeReason": "Fire beats Bug"
+        },
+        {
+          "pokemon": "Entei",
+          "effectiveness": "super-effective",
+          "moveType": "Fire",
+          "role": "Attacker",
+          "reason": "Fire beats Bug",
+          "typeReason": "Fire beats Bug"
+        },
+        {
+          "pokemon": "Blaziken",
+          "effectiveness": "super-effective",
+          "moveType": "Fire",
+          "role": "Attacker",
+          "reason": "Fire beats Bug",
+          "typeReason": "Fire beats Bug"
+        },
+        {
+          "pokemon": "Tyranitar",
+          "effectiveness": "super-effective",
+          "moveType": "Rock",
+          "role": "Attacker",
+          "reason": "Rock beats Bug",
+          "typeReason": "Rock beats Bug/Flying"
+        }
+      ]
+    },
+    "Charizard": {
+      "weakTo": [
+        {
+          "pokemon": "Blastoise",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Gyarados",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Swampert",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Kyogre",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Garchomp",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Excadrill",
           "effectiveness": "super-effective",
           "role": "Attacker"
         },
@@ -365,27 +1745,392 @@
       ],
       "topCounters": [
         {
-          "pokemon": "Excadrill",
+          "pokemon": "Blastoise",
           "effectiveness": "super-effective",
-          "moveType": "Ground",
-          "role": "Attacker"
+          "moveType": "Water",
+          "role": "Attacker",
+          "reason": "Water beats Fire",
+          "typeReason": "Water beats Fire"
+        },
+        {
+          "pokemon": "Gyarados",
+          "effectiveness": "super-effective",
+          "moveType": "Water",
+          "role": "Attacker",
+          "reason": "Water beats Fire",
+          "typeReason": "Water beats Fire"
+        },
+        {
+          "pokemon": "Swampert",
+          "effectiveness": "super-effective",
+          "moveType": "Water",
+          "role": "Attacker",
+          "reason": "Water beats Fire",
+          "typeReason": "Water beats Fire"
+        },
+        {
+          "pokemon": "Kyogre",
+          "effectiveness": "super-effective",
+          "moveType": "Water",
+          "role": "Attacker",
+          "reason": "Water beats Fire",
+          "typeReason": "Water beats Fire"
         },
         {
           "pokemon": "Garchomp",
           "effectiveness": "super-effective",
           "moveType": "Ground",
-          "role": "Attacker"
-        },
-        {
-          "pokemon": "Groudon",
-          "effectiveness": "super-effective",
-          "moveType": "Ground",
-          "role": "Attacker"
+          "role": "Attacker",
+          "reason": "Ground beats Fire",
+          "typeReason": "Ground beats Fire"
         }
       ]
     },
-    "Charizard": {
-      "tier": 4,
+    "Blastoise": {
+      "weakTo": [
+        {
+          "pokemon": "Raikou",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Zapdos",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Magnezone",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Electivire",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Venusaur",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Sceptile",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Roserade",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Leafeon",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        }
+      ],
+      "topCounters": [
+        {
+          "pokemon": "Raikou",
+          "effectiveness": "super-effective",
+          "moveType": "Electric",
+          "role": "Attacker",
+          "reason": "Electric beats Water",
+          "typeReason": "Electric beats Water"
+        },
+        {
+          "pokemon": "Zapdos",
+          "effectiveness": "super-effective",
+          "moveType": "Electric",
+          "role": "Attacker",
+          "reason": "Electric beats Water",
+          "typeReason": "Electric beats Water"
+        },
+        {
+          "pokemon": "Magnezone",
+          "effectiveness": "super-effective",
+          "moveType": "Electric",
+          "role": "Attacker",
+          "reason": "Electric beats Water",
+          "typeReason": "Electric beats Water"
+        },
+        {
+          "pokemon": "Electivire",
+          "effectiveness": "super-effective",
+          "moveType": "Electric",
+          "role": "Attacker",
+          "reason": "Electric beats Water",
+          "typeReason": "Electric beats Water"
+        },
+        {
+          "pokemon": "Venusaur",
+          "effectiveness": "super-effective",
+          "moveType": "Grass",
+          "role": "Attacker",
+          "reason": "Grass beats Water",
+          "typeReason": "Grass beats Water"
+        }
+      ]
+    },
+    "Venusaur": {
+      "weakTo": [
+        {
+          "pokemon": "Charizard",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Moltres",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Entei",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Blaziken",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Articuno",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Mamoswine",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Glaceon",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Weavile",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        }
+      ],
+      "topCounters": [
+        {
+          "pokemon": "Charizard",
+          "effectiveness": "super-effective",
+          "moveType": "Fire",
+          "role": "Attacker",
+          "reason": "Fire beats Grass",
+          "typeReason": "Fire beats Grass"
+        },
+        {
+          "pokemon": "Moltres",
+          "effectiveness": "super-effective",
+          "moveType": "Fire",
+          "role": "Attacker",
+          "reason": "Fire beats Grass",
+          "typeReason": "Fire beats Grass"
+        },
+        {
+          "pokemon": "Entei",
+          "effectiveness": "super-effective",
+          "moveType": "Fire",
+          "role": "Attacker",
+          "reason": "Fire beats Grass",
+          "typeReason": "Fire beats Grass"
+        },
+        {
+          "pokemon": "Blaziken",
+          "effectiveness": "super-effective",
+          "moveType": "Fire",
+          "role": "Attacker",
+          "reason": "Fire beats Grass",
+          "typeReason": "Fire beats Grass"
+        },
+        {
+          "pokemon": "Articuno",
+          "effectiveness": "super-effective",
+          "moveType": "Ice",
+          "role": "Attacker",
+          "reason": "Ice beats Grass",
+          "typeReason": "Ice beats Grass"
+        }
+      ]
+    },
+    "Bulbasaur": {
+      "weakTo": [
+        {
+          "pokemon": "Charizard",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Moltres",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Entei",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Blaziken",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Articuno",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Mamoswine",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Glaceon",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Weavile",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        }
+      ],
+      "topCounters": [
+        {
+          "pokemon": "Charizard",
+          "effectiveness": "super-effective",
+          "moveType": "Fire",
+          "role": "Attacker",
+          "reason": "Fire beats Grass",
+          "typeReason": "Fire beats Grass"
+        },
+        {
+          "pokemon": "Moltres",
+          "effectiveness": "super-effective",
+          "moveType": "Fire",
+          "role": "Attacker",
+          "reason": "Fire beats Grass",
+          "typeReason": "Fire beats Grass"
+        },
+        {
+          "pokemon": "Entei",
+          "effectiveness": "super-effective",
+          "moveType": "Fire",
+          "role": "Attacker",
+          "reason": "Fire beats Grass",
+          "typeReason": "Fire beats Grass"
+        },
+        {
+          "pokemon": "Blaziken",
+          "effectiveness": "super-effective",
+          "moveType": "Fire",
+          "role": "Attacker",
+          "reason": "Fire beats Grass",
+          "typeReason": "Fire beats Grass"
+        },
+        {
+          "pokemon": "Articuno",
+          "effectiveness": "super-effective",
+          "moveType": "Ice",
+          "role": "Attacker",
+          "reason": "Ice beats Grass",
+          "typeReason": "Ice beats Grass"
+        }
+      ]
+    },
+    "Ivysaur": {
+      "weakTo": [
+        {
+          "pokemon": "Charizard",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Moltres",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Entei",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Blaziken",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Articuno",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Mamoswine",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Glaceon",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Weavile",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        }
+      ],
+      "topCounters": [
+        {
+          "pokemon": "Charizard",
+          "effectiveness": "super-effective",
+          "moveType": "Fire",
+          "role": "Attacker",
+          "reason": "Fire beats Grass",
+          "typeReason": "Fire beats Grass"
+        },
+        {
+          "pokemon": "Moltres",
+          "effectiveness": "super-effective",
+          "moveType": "Fire",
+          "role": "Attacker",
+          "reason": "Fire beats Grass",
+          "typeReason": "Fire beats Grass"
+        },
+        {
+          "pokemon": "Entei",
+          "effectiveness": "super-effective",
+          "moveType": "Fire",
+          "role": "Attacker",
+          "reason": "Fire beats Grass",
+          "typeReason": "Fire beats Grass"
+        },
+        {
+          "pokemon": "Blaziken",
+          "effectiveness": "super-effective",
+          "moveType": "Fire",
+          "role": "Attacker",
+          "reason": "Fire beats Grass",
+          "typeReason": "Fire beats Grass"
+        },
+        {
+          "pokemon": "Articuno",
+          "effectiveness": "super-effective",
+          "moveType": "Ice",
+          "role": "Attacker",
+          "reason": "Ice beats Grass",
+          "typeReason": "Ice beats Grass"
+        }
+      ]
+    },
+    "Charmander": {
       "weakTo": [
         {
           "pokemon": "Blastoise",
@@ -398,7 +2143,356 @@
           "role": "Attacker"
         },
         {
-          "pokemon": "Golem",
+          "pokemon": "Swampert",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Kyogre",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Garchomp",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Excadrill",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Groudon",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Rhyperior",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        }
+      ],
+      "topCounters": [
+        {
+          "pokemon": "Blastoise",
+          "effectiveness": "super-effective",
+          "moveType": "Water",
+          "role": "Attacker",
+          "reason": "Water beats Fire",
+          "typeReason": "Water beats Fire"
+        },
+        {
+          "pokemon": "Gyarados",
+          "effectiveness": "super-effective",
+          "moveType": "Water",
+          "role": "Attacker",
+          "reason": "Water beats Fire",
+          "typeReason": "Water beats Fire"
+        },
+        {
+          "pokemon": "Swampert",
+          "effectiveness": "super-effective",
+          "moveType": "Water",
+          "role": "Attacker",
+          "reason": "Water beats Fire",
+          "typeReason": "Water beats Fire"
+        },
+        {
+          "pokemon": "Kyogre",
+          "effectiveness": "super-effective",
+          "moveType": "Water",
+          "role": "Attacker",
+          "reason": "Water beats Fire",
+          "typeReason": "Water beats Fire"
+        },
+        {
+          "pokemon": "Garchomp",
+          "effectiveness": "super-effective",
+          "moveType": "Ground",
+          "role": "Attacker",
+          "reason": "Ground beats Fire",
+          "typeReason": "Ground beats Fire"
+        }
+      ]
+    },
+    "Charmeleon": {
+      "weakTo": [
+        {
+          "pokemon": "Blastoise",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Gyarados",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Swampert",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Kyogre",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Garchomp",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Excadrill",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Groudon",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Rhyperior",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        }
+      ],
+      "topCounters": [
+        {
+          "pokemon": "Blastoise",
+          "effectiveness": "super-effective",
+          "moveType": "Water",
+          "role": "Attacker",
+          "reason": "Water beats Fire",
+          "typeReason": "Water beats Fire"
+        },
+        {
+          "pokemon": "Gyarados",
+          "effectiveness": "super-effective",
+          "moveType": "Water",
+          "role": "Attacker",
+          "reason": "Water beats Fire",
+          "typeReason": "Water beats Fire"
+        },
+        {
+          "pokemon": "Swampert",
+          "effectiveness": "super-effective",
+          "moveType": "Water",
+          "role": "Attacker",
+          "reason": "Water beats Fire",
+          "typeReason": "Water beats Fire"
+        },
+        {
+          "pokemon": "Kyogre",
+          "effectiveness": "super-effective",
+          "moveType": "Water",
+          "role": "Attacker",
+          "reason": "Water beats Fire",
+          "typeReason": "Water beats Fire"
+        },
+        {
+          "pokemon": "Garchomp",
+          "effectiveness": "super-effective",
+          "moveType": "Ground",
+          "role": "Attacker",
+          "reason": "Ground beats Fire",
+          "typeReason": "Ground beats Fire"
+        }
+      ]
+    },
+    "Squirtle": {
+      "weakTo": [
+        {
+          "pokemon": "Raikou",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Zapdos",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Magnezone",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Electivire",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Venusaur",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Sceptile",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Roserade",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Leafeon",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        }
+      ],
+      "topCounters": [
+        {
+          "pokemon": "Raikou",
+          "effectiveness": "super-effective",
+          "moveType": "Electric",
+          "role": "Attacker",
+          "reason": "Electric beats Water",
+          "typeReason": "Electric beats Water"
+        },
+        {
+          "pokemon": "Zapdos",
+          "effectiveness": "super-effective",
+          "moveType": "Electric",
+          "role": "Attacker",
+          "reason": "Electric beats Water",
+          "typeReason": "Electric beats Water"
+        },
+        {
+          "pokemon": "Magnezone",
+          "effectiveness": "super-effective",
+          "moveType": "Electric",
+          "role": "Attacker",
+          "reason": "Electric beats Water",
+          "typeReason": "Electric beats Water"
+        },
+        {
+          "pokemon": "Electivire",
+          "effectiveness": "super-effective",
+          "moveType": "Electric",
+          "role": "Attacker",
+          "reason": "Electric beats Water",
+          "typeReason": "Electric beats Water"
+        },
+        {
+          "pokemon": "Venusaur",
+          "effectiveness": "super-effective",
+          "moveType": "Grass",
+          "role": "Attacker",
+          "reason": "Grass beats Water",
+          "typeReason": "Grass beats Water"
+        }
+      ]
+    },
+    "Wartortle": {
+      "weakTo": [
+        {
+          "pokemon": "Raikou",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Zapdos",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Magnezone",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Electivire",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Venusaur",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Sceptile",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Roserade",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Leafeon",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        }
+      ],
+      "topCounters": [
+        {
+          "pokemon": "Raikou",
+          "effectiveness": "super-effective",
+          "moveType": "Electric",
+          "role": "Attacker",
+          "reason": "Electric beats Water",
+          "typeReason": "Electric beats Water"
+        },
+        {
+          "pokemon": "Zapdos",
+          "effectiveness": "super-effective",
+          "moveType": "Electric",
+          "role": "Attacker",
+          "reason": "Electric beats Water",
+          "typeReason": "Electric beats Water"
+        },
+        {
+          "pokemon": "Magnezone",
+          "effectiveness": "super-effective",
+          "moveType": "Electric",
+          "role": "Attacker",
+          "reason": "Electric beats Water",
+          "typeReason": "Electric beats Water"
+        },
+        {
+          "pokemon": "Electivire",
+          "effectiveness": "super-effective",
+          "moveType": "Electric",
+          "role": "Attacker",
+          "reason": "Electric beats Water",
+          "typeReason": "Electric beats Water"
+        },
+        {
+          "pokemon": "Venusaur",
+          "effectiveness": "super-effective",
+          "moveType": "Grass",
+          "role": "Attacker",
+          "reason": "Grass beats Water",
+          "typeReason": "Grass beats Water"
+        }
+      ]
+    },
+    "Caterpie": {
+      "weakTo": [
+        {
+          "pokemon": "Charizard",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Moltres",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Entei",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Blaziken",
           "effectiveness": "super-effective",
           "role": "Attacker"
         },
@@ -406,31 +2500,67 @@
           "pokemon": "Tyranitar",
           "effectiveness": "super-effective",
           "role": "Attacker"
-        }
-      ],
-      "topCounters": [
+        },
         {
-          "pokemon": "Blastoise",
+          "pokemon": "Rampardos",
           "effectiveness": "super-effective",
-          "moveType": "Water",
           "role": "Attacker"
         },
         {
-          "pokemon": "Gyarados",
+          "pokemon": "Terrakion",
           "effectiveness": "super-effective",
-          "moveType": "Water",
           "role": "Attacker"
         },
         {
           "pokemon": "Golem",
           "effectiveness": "super-effective",
-          "moveType": "Rock",
           "role": "Attacker"
+        }
+      ],
+      "topCounters": [
+        {
+          "pokemon": "Charizard",
+          "effectiveness": "super-effective",
+          "moveType": "Fire",
+          "role": "Attacker",
+          "reason": "Fire beats Bug",
+          "typeReason": "Fire beats Bug"
+        },
+        {
+          "pokemon": "Moltres",
+          "effectiveness": "super-effective",
+          "moveType": "Fire",
+          "role": "Attacker",
+          "reason": "Fire beats Bug",
+          "typeReason": "Fire beats Bug"
+        },
+        {
+          "pokemon": "Entei",
+          "effectiveness": "super-effective",
+          "moveType": "Fire",
+          "role": "Attacker",
+          "reason": "Fire beats Bug",
+          "typeReason": "Fire beats Bug"
+        },
+        {
+          "pokemon": "Blaziken",
+          "effectiveness": "super-effective",
+          "moveType": "Fire",
+          "role": "Attacker",
+          "reason": "Fire beats Bug",
+          "typeReason": "Fire beats Bug"
+        },
+        {
+          "pokemon": "Tyranitar",
+          "effectiveness": "super-effective",
+          "moveType": "Rock",
+          "role": "Attacker",
+          "reason": "Rock beats Bug",
+          "typeReason": "Rock beats Bug"
         }
       ]
     },
-    "Venusaur": {
-      "tier": 3,
+    "Metapod": {
       "weakTo": [
         {
           "pokemon": "Charizard",
@@ -443,7 +2573,32 @@
           "role": "Attacker"
         },
         {
-          "pokemon": "Ho-Oh",
+          "pokemon": "Entei",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Blaziken",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Tyranitar",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Rampardos",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Terrakion",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Golem",
           "effectiveness": "super-effective",
           "role": "Attacker"
         }
@@ -453,99 +2608,127 @@
           "pokemon": "Charizard",
           "effectiveness": "super-effective",
           "moveType": "Fire",
-          "role": "Attacker"
+          "role": "Attacker",
+          "reason": "Fire beats Bug",
+          "typeReason": "Fire beats Bug"
         },
         {
           "pokemon": "Moltres",
           "effectiveness": "super-effective",
           "moveType": "Fire",
-          "role": "Attacker"
+          "role": "Attacker",
+          "reason": "Fire beats Bug",
+          "typeReason": "Fire beats Bug"
         },
         {
-          "pokemon": "Ho-Oh",
+          "pokemon": "Entei",
           "effectiveness": "super-effective",
           "moveType": "Fire",
-          "role": "Attacker"
+          "role": "Attacker",
+          "reason": "Fire beats Bug",
+          "typeReason": "Fire beats Bug"
+        },
+        {
+          "pokemon": "Blaziken",
+          "effectiveness": "super-effective",
+          "moveType": "Fire",
+          "role": "Attacker",
+          "reason": "Fire beats Bug",
+          "typeReason": "Fire beats Bug"
+        },
+        {
+          "pokemon": "Tyranitar",
+          "effectiveness": "super-effective",
+          "moveType": "Rock",
+          "role": "Attacker",
+          "reason": "Rock beats Bug",
+          "typeReason": "Rock beats Bug"
         }
       ]
     },
-    "Blastoise": {
-      "tier": 3,
+    "Lapras": {
       "weakTo": [
-        {
-          "pokemon": "Venusaur",
-          "effectiveness": "super-effective",
-          "role": "Attacker"
-        },
-        {
-          "pokemon": "Sceptile",
-          "effectiveness": "super-effective",
-          "role": "Attacker"
-        },
         {
           "pokemon": "Raikou",
           "effectiveness": "super-effective",
           "role": "Attacker"
-        }
-      ],
-      "topCounters": [
+        },
+        {
+          "pokemon": "Zapdos",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Magnezone",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Electivire",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
         {
           "pokemon": "Venusaur",
           "effectiveness": "super-effective",
-          "moveType": "Grass",
           "role": "Attacker"
         },
         {
           "pokemon": "Sceptile",
           "effectiveness": "super-effective",
-          "moveType": "Grass",
           "role": "Attacker"
         },
+        {
+          "pokemon": "Roserade",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        },
+        {
+          "pokemon": "Leafeon",
+          "effectiveness": "super-effective",
+          "role": "Attacker"
+        }
+      ],
+      "topCounters": [
         {
           "pokemon": "Raikou",
           "effectiveness": "super-effective",
           "moveType": "Electric",
-          "role": "Attacker"
-        }
-      ]
-    },
-    "Gigantamax Charizard": {
-      "tier": 5,
-      "weakTo": [
-        {
-          "pokemon": "Blastoise",
-          "effectiveness": "super-effective",
-          "role": "Attacker"
+          "role": "Attacker",
+          "reason": "Electric beats Water",
+          "typeReason": "Electric beats Water"
         },
         {
-          "pokemon": "Gyarados",
+          "pokemon": "Zapdos",
           "effectiveness": "super-effective",
-          "role": "Attacker"
+          "moveType": "Electric",
+          "role": "Attacker",
+          "reason": "Electric beats Water",
+          "typeReason": "Electric beats Water"
         },
         {
-          "pokemon": "Golem",
+          "pokemon": "Magnezone",
           "effectiveness": "super-effective",
-          "role": "Attacker"
-        }
-      ],
-      "topCounters": [
-        {
-          "pokemon": "Blastoise",
-          "effectiveness": "super-effective",
-          "moveType": "Water",
-          "role": "Attacker"
+          "moveType": "Electric",
+          "role": "Attacker",
+          "reason": "Electric beats Water",
+          "typeReason": "Electric beats Water"
         },
         {
-          "pokemon": "Gyarados",
+          "pokemon": "Electivire",
           "effectiveness": "super-effective",
-          "moveType": "Water",
-          "role": "Attacker"
+          "moveType": "Electric",
+          "role": "Attacker",
+          "reason": "Electric beats Water",
+          "typeReason": "Electric beats Water"
         },
         {
-          "pokemon": "Golem",
+          "pokemon": "Venusaur",
           "effectiveness": "super-effective",
-          "moveType": "Rock",
-          "role": "Attacker"
+          "moveType": "Grass",
+          "role": "Attacker",
+          "reason": "Grass beats Water",
+          "typeReason": "Grass beats Water"
         }
       ]
     }

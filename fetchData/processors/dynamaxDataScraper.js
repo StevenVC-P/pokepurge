@@ -102,16 +102,23 @@ class DynamaxDataScraper {
    */
   async scrapeAll() {
     console.log("🔥 Starting Max Battle Data Scraping...");
-    console.log("📊 Target: Dynamax raids, type effectiveness, specific counters");
+    console.log("📊 Target: Current Max Battle bosses, difficulty levels, counters");
     console.log("-".repeat(60));
 
     try {
-      // Scrape from reliable sources
-      await this.scrapePokemonGoHub();
-      await this.scrapeGamePress();
+      // Try to scrape current Max Battle data, fallback to known data if blocked
+      await this.scrapeCurrentMaxBattles();
+      await this.scrapeMaxMondaySchedule();
+      await this.scrapeGigantamaxGuides();
+
+      // If no data was scraped (due to blocking), use known Max Battle data
+      if (Object.keys(this.dynamaxData.raids).length === 0) {
+        console.log("🔄 Using known Max Battle data as fallback...");
+        await this.loadKnownMaxBattleData();
+      }
 
       // Process and enhance data
-      await this.processTypeEffectiveness();
+      await this.processMaxBattleData();
       await this.generateCounterMappings();
       await this.addTypeEffectivenessReasons();
 
@@ -199,46 +206,63 @@ class DynamaxDataScraper {
   }
 
   /**
-   * Scrape Pokemon GO Hub for Dynamax guides
+   * Scrape current Max Battle bosses and schedule
    */
-  async scrapePokemonGoHub() {
-    console.log("🌐 Scraping Pokemon GO Hub...");
+  async scrapeCurrentMaxBattles() {
+    console.log("🌐 Scraping current Max Battle data...");
 
     try {
-      // Get list of Dynamax guides
-      const guidesResponse = await axios.get(`${this.sources.pokemonGoHub}/post/category/guide/`, {
+      // Scrape the Max Monday schedule page
+      const scheduleResponse = await axios.get(`${this.sources.pokemonGoHub.baseUrl}/post/guide/spotlight-raid-hours/`, {
         timeout: 10000,
         headers: {
           "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
         },
       });
 
-      const $ = cheerio.load(guidesResponse.data);
-      const dynamaxGuides = [];
+      const $ = cheerio.load(scheduleResponse.data);
 
-      // Find Dynamax-related guide links
-      $('a[href*="dynamax"], a[href*="max-battle"]').each((i, element) => {
-        const href = $(element).attr("href");
-        const title = $(element).text().trim();
+      // Extract Max Monday schedule
+      const maxMondayData = [];
+      $('h3:contains("Max Mondays"), h2:contains("Max Mondays")')
+        .next()
+        .find("tr")
+        .each((i, row) => {
+          const cells = $(row).find("td");
+          if (cells.length >= 2) {
+            const date = $(cells[0]).text().trim();
+            const pokemonName = $(cells[1]).text().trim();
 
-        if (href && title && (title.includes("Dynamax") || title.includes("Max Battle"))) {
-          dynamaxGuides.push({
-            url: href.startsWith("http") ? href : `${this.sources.pokemonGoHub}${href}`,
-            title: title,
-            pokemon: this.extractPokemonName(title),
-          });
-        }
+            if (pokemonName && pokemonName !== "Max Monday") {
+              maxMondayData.push({
+                date: date,
+                pokemon: pokemonName,
+                difficulty: 1, // Max Mondays are currently 1-star
+                type: "max-monday",
+                source: "pokemongohub-schedule",
+              });
+            }
+          }
+        });
+
+      console.log(`  Found ${maxMondayData.length} Max Monday bosses`);
+
+      // Store the data
+      maxMondayData.forEach((boss) => {
+        this.dynamaxData.raids[boss.pokemon] = {
+          difficulty: boss.difficulty,
+          type: boss.type,
+          date: boss.date,
+          counters: [], // Will be populated by type effectiveness
+          url: `${this.sources.pokemonGoHub.baseUrl}/post/guide/spotlight-raid-hours/`,
+          lastUpdated: new Date().toISOString(),
+        };
       });
 
-      console.log(`  Found ${dynamaxGuides.length} Dynamax guides`);
-
-      // Scrape individual guides (limit to prevent overload)
-      for (const guide of dynamaxGuides.slice(0, 10)) {
-        await this.scrapeIndividualGuide(guide);
-        await this.delay(1000); // Rate limiting
-      }
+      this.dynamaxData.metadata.totalRaids = maxMondayData.length;
+      this.dynamaxData.metadata.sources.push("pokemongohub-max-mondays");
     } catch (error) {
-      console.warn("⚠️  Pokemon GO Hub scraping failed:", error.message);
+      console.warn("⚠️  Max Battle schedule scraping failed:", error.message);
     }
   }
 
@@ -314,48 +338,293 @@ class DynamaxDataScraper {
   }
 
   /**
-   * Scrape GamePress for DPS/TDO data
+   * Scrape Max Monday schedule for upcoming bosses
    */
-  async scrapeGamePress() {
-    console.log("🌐 Scraping GamePress...");
+  async scrapeMaxMondaySchedule() {
+    console.log("🌐 Scraping Max Monday schedule...");
 
     try {
-      // GamePress has comprehensive DPS data that can inform Dynamax effectiveness
-      const dpsResponse = await axios.get(`${this.sources.gamePress}/comprehensive-dps-spreadsheet`, {
+      // Get the current events page for more Max Battle info
+      const eventsResponse = await axios.get(`${this.sources.pokemonGoHub.baseUrl}/post/event/pokemon-go-august-2025-events/`, {
         timeout: 10000,
         headers: {
           "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
         },
       });
 
-      // Note: GamePress data is often in embedded spreadsheets or requires API access
-      // This is a placeholder for future implementation when we have better access
-      console.log("  📊 GamePress DPS data integration planned for future update");
+      const $ = cheerio.load(eventsResponse.data);
+
+      // Look for Dynamax/Max Battle mentions in events
+      const maxBattleEvents = [];
+      $("h2, h3, h4").each((i, heading) => {
+        const text = $(heading).text();
+        if (text.includes("Dynamax") || text.includes("Max Battle") || text.includes("Gigantamax")) {
+          const nextContent = $(heading).nextUntil("h1, h2, h3, h4").text();
+
+          // Extract Pokemon names and difficulty info
+          const pokemonMatches = nextContent.match(/([A-Z][a-z]+(?:\s+[A-Z][a-z]+)*)/g);
+          if (pokemonMatches) {
+            pokemonMatches.forEach((pokemon) => {
+              if (this.isValidPokemonName(pokemon)) {
+                maxBattleEvents.push({
+                  pokemon: pokemon,
+                  difficulty: this.inferDifficulty(nextContent),
+                  type: text.includes("Gigantamax") ? "gigantamax" : "dynamax",
+                  source: "pokemongohub-events",
+                });
+              }
+            });
+          }
+        }
+      });
+
+      console.log(`  Found ${maxBattleEvents.length} Max Battle events`);
+
+      // Add to raids data
+      maxBattleEvents.forEach((event) => {
+        if (!this.dynamaxData.raids[event.pokemon]) {
+          this.dynamaxData.raids[event.pokemon] = {
+            difficulty: event.difficulty,
+            type: event.type,
+            counters: [],
+            url: `${this.sources.pokemonGoHub.baseUrl}/post/event/pokemon-go-august-2025-events/`,
+            lastUpdated: new Date().toISOString(),
+          };
+        }
+      });
     } catch (error) {
-      console.warn("⚠️  GamePress scraping failed:", error.message);
+      console.warn("⚠️  Max Monday schedule scraping failed:", error.message);
     }
   }
 
   /**
-   * Scrape community data from Reddit and other sources
+   * Scrape Gigantamax specific guides
    */
-  async scrapeCommunityData() {
-    console.log("🌐 Scraping community data...");
+  async scrapeGigantamaxGuides() {
+    console.log("🌐 Scraping Gigantamax guides...");
 
     try {
-      // Search for recent Dynamax tier lists and analysis
-      const searchTerms = ["Dynamax tier list", "Max Battle guide", "Dynamax counters"];
+      // Search for Gigantamax guides on Pokemon GO Hub
+      const searchResponse = await axios.get(`${this.sources.pokemonGoHub.baseUrl}/post/category/guide/`, {
+        timeout: 10000,
+        headers: {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+        },
+      });
 
-      for (const term of searchTerms) {
-        // Note: Reddit API requires authentication for extensive scraping
-        // This is a placeholder for community data integration
-        console.log(`  🔍 Searching for: ${term}`);
+      const $ = cheerio.load(searchResponse.data);
+      const gigantamaxGuides = [];
+
+      // Find Gigantamax-specific guides
+      $("a").each((i, element) => {
+        const href = $(element).attr("href");
+        const title = $(element).text().trim();
+
+        if (href && title && title.toLowerCase().includes("gigantamax")) {
+          gigantamaxGuides.push({
+            url: href.startsWith("http") ? href : `${this.sources.pokemonGoHub.baseUrl}${href}`,
+            title: title,
+            pokemon: this.extractPokemonName(title),
+            difficulty: this.inferGigantamaxDifficulty(title),
+          });
+        }
+      });
+
+      console.log(`  Found ${gigantamaxGuides.length} Gigantamax guides`);
+
+      // Process each guide
+      for (const guide of gigantamaxGuides.slice(0, 5)) {
+        await this.scrapeGigantamaxGuide(guide);
+        await this.delay(1000);
       }
-
-      console.log("  📊 Community data integration planned for future update");
     } catch (error) {
-      console.warn("⚠️  Community data scraping failed:", error.message);
+      console.warn("⚠️  Gigantamax guides scraping failed:", error.message);
     }
+  }
+
+  /**
+   * Scrape individual Gigantamax guide for counter data
+   */
+  async scrapeGigantamaxGuide(guide) {
+    try {
+      console.log(`  📖 Scraping Gigantamax guide: ${guide.title}`);
+
+      const response = await axios.get(guide.url, {
+        timeout: 10000,
+        headers: {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+        },
+      });
+
+      const $ = cheerio.load(response.data);
+
+      // Extract counter information from the guide
+      const counters = [];
+      $('h2:contains("Counter"), h3:contains("Counter"), h2:contains("Best"), h3:contains("Best")').each((i, heading) => {
+        const section = $(heading).nextUntil("h1, h2, h3").text();
+        const pokemonMatches = section.match(/([A-Z][a-z]+(?:\s+[A-Z][a-z]+)*)/g);
+
+        if (pokemonMatches) {
+          pokemonMatches.forEach((pokemon) => {
+            if (this.isValidPokemonName(pokemon)) {
+              counters.push({
+                pokemon: pokemon,
+                effectiveness: "super-effective",
+                moveType: this.inferMoveType(pokemon),
+                role: "Attacker",
+              });
+            }
+          });
+        }
+      });
+
+      // Store the data
+      if (guide.pokemon && counters.length > 0) {
+        this.dynamaxData.raids[guide.pokemon] = {
+          difficulty: guide.difficulty,
+          type: "gigantamax",
+          counters: counters,
+          url: guide.url,
+          lastUpdated: new Date().toISOString(),
+        };
+      }
+    } catch (error) {
+      console.warn(`    ⚠️  Failed to scrape Gigantamax guide ${guide.title}:`, error.message);
+    }
+  }
+
+  /**
+   * Load known Max Battle data when scraping fails
+   */
+  async loadKnownMaxBattleData() {
+    console.log("📊 Loading known Max Battle data...");
+
+    // Current Max Monday bosses (August 2025) - 1-star difficulty
+    const maxMondayBosses = [
+      { name: "Omanyte", difficulty: 1, type: "max-monday", date: "August 4" },
+      { name: "Trubbish", difficulty: 1, type: "max-monday", date: "August 11" },
+      { name: "Chansey", difficulty: 1, type: "max-monday", date: "August 25" },
+      { name: "Pidove", difficulty: 1, type: "max-monday", date: "September 1" },
+    ];
+
+    // Known Gigantamax bosses - higher difficulty
+    const gigantamaxBosses = [
+      { name: "Butterfree", difficulty: 3, type: "gigantamax" },
+      { name: "Charizard", difficulty: 4, type: "gigantamax" },
+      { name: "Blastoise", difficulty: 4, type: "gigantamax" },
+      { name: "Venusaur", difficulty: 4, type: "gigantamax" },
+    ];
+
+    // Other known Dynamax Pokemon that appear in Max Battles
+    const dynamaxBosses = [
+      { name: "Bulbasaur", difficulty: 1, type: "dynamax" },
+      { name: "Ivysaur", difficulty: 2, type: "dynamax" },
+      { name: "Charmander", difficulty: 1, type: "dynamax" },
+      { name: "Charmeleon", difficulty: 2, type: "dynamax" },
+      { name: "Squirtle", difficulty: 1, type: "dynamax" },
+      { name: "Wartortle", difficulty: 2, type: "dynamax" },
+      { name: "Caterpie", difficulty: 1, type: "dynamax" },
+      { name: "Metapod", difficulty: 1, type: "dynamax" },
+      { name: "Lapras", difficulty: 3, type: "dynamax" },
+    ];
+
+    // Combine all known bosses
+    const allBosses = [...maxMondayBosses, ...gigantamaxBosses, ...dynamaxBosses];
+
+    // Add to raids data
+    allBosses.forEach((boss) => {
+      this.dynamaxData.raids[boss.name] = {
+        difficulty: boss.difficulty,
+        type: boss.type,
+        date: boss.date || null,
+        counters: [], // Will be populated by type effectiveness
+        url: "https://pokemongohub.net/post/guide/spotlight-raid-hours/",
+        lastUpdated: new Date().toISOString(),
+        source: "known-data",
+      };
+    });
+
+    this.dynamaxData.metadata.totalRaids = allBosses.length;
+    this.dynamaxData.metadata.sources.push("known-max-battle-data");
+    this.dynamaxData.metadata.version = "1.1.0-real-data";
+
+    console.log(`  ✅ Loaded ${allBosses.length} known Max Battle bosses`);
+  }
+
+  /**
+   * Process Max Battle data and generate type effectiveness
+   */
+  async processMaxBattleData() {
+    console.log("⚙️  Processing Max Battle data...");
+
+    // Generate counters based on type effectiveness for each raid boss
+    Object.keys(this.dynamaxData.raids).forEach((bossName) => {
+      const boss = this.dynamaxData.raids[bossName];
+      const bossTypes = this.inferPokemonTypes(bossName);
+
+      if (bossTypes.length > 0) {
+        boss.types = bossTypes;
+        boss.counters = this.generateCountersForBoss(bossName, bossTypes, boss.difficulty);
+      }
+    });
+
+    console.log(`  ✅ Processed ${Object.keys(this.dynamaxData.raids).length} Max Battle bosses`);
+  }
+
+  /**
+   * Generate counters for a specific boss based on type effectiveness
+   */
+  generateCountersForBoss(bossName, bossTypes, difficulty) {
+    const counters = [];
+
+    // Get super effective types against this boss
+    bossTypes.forEach((defenseType) => {
+      Object.entries(this.typeChart.superEffective).forEach(([attackType, defendingTypes]) => {
+        if (defendingTypes.includes(defenseType)) {
+          // Find Pokemon of this attacking type
+          const attackingPokemon = this.getTopPokemonOfType(attackType, difficulty);
+          attackingPokemon.forEach((pokemon) => {
+            counters.push({
+              pokemon: pokemon,
+              effectiveness: "super-effective",
+              moveType: attackType,
+              role: "Attacker",
+              reason: `${attackType} beats ${defenseType}`,
+            });
+          });
+        }
+      });
+    });
+
+    return counters.slice(0, 8); // Limit to top 8 counters
+  }
+
+  /**
+   * Get top Pokemon of a specific type for countering
+   */
+  getTopPokemonOfType(type, difficulty) {
+    // Common strong Pokemon by type for Max Battles
+    const topPokemonByType = {
+      Fire: ["Charizard", "Moltres", "Entei", "Blaziken"],
+      Water: ["Blastoise", "Gyarados", "Swampert", "Kyogre"],
+      Grass: ["Venusaur", "Sceptile", "Roserade", "Leafeon"],
+      Electric: ["Raikou", "Zapdos", "Magnezone", "Electivire"],
+      Ice: ["Articuno", "Mamoswine", "Glaceon", "Weavile"],
+      Fighting: ["Machamp", "Lucario", "Conkeldurr", "Terrakion"],
+      Poison: ["Gengar", "Crobat", "Toxicroak", "Roserade"],
+      Ground: ["Garchomp", "Excadrill", "Groudon", "Rhyperior"],
+      Flying: ["Rayquaza", "Dragonite", "Salamence", "Togekiss"],
+      Psychic: ["Mewtwo", "Alakazam", "Espeon", "Gardevoir"],
+      Bug: ["Scizor", "Heracross", "Volcarona", "Genesect"],
+      Rock: ["Tyranitar", "Rampardos", "Terrakion", "Golem"],
+      Ghost: ["Gengar", "Giratina", "Chandelure", "Drifblim"],
+      Dragon: ["Rayquaza", "Dragonite", "Salamence", "Garchomp"],
+      Dark: ["Tyranitar", "Darkrai", "Hydreigon", "Absol"],
+      Steel: ["Metagross", "Dialga", "Excadrill", "Scizor"],
+      Fairy: ["Gardevoir", "Togekiss", "Clefable", "Sylveon"],
+    };
+
+    return topPokemonByType[type] || [];
   }
 
   /**
@@ -492,6 +761,85 @@ class DynamaxDataScraper {
     if (text.toLowerCase().includes("defender") || text.toLowerCase().includes("tank")) return "Defender";
     if (text.toLowerCase().includes("healer") || text.toLowerCase().includes("support")) return "Healer";
     return "Attacker"; // Default
+  }
+
+  /**
+   * Helper methods for data processing
+   */
+  isValidPokemonName(name) {
+    // Basic validation for Pokemon names
+    const validNames = ["Bulbasaur", "Ivysaur", "Venusaur", "Charmander", "Charmeleon", "Charizard", "Squirtle", "Wartortle", "Blastoise", "Caterpie", "Metapod", "Butterfree", "Omanyte", "Omastar", "Trubbish", "Garbodor", "Chansey", "Blissey", "Pidove", "Tranquill", "Unfezant", "Lapras", "Raikou", "Entei", "Suicune"];
+    return validNames.includes(name) || name.length > 3;
+  }
+
+  inferDifficulty(content) {
+    // Infer difficulty from content text
+    if (content.includes("3-star") || content.includes("Tier 3")) return 3;
+    if (content.includes("4-star") || content.includes("Tier 4")) return 4;
+    if (content.includes("5-star") || content.includes("Tier 5")) return 5;
+    if (content.includes("Gigantamax")) return 4; // Gigantamax are typically harder
+    return 1; // Default to 1-star for Max Mondays
+  }
+
+  inferGigantamaxDifficulty(title) {
+    // Gigantamax battles are typically 3-4 star difficulty
+    if (title.includes("Butterfree")) return 3;
+    if (title.includes("Charizard") || title.includes("Blastoise") || title.includes("Venusaur")) return 4;
+    return 3; // Default for Gigantamax
+  }
+
+  inferMoveType(pokemon) {
+    // Infer primary move type based on Pokemon
+    const moveTypes = {
+      Charizard: "Fire",
+      Blastoise: "Water",
+      Venusaur: "Grass",
+      Raikou: "Electric",
+      Entei: "Fire",
+      Suicune: "Water",
+      Butterfree: "Bug",
+      Lapras: "Water",
+      Chansey: "Normal",
+    };
+    return moveTypes[pokemon] || "Normal";
+  }
+
+  inferPokemonTypes(pokemonName) {
+    // Basic type inference for common Pokemon
+    const typeMap = {
+      Bulbasaur: ["Grass", "Poison"],
+      Ivysaur: ["Grass", "Poison"],
+      Venusaur: ["Grass", "Poison"],
+      Charmander: ["Fire"],
+      Charmeleon: ["Fire"],
+      Charizard: ["Fire", "Flying"],
+      Squirtle: ["Water"],
+      Wartortle: ["Water"],
+      Blastoise: ["Water"],
+      Caterpie: ["Bug"],
+      Metapod: ["Bug"],
+      Butterfree: ["Bug", "Flying"],
+      Omanyte: ["Rock", "Water"],
+      Omastar: ["Rock", "Water"],
+      Trubbish: ["Poison"],
+      Garbodor: ["Poison"],
+      Chansey: ["Normal"],
+      Blissey: ["Normal"],
+      Pidove: ["Normal", "Flying"],
+      Tranquill: ["Normal", "Flying"],
+      Unfezant: ["Normal", "Flying"],
+      Lapras: ["Water", "Ice"],
+      Raikou: ["Electric"],
+      Entei: ["Fire"],
+      Suicune: ["Water"],
+    };
+    return typeMap[pokemonName] || ["Normal"];
+  }
+
+  extractPokemonName(title) {
+    // Extract Pokemon name from guide title
+    const matches = title.match(/(?:Gigantamax\s+)?([A-Z][a-z]+(?:\s+[A-Z][a-z]+)*)/);
+    return matches ? matches[1].trim() : null;
   }
 
   delay(ms) {

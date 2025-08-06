@@ -1,0 +1,769 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "generatedAt": "2025-08-05T01:32:48.874Z",
+    "description": "Fast move recommendations for Dynamax Pokemon based on energy generation speed",
+    "criteria": {
+      "primary": "Energy Per Second (EPS)",
+      "secondary": "Damage Per Second (DPS)",
+      "goal": "Fastest Max meter charging"
+    }
+  },
+  "byType": {
+    "grass": {
+      "recommended": [
+        {
+          "name": "Bullet Seed",
+          "id": "fast_bullet_seed",
+          "eps": 4.33,
+          "dps": 1.67,
+          "efficiency": 10.33,
+          "energyGain": 13,
+          "turns": 3,
+          "power": 5,
+          "reasoning": "Best grass fast move for Max meter charging (4.33 EPS)"
+        },
+        {
+          "name": "Vine Whip",
+          "id": "fast_vine_whip",
+          "eps": 4,
+          "dps": 2.5,
+          "efficiency": 10.5,
+          "energyGain": 8,
+          "turns": 2,
+          "power": 5,
+          "reasoning": "2nd best grass move - Very Good energy generation"
+        },
+        {
+          "name": "Leafage",
+          "id": "fast_leafage",
+          "eps": 3.5,
+          "dps": 3,
+          "efficiency": 10,
+          "energyGain": 7,
+          "turns": 2,
+          "power": 6,
+          "reasoning": "3rd best grass move - Good energy generation"
+        }
+      ],
+      "alternativeCount": 2
+    },
+    "fire": {
+      "recommended": [
+        {
+          "name": "Incinerate",
+          "id": "fast_incinerate",
+          "eps": 4,
+          "dps": 4,
+          "efficiency": 12,
+          "energyGain": 20,
+          "turns": 5,
+          "power": 20,
+          "reasoning": "Best fire fast move for Max meter charging (4 EPS)"
+        },
+        {
+          "name": "Ember",
+          "id": "fast_ember",
+          "eps": 3.5,
+          "dps": 3.5,
+          "efficiency": 10.5,
+          "energyGain": 7,
+          "turns": 2,
+          "power": 7,
+          "reasoning": "2nd best fire move - Good energy generation"
+        },
+        {
+          "name": "Fire Spin",
+          "id": "fast_fire_spin",
+          "eps": 3.33,
+          "dps": 3.67,
+          "efficiency": 10.33,
+          "energyGain": 10,
+          "turns": 3,
+          "power": 11,
+          "reasoning": "3rd best fire move - Average energy generation"
+        }
+      ],
+      "alternativeCount": 1
+    },
+    "dragon": {
+      "recommended": [
+        {
+          "name": "Dragon Tail",
+          "id": "fast_dragon_tail",
+          "eps": 3,
+          "dps": 4.33,
+          "efficiency": 10.33,
+          "energyGain": 9,
+          "turns": 3,
+          "power": 13,
+          "reasoning": "Best dragon fast move for Max meter charging (3 EPS)"
+        },
+        {
+          "name": "Dragon Breath",
+          "id": "fast_dragon_breath",
+          "eps": 3,
+          "dps": 4,
+          "efficiency": 10,
+          "energyGain": 3,
+          "turns": 1,
+          "power": 4,
+          "reasoning": "2nd best dragon move - Average energy generation"
+        }
+      ],
+      "alternativeCount": 0
+    },
+    "water": {
+      "recommended": [
+        {
+          "name": "Water Shuriken",
+          "id": "fast_water_shuriken",
+          "eps": 4.67,
+          "dps": 2,
+          "efficiency": 11.33,
+          "energyGain": 14,
+          "turns": 3,
+          "power": 6,
+          "reasoning": "Best water fast move for Max meter charging (4.67 EPS)"
+        },
+        {
+          "name": "Bubble",
+          "id": "fast_bubble",
+          "eps": 3.67,
+          "dps": 2.67,
+          "efficiency": 10,
+          "energyGain": 11,
+          "turns": 3,
+          "power": 8,
+          "reasoning": "2nd best water move - Good energy generation"
+        },
+        {
+          "name": "Water Gun",
+          "id": "fast_water_gun",
+          "eps": 3,
+          "dps": 3,
+          "efficiency": 9,
+          "energyGain": 3,
+          "turns": 1,
+          "power": 3,
+          "reasoning": "3rd best water move - Average energy generation"
+        }
+      ],
+      "alternativeCount": 1
+    },
+    "rock": {
+      "recommended": [
+        {
+          "name": "Rollout",
+          "id": "fast_rollout",
+          "eps": 4.33,
+          "dps": 2.33,
+          "efficiency": 11,
+          "energyGain": 13,
+          "turns": 3,
+          "power": 7,
+          "reasoning": "Best rock fast move for Max meter charging (4.33 EPS)"
+        },
+        {
+          "name": "Smack Down",
+          "id": "fast_smack_down",
+          "eps": 2.67,
+          "dps": 3.67,
+          "efficiency": 9,
+          "energyGain": 8,
+          "turns": 3,
+          "power": 11,
+          "reasoning": "2nd best rock move - Below Average energy generation"
+        },
+        {
+          "name": "Rock Throw",
+          "id": "fast_rock_throw",
+          "eps": 2.5,
+          "dps": 4,
+          "efficiency": 9,
+          "energyGain": 5,
+          "turns": 2,
+          "power": 8,
+          "reasoning": "3rd best rock move - Below Average energy generation"
+        }
+      ],
+      "alternativeCount": 0
+    },
+    "bug": {
+      "recommended": [
+        {
+          "name": "Fury Cutter",
+          "id": "fast_fury_cutter",
+          "eps": 4,
+          "dps": 3,
+          "efficiency": 11,
+          "energyGain": 4,
+          "turns": 1,
+          "power": 3,
+          "reasoning": "Best bug fast move for Max meter charging (4 EPS)"
+        },
+        {
+          "name": "Infestation",
+          "id": "fast_infestation",
+          "eps": 4,
+          "dps": 2,
+          "efficiency": 10,
+          "energyGain": 12,
+          "turns": 3,
+          "power": 6,
+          "reasoning": "2nd best bug move - Very Good energy generation"
+        },
+        {
+          "name": "Bug Bite",
+          "id": "fast_bug_bite",
+          "eps": 3,
+          "dps": 4,
+          "efficiency": 10,
+          "energyGain": 3,
+          "turns": 1,
+          "power": 4,
+          "reasoning": "3rd best bug move - Average energy generation"
+        }
+      ],
+      "alternativeCount": 1
+    },
+    "poison": {
+      "recommended": [
+        {
+          "name": "Poison Sting",
+          "id": "fast_poison_sting",
+          "eps": 4.5,
+          "dps": 2,
+          "efficiency": 11,
+          "energyGain": 9,
+          "turns": 2,
+          "power": 4,
+          "reasoning": "Best poison fast move for Max meter charging (4.5 EPS)"
+        },
+        {
+          "name": "Acid",
+          "id": "fast_acid",
+          "eps": 4,
+          "dps": 3,
+          "efficiency": 11,
+          "energyGain": 8,
+          "turns": 2,
+          "power": 6,
+          "reasoning": "2nd best poison move - Very Good energy generation"
+        },
+        {
+          "name": "Poison Jab",
+          "id": "fast_poison_jab",
+          "eps": 3.5,
+          "dps": 3.5,
+          "efficiency": 10.5,
+          "energyGain": 7,
+          "turns": 2,
+          "power": 7,
+          "reasoning": "3rd best poison move - Good energy generation"
+        }
+      ],
+      "alternativeCount": 0
+    },
+    "flying": {
+      "recommended": [
+        {
+          "name": "Wing Attack",
+          "id": "fast_wing_attack",
+          "eps": 3.5,
+          "dps": 2.5,
+          "efficiency": 9.5,
+          "energyGain": 7,
+          "turns": 2,
+          "power": 5,
+          "reasoning": "Best flying fast move for Max meter charging (3.5 EPS)"
+        },
+        {
+          "name": "Gust",
+          "id": "fast_gust",
+          "eps": 3,
+          "dps": 4,
+          "efficiency": 10,
+          "energyGain": 12,
+          "turns": 4,
+          "power": 16,
+          "reasoning": "2nd best flying move - Average energy generation"
+        },
+        {
+          "name": "Air Slash",
+          "id": "fast_air_slash",
+          "eps": 3,
+          "dps": 3,
+          "efficiency": 9,
+          "energyGain": 9,
+          "turns": 3,
+          "power": 9,
+          "reasoning": "3rd best flying move - Average energy generation"
+        }
+      ],
+      "alternativeCount": 1
+    },
+    "normal": {
+      "recommended": [
+        {
+          "name": "Lock On",
+          "id": "fast_lock_on",
+          "eps": 5,
+          "dps": 1,
+          "efficiency": 11,
+          "energyGain": 5,
+          "turns": 1,
+          "power": 1,
+          "reasoning": "Best normal fast move for Max meter charging (5 EPS)"
+        },
+        {
+          "name": "Quick Attack",
+          "id": "fast_quick_attack",
+          "eps": 4,
+          "dps": 2.5,
+          "efficiency": 10.5,
+          "energyGain": 8,
+          "turns": 2,
+          "power": 5,
+          "reasoning": "2nd best normal move - Very Good energy generation"
+        },
+        {
+          "name": "Tackle",
+          "id": "fast_tackle",
+          "eps": 3,
+          "dps": 3,
+          "efficiency": 9,
+          "energyGain": 3,
+          "turns": 1,
+          "power": 3,
+          "reasoning": "3rd best normal move - Average energy generation"
+        }
+      ],
+      "alternativeCount": 3
+    },
+    "steel": {
+      "recommended": [
+        {
+          "name": "Metal Sound",
+          "id": "fast_metal_sound",
+          "eps": 4,
+          "dps": 2.5,
+          "efficiency": 10.5,
+          "energyGain": 8,
+          "turns": 2,
+          "power": 5,
+          "reasoning": "Best steel fast move for Max meter charging (4 EPS)"
+        },
+        {
+          "name": "Bullet Punch",
+          "id": "fast_bullet_punch",
+          "eps": 3.5,
+          "dps": 4,
+          "efficiency": 11,
+          "energyGain": 7,
+          "turns": 2,
+          "power": 8,
+          "reasoning": "2nd best steel move - Good energy generation"
+        },
+        {
+          "name": "Metal Claw",
+          "id": "fast_metal_claw",
+          "eps": 3.5,
+          "dps": 2.5,
+          "efficiency": 9.5,
+          "energyGain": 7,
+          "turns": 2,
+          "power": 5,
+          "reasoning": "3rd best steel move - Good energy generation"
+        }
+      ],
+      "alternativeCount": 1
+    },
+    "electric": {
+      "recommended": [
+        {
+          "name": "Thunder Shock",
+          "id": "fast_thunder_shock",
+          "eps": 4.5,
+          "dps": 2,
+          "efficiency": 11,
+          "energyGain": 9,
+          "turns": 2,
+          "power": 4,
+          "reasoning": "Best electric fast move for Max meter charging (4.5 EPS)"
+        },
+        {
+          "name": "Volt Switch",
+          "id": "fast_volt_switch",
+          "eps": 4,
+          "dps": 3,
+          "efficiency": 11,
+          "energyGain": 16,
+          "turns": 4,
+          "power": 12,
+          "reasoning": "2nd best electric move - Very Good energy generation"
+        },
+        {
+          "name": "Charge Beam",
+          "id": "fast_charge_beam",
+          "eps": 3.67,
+          "dps": 1.67,
+          "efficiency": 9,
+          "energyGain": 11,
+          "turns": 3,
+          "power": 5,
+          "reasoning": "3rd best electric move - Good energy generation"
+        }
+      ],
+      "alternativeCount": 2
+    },
+    "ground": {
+      "recommended": [
+        {
+          "name": "Sand Attack",
+          "id": "fast_sand_attack",
+          "eps": 4,
+          "dps": 2,
+          "efficiency": 10,
+          "energyGain": 4,
+          "turns": 1,
+          "power": 2,
+          "reasoning": "Best ground fast move for Max meter charging (4 EPS)"
+        },
+        {
+          "name": "Mud Shot",
+          "id": "fast_mud_shot",
+          "eps": 4,
+          "dps": 2,
+          "efficiency": 10,
+          "energyGain": 8,
+          "turns": 2,
+          "power": 4,
+          "reasoning": "2nd best ground move - Very Good energy generation"
+        },
+        {
+          "name": "Mud Slap",
+          "id": "fast_mud_slap",
+          "eps": 3.33,
+          "dps": 4,
+          "efficiency": 10.67,
+          "energyGain": 10,
+          "turns": 3,
+          "power": 12,
+          "reasoning": "3rd best ground move - Average energy generation"
+        }
+      ],
+      "alternativeCount": 0
+    },
+    "ice": {
+      "recommended": [
+        {
+          "name": "Powder Snow",
+          "id": "fast_powder_snow",
+          "eps": 4,
+          "dps": 2.5,
+          "efficiency": 10.5,
+          "energyGain": 8,
+          "turns": 2,
+          "power": 5,
+          "reasoning": "Best ice fast move for Max meter charging (4 EPS)"
+        },
+        {
+          "name": "Ice Shard",
+          "id": "fast_ice_shard",
+          "eps": 3.33,
+          "dps": 3,
+          "efficiency": 9.67,
+          "energyGain": 10,
+          "turns": 3,
+          "power": 9,
+          "reasoning": "2nd best ice move - Average energy generation"
+        },
+        {
+          "name": "Ice Fang",
+          "id": "fast_ice_fang",
+          "eps": 3,
+          "dps": 4,
+          "efficiency": 10,
+          "energyGain": 6,
+          "turns": 2,
+          "power": 8,
+          "reasoning": "3rd best ice move - Average energy generation"
+        }
+      ],
+      "alternativeCount": 0
+    },
+    "ghost": {
+      "recommended": [
+        {
+          "name": "Hex",
+          "id": "fast_hex",
+          "eps": 4.33,
+          "dps": 2.33,
+          "efficiency": 11,
+          "energyGain": 13,
+          "turns": 3,
+          "power": 7,
+          "reasoning": "Best ghost fast move for Max meter charging (4.33 EPS)"
+        },
+        {
+          "name": "Shadow Claw",
+          "id": "fast_shadow_claw",
+          "eps": 4,
+          "dps": 3,
+          "efficiency": 11,
+          "energyGain": 8,
+          "turns": 2,
+          "power": 6,
+          "reasoning": "2nd best ghost move - Very Good energy generation"
+        },
+        {
+          "name": "Astonish",
+          "id": "fast_astonish",
+          "eps": 3.33,
+          "dps": 4,
+          "efficiency": 10.67,
+          "energyGain": 10,
+          "turns": 3,
+          "power": 12,
+          "reasoning": "3rd best ghost move - Average energy generation"
+        }
+      ],
+      "alternativeCount": 1
+    },
+    "psychic": {
+      "recommended": [
+        {
+          "name": "Psycho Cut",
+          "id": "fast_psycho_cut",
+          "eps": 4.5,
+          "dps": 1.5,
+          "efficiency": 10.5,
+          "energyGain": 9,
+          "turns": 2,
+          "power": 3,
+          "reasoning": "Best psychic fast move for Max meter charging (4.5 EPS)"
+        },
+        {
+          "name": "Psywave",
+          "id": "fast_psywave",
+          "eps": 4,
+          "dps": 3,
+          "efficiency": 11,
+          "energyGain": 4,
+          "turns": 1,
+          "power": 3,
+          "reasoning": "2nd best psychic move - Very Good energy generation"
+        },
+        {
+          "name": "Confusion",
+          "id": "fast_confusion",
+          "eps": 3,
+          "dps": 4,
+          "efficiency": 10,
+          "energyGain": 12,
+          "turns": 4,
+          "power": 16,
+          "reasoning": "3rd best psychic move - Average energy generation"
+        }
+      ],
+      "alternativeCount": 1
+    },
+    "fairy": {
+      "recommended": [
+        {
+          "name": "Fairy Wind",
+          "id": "fast_fairy_wind",
+          "eps": 4.5,
+          "dps": 2,
+          "efficiency": 11,
+          "energyGain": 9,
+          "turns": 2,
+          "power": 4,
+          "reasoning": "Best fairy fast move for Max meter charging (4.5 EPS)"
+        },
+        {
+          "name": "Geomancy",
+          "id": "fast_geomancy",
+          "eps": 4.33,
+          "dps": 1.33,
+          "efficiency": 10,
+          "energyGain": 13,
+          "turns": 3,
+          "power": 4,
+          "reasoning": "2nd best fairy move - Very Good energy generation"
+        },
+        {
+          "name": "Charm",
+          "id": "fast_charm",
+          "eps": 2,
+          "dps": 5,
+          "efficiency": 9,
+          "energyGain": 6,
+          "turns": 3,
+          "power": 15,
+          "reasoning": "3rd best fairy move - Below Average energy generation"
+        }
+      ],
+      "alternativeCount": 0
+    },
+    "dark": {
+      "recommended": [
+        {
+          "name": "Snarl",
+          "id": "fast_snarl",
+          "eps": 4.33,
+          "dps": 1.67,
+          "efficiency": 10.33,
+          "energyGain": 13,
+          "turns": 3,
+          "power": 5,
+          "reasoning": "Best dark fast move for Max meter charging (4.33 EPS)"
+        },
+        {
+          "name": "Sucker Punch",
+          "id": "fast_sucker_punch",
+          "eps": 3.5,
+          "dps": 4,
+          "efficiency": 11,
+          "energyGain": 7,
+          "turns": 2,
+          "power": 8,
+          "reasoning": "2nd best dark move - Good energy generation"
+        },
+        {
+          "name": "Feint Attack",
+          "id": "fast_feint_attack",
+          "eps": 3,
+          "dps": 3,
+          "efficiency": 9,
+          "energyGain": 6,
+          "turns": 2,
+          "power": 6,
+          "reasoning": "3rd best dark move - Average energy generation"
+        }
+      ],
+      "alternativeCount": 1
+    },
+    "fighting": {
+      "recommended": [
+        {
+          "name": "Karate Chop",
+          "id": "fast_karate_chop",
+          "eps": 4.5,
+          "dps": 2.5,
+          "efficiency": 11.5,
+          "energyGain": 9,
+          "turns": 2,
+          "power": 5,
+          "reasoning": "Best fighting fast move for Max meter charging (4.5 EPS)"
+        },
+        {
+          "name": "Double Kick",
+          "id": "fast_double_kick",
+          "eps": 4,
+          "dps": 2.67,
+          "efficiency": 10.67,
+          "energyGain": 12,
+          "turns": 3,
+          "power": 8,
+          "reasoning": "2nd best fighting move - Very Good energy generation"
+        },
+        {
+          "name": "Force Palm",
+          "id": "fast_force_palm",
+          "eps": 3.33,
+          "dps": 4.33,
+          "efficiency": 11,
+          "energyGain": 10,
+          "turns": 3,
+          "power": 13,
+          "reasoning": "3rd best fighting move - Average energy generation"
+        }
+      ],
+      "alternativeCount": 3
+    }
+  },
+  "topOverall": [
+    {
+      "name": "Lock On",
+      "type": "normal",
+      "eps": 5,
+      "dps": 1,
+      "efficiency": 11,
+      "reasoning": "5 EPS - Excellent energy generation"
+    },
+    {
+      "name": "Water Shuriken",
+      "type": "water",
+      "eps": 4.67,
+      "dps": 2,
+      "efficiency": 11.33,
+      "reasoning": "4.67 EPS - Excellent energy generation"
+    },
+    {
+      "name": "Poison Sting",
+      "type": "poison",
+      "eps": 4.5,
+      "dps": 2,
+      "efficiency": 11,
+      "reasoning": "4.5 EPS - Excellent energy generation"
+    },
+    {
+      "name": "Thunder Shock",
+      "type": "electric",
+      "eps": 4.5,
+      "dps": 2,
+      "efficiency": 11,
+      "reasoning": "4.5 EPS - Excellent energy generation"
+    },
+    {
+      "name": "Psycho Cut",
+      "type": "psychic",
+      "eps": 4.5,
+      "dps": 1.5,
+      "efficiency": 10.5,
+      "reasoning": "4.5 EPS - Excellent energy generation"
+    },
+    {
+      "name": "Fairy Wind",
+      "type": "fairy",
+      "eps": 4.5,
+      "dps": 2,
+      "efficiency": 11,
+      "reasoning": "4.5 EPS - Excellent energy generation"
+    },
+    {
+      "name": "Karate Chop",
+      "type": "fighting",
+      "eps": 4.5,
+      "dps": 2.5,
+      "efficiency": 11.5,
+      "reasoning": "4.5 EPS - Excellent energy generation"
+    },
+    {
+      "name": "Bullet Seed",
+      "type": "grass",
+      "eps": 4.33,
+      "dps": 1.67,
+      "efficiency": 10.33,
+      "reasoning": "4.33 EPS - Very Good energy generation"
+    },
+    {
+      "name": "Rollout",
+      "type": "rock",
+      "eps": 4.33,
+      "dps": 2.33,
+      "efficiency": 11,
+      "reasoning": "4.33 EPS - Very Good energy generation"
+    },
+    {
+      "name": "Hex",
+      "type": "ghost",
+      "eps": 4.33,
+      "dps": 2.33,
+      "efficiency": 11,
+      "reasoning": "4.33 EPS - Very Good energy generation"
+    }
+  ]
+}

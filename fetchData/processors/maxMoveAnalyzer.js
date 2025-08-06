@@ -126,7 +126,7 @@ class MaxMoveAnalyzer {
     // Role-based move recommendations
     if (role.primary === "Attacker") {
       // Attackers prioritize Max Attack moves
-      this.addAttackMoves(recommendations, primaryType, secondaryType, "Primary", "Secondary");
+      this.addAttackMoves(recommendations, pokemon, "Primary", "Secondary");
 
       // Add specific support moves based on secondary role
       if (role.secondary === "Healer") {
@@ -166,9 +166,9 @@ class MaxMoveAnalyzer {
           priority: "Secondary",
           description: `Heals ~8%/12%/16% of your max HP (${stats.hp}) to all allies (Level 1-3). Secondary healer capability.`,
         });
-        this.addAttackMoves(recommendations, primaryType, secondaryType, "Situational", "Situational");
+        this.addAttackMoves(recommendations, pokemon, "Situational", "Situational");
       } else {
-        this.addAttackMoves(recommendations, primaryType, secondaryType, "Secondary", "Situational");
+        this.addAttackMoves(recommendations, pokemon, "Secondary", "Situational");
       }
     } else if (role.primary === "Healer") {
       // Healers prioritize Max Spirit
@@ -189,9 +189,9 @@ class MaxMoveAnalyzer {
           priority: "Secondary",
           description: "Shields add 20/40/60 HP (Level 1-3). Draws aggro to protect teammates. Secondary tank capability.",
         });
-        this.addAttackMoves(recommendations, primaryType, secondaryType, "Situational", "Situational");
+        this.addAttackMoves(recommendations, pokemon, "Situational", "Situational");
       } else {
-        this.addAttackMoves(recommendations, primaryType, secondaryType, "Secondary", "Situational");
+        this.addAttackMoves(recommendations, pokemon, "Secondary", "Situational");
       }
     }
 
@@ -199,31 +199,68 @@ class MaxMoveAnalyzer {
   }
 
   /**
-   * Add Max Attack moves to recommendations
+   * Add Max Attack moves to recommendations based on available fast moves
    */
-  addAttackMoves(recommendations, primaryType, secondaryType, primaryPriority, secondaryPriority) {
-    // Primary type attack move
-    if (this.maxMoves.attack[primaryType]) {
-      const move = this.maxMoves.attack[primaryType];
-      recommendations.push({
-        moveName: move.name,
-        moveType: primaryType,
-        category: "Attack",
-        priority: primaryPriority,
-        description: `${move.effect}. ${primaryPriority === "Primary" ? "Main damage dealer with STAB bonus." : "Attack option with STAB bonus."}`,
-      });
-    }
+  addAttackMoves(recommendations, pokemon, primaryPriority, secondaryPriority) {
+    // Use comprehensive fast move data if available
+    if (pokemon.dynamaxFastMoves && pokemon.dynamaxFastMoves.length > 0) {
+      pokemon.dynamaxFastMoves.forEach((fastMove, index) => {
+        const moveType = fastMove.type;
+        const maxMove = this.maxMoves.attack[moveType];
 
-    // Secondary type attack move (if dual-type)
-    if (secondaryType && this.maxMoves.attack[secondaryType] && secondaryType !== primaryType) {
-      const move = this.maxMoves.attack[secondaryType];
-      recommendations.push({
-        moveName: move.name,
-        moveType: secondaryType,
-        category: "Attack",
-        priority: secondaryPriority,
-        description: `${move.effect}. ${secondaryPriority === "Secondary" ? "Alternative attack with type coverage." : "Situational attack option."}`,
+        if (maxMove) {
+          // Determine priority based on STAB and order
+          let priority;
+          if (index === 0) {
+            priority = primaryPriority; // First move gets primary priority
+          } else if (fastMove.stab) {
+            priority = secondaryPriority; // STAB moves get secondary priority
+          } else {
+            priority = "Situational"; // Coverage moves are situational
+          }
+
+          // Create description based on STAB and EPS
+          const stabText = fastMove.stab ? "STAB bonus" : "type coverage";
+          const epsText = `${fastMove.eps} EPS`;
+          const priorityText = priority === primaryPriority ? "Primary attack option" : priority === secondaryPriority ? "Alternative attack option" : "Coverage attack option";
+
+          recommendations.push({
+            moveName: maxMove.name,
+            moveType: moveType,
+            category: "Attack",
+            priority: priority,
+            description: `${maxMove.effect}. ${priorityText} with ${stabText}. Fast move: ${fastMove.moveName} (${epsText}).`,
+          });
+        }
       });
+    } else {
+      // Fallback to type-based recommendations if no fast move data
+      const primaryType = pokemon.types[0];
+      const secondaryType = pokemon.types[1];
+
+      // Primary type attack move
+      if (this.maxMoves.attack[primaryType]) {
+        const move = this.maxMoves.attack[primaryType];
+        recommendations.push({
+          moveName: move.name,
+          moveType: primaryType,
+          category: "Attack",
+          priority: primaryPriority,
+          description: `${move.effect}. ${primaryPriority === "Primary" ? "Main damage dealer with STAB bonus." : "Attack option with STAB bonus."}`,
+        });
+      }
+
+      // Secondary type attack move (if dual-type)
+      if (secondaryType && this.maxMoves.attack[secondaryType] && secondaryType !== primaryType) {
+        const move = this.maxMoves.attack[secondaryType];
+        recommendations.push({
+          moveName: move.name,
+          moveType: secondaryType,
+          category: "Attack",
+          priority: secondaryPriority,
+          description: `${move.effect}. ${secondaryPriority === "Secondary" ? "Alternative attack with type coverage." : "Situational attack option."}`,
+        });
+      }
     }
   }
 

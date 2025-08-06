@@ -95,23 +95,21 @@ const PokemonDetail: React.FC = () => {
   };
 
   const getDisplayAIData = () => {
-    if (!pokemon) return { role: '', tags: [], summary: '', notes: '', hasData: false };
+    if (!pokemon) return { tags: [], summary: '', notes: '', hasData: false };
     if (showDynamaxData && pokemon.dynamax) {
-      const hasDynamaxData = !!(pokemon.dynamaxQuickRole || pokemon.dynamaxRoleSummary || pokemon.dynamaxKeyTags?.length);
+      const hasDynamaxData = !!(pokemon.dynamaxRoleSummary || pokemon.dynamaxKeyTags?.length);
       return {
-        role: pokemon.dynamaxQuickRole || pokemon.quickRole || '',
         tags: pokemon.dynamaxKeyTags || pokemon.keyTags || [],
         summary: pokemon.dynamaxRoleSummary || pokemon.roleSummary || '',
         notes: pokemon.dynamaxNotes || pokemon.notes || '',
-        hasData: hasDynamaxData || !!(pokemon.quickRole || pokemon.roleSummary)
+        hasData: hasDynamaxData || !!(pokemon.roleSummary)
       };
     }
     return {
-      role: pokemon.quickRole || '',
       tags: pokemon.keyTags || [],
       summary: pokemon.roleSummary || '',
       notes: pokemon.notes || '',
-      hasData: !!(pokemon.quickRole || pokemon.roleSummary)
+      hasData: !!(pokemon.roleSummary)
     };
   };
 
@@ -386,24 +384,7 @@ const PokemonDetail: React.FC = () => {
             }`}>
               {aiData.summary}
             </p>
-            {aiData.role && (
-              <div className="text-sm">
-                <span className={`font-medium ${
-                  showDynamaxData
-                    ? 'text-purple-900 dark:text-purple-100'
-                    : 'text-blue-900 dark:text-blue-100'
-                }`}>
-                  Role:
-                </span>
-                <span className={`${
-                  showDynamaxData
-                    ? 'text-purple-700 dark:text-purple-300'
-                    : 'text-blue-700 dark:text-blue-300'
-                }`}>
-                  {aiData.role}
-                </span>
-              </div>
-            )}
+
             {aiData.tags && aiData.tags.length > 0 && (
               <div className="flex flex-wrap gap-1 mt-2">
                 {aiData.tags.map((tag, index) => (
@@ -498,47 +479,59 @@ const PokemonDetail: React.FC = () => {
             🔥 Max Battle Performance
           </h3>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             {/* Effective Against Section */}
             <div className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-purple-200 dark:border-purple-700">
               <h4 className="font-medium text-gray-900 dark:text-gray-100 mb-3 flex items-center gap-2">
                 ⚔️ Effective Against
               </h4>
-              {pokemon.maxBattleEffectiveAgainst && pokemon.maxBattleEffectiveAgainst.length > 0 ? (
-                <div className="space-y-2">
-                  {pokemon.maxBattleEffectiveAgainst.map((target, index) => (
-                    <div key={index} className="flex items-center justify-between p-2 bg-green-50 dark:bg-green-900/20 rounded border border-green-200 dark:border-green-800">
-                      <div className="flex flex-col">
-                        <span className="font-medium text-green-800 dark:text-green-200">
-                          {target.name}
+
+              {/* Type-Specific Counters */}
+              {(pokemon as any).typeSpecificCounters && (pokemon as any).typeSpecificCounters.length > 0 && (
+                <div className="mb-4">
+                  {(pokemon as any).typeSpecificCounters.map((typeData: any, index: number) => (
+                    <div key={index} className="mb-4">
+                      <h5 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 flex items-center gap-2">
+                        <span className={`px-2 py-1 rounded text-white text-xs font-medium ${getTypeColor(typeData.moveType)}`}>
+                          {typeData.moveType}
                         </span>
-                        {(target as any).moveInfo && (
-                          <div className="flex items-center gap-1 mt-1">
-                            <span className="text-xs text-gray-600 dark:text-gray-400">
-                              {(target as any).moveInfo.moveName}
-                            </span>
-                            <span className={`px-1.5 py-0.5 rounded text-white text-xs font-medium ${getTypeColor((target as any).moveInfo.moveType)}`}>
-                              {(target as any).moveInfo.moveType}
-                            </span>
+                        <span className="text-xs text-gray-600 dark:text-gray-400">Counters:</span>
+                      </h5>
+                      <div className="space-y-2">
+                        {typeData.counters.map((target: any, counterIndex: number) => (
+                          <div key={counterIndex} className="flex items-center justify-between p-2 bg-green-50 dark:bg-green-900/20 rounded border border-green-200 dark:border-green-800">
+                            <div className="flex flex-col">
+                              <span className="font-medium text-green-800 dark:text-green-200">
+                                {target.name}
+                              </span>
+                              {target.moveInfo && (
+                                <div className="flex items-center gap-1 mt-1">
+                                  <span className="text-xs text-gray-600 dark:text-gray-400">
+                                    {target.moveInfo.moveName}
+                                  </span>
+                                  <span className={`px-1.5 py-0.5 rounded text-white text-xs font-medium ${getTypeColor(target.moveInfo.moveType)}`}>
+                                    {target.moveInfo.moveType}
+                                  </span>
+                                </div>
+                              )}
+                            </div>
+                            <div className="flex items-center gap-2">
+                              <span className="px-2 py-1 bg-purple-100 dark:bg-purple-800 text-purple-800 dark:text-purple-200 rounded text-xs">
+                                {target.difficulty}★
+                              </span>
+                              <span className="text-xs text-green-600 dark:text-green-400">
+                                {target.effectiveness === 'super-effective' ? '2x' : '1x'}
+                              </span>
+                            </div>
                           </div>
-                        )}
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <span className="px-2 py-1 bg-purple-100 dark:bg-purple-800 text-purple-800 dark:text-purple-200 rounded text-xs">
-                          Tier {target.tier}
-                        </span>
-                        <span className="text-xs text-green-600 dark:text-green-400">
-                          {target.effectiveness === 'super-effective' ? '2x' : '1x'}
-                        </span>
+                        ))}
                       </div>
                     </div>
                   ))}
                 </div>
-              ) : (
-                <div className="text-sm text-gray-600 dark:text-gray-400">
-                  No specific Max Battle counter data available. Check type effectiveness for general guidance.
-                </div>
               )}
+
+
             </div>
 
             {/* Counters Section */}
@@ -546,9 +539,9 @@ const PokemonDetail: React.FC = () => {
               <h4 className="font-medium text-gray-900 dark:text-gray-100 mb-3 flex items-center gap-2">
                 ⚔️ Counters
               </h4>
-              {pokemon.maxBattleVulnerableTo && pokemon.maxBattleVulnerableTo.length > 0 ? (
+              {pokemon.maxBattleVulnerableTo && pokemon.maxBattleVulnerableTo.filter(counter => !counter.difficulty || counter.difficulty >= 3).length > 0 ? (
                 <div className="space-y-2">
-                  {pokemon.maxBattleVulnerableTo.map((counter, index) => (
+                  {pokemon.maxBattleVulnerableTo.filter(counter => !counter.difficulty || counter.difficulty >= 3).map((counter, index) => (
                     <div key={index} className="flex items-center justify-between p-2 bg-red-50 dark:bg-red-900/20 rounded border border-red-200 dark:border-red-800">
                       <div className="flex flex-col">
                         <span className="font-medium text-red-800 dark:text-red-200">
@@ -580,6 +573,38 @@ const PokemonDetail: React.FC = () => {
                 <div className="text-sm text-gray-600 dark:text-gray-400">
                   No specific Max Battle counter data available. Check type weaknesses for general guidance.
                 </div>
+              )}
+            </div>
+
+            {/* Fast Move Recommendations Section */}
+            <div className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-purple-200 dark:border-purple-700">
+              <h4 className="font-medium text-gray-900 dark:text-gray-100 mb-3 flex items-center gap-2">
+                ⚡ Fastest Moves by Type
+              </h4>
+              {pokemon.dynamaxFastMoves && pokemon.dynamaxFastMoves.length > 0 ? (
+                <div className="space-y-2">
+                  {pokemon.dynamaxFastMoves.map((move, index) => (
+                    <div key={index} className="flex items-center justify-between p-2 bg-blue-50 dark:bg-blue-900/20 rounded border border-blue-200 dark:border-blue-800">
+                      <span className="font-medium text-blue-800 dark:text-blue-200">
+                        {move.moveName}
+                      </span>
+                      <div className="flex items-center gap-2">
+                        <span className={`px-2 py-1 rounded text-white text-xs font-medium ${getTypeColor(move.type)}`}>
+                          {move.type}
+                        </span>
+                        {move.stab && (
+                          <span className="px-2 py-1 bg-yellow-100 dark:bg-yellow-800 text-yellow-800 dark:text-yellow-200 rounded text-xs font-medium">
+                            STAB
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <p className="text-gray-500 dark:text-gray-400 text-sm">
+                  No fast move recommendations available
+                </p>
               )}
             </div>
           </div>
